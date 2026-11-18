@@ -69,7 +69,7 @@ function build(r: Row) {
     credits: r.id === "bis" ? bis.credits : undefined,
     ects: r.id === "bis" ? bis.ects : undefined,
     url: r.url ?? rules,
-    source: (r.source ?? (r.url ? "program" : "school")) as SourceKey,
+    source: (r.source ?? "school") as SourceKey,
     note: r.note,
     description: r.description ?? "",
     topics: r.topics ?? [],
