@@ -1,6 +1,6 @@
 # Official source register
 
-Research date: 26 October 2026 (Asia/Almaty). Official KIMEP information is the authority; no forum claims are used as requirements. English URLs often redirect to Kazakh; use the university language selector as needed.
+Research date: 26 October 2026; re-verified against the primary sources on 18 November 2026 (Asia/Almaty). Facts re-checked on 18 November carry that date in `src/data.ts`; sources not re-opened keep 26 October. Official KIMEP information is the authority; no forum claims are used as requirements. English URLs often redirect to Kazakh; use the university language selector as needed.
 
 ## admission: Undergraduate admission guide, 2026–2027
 
@@ -19,6 +19,18 @@ Edition/update: No update date shown. Last verified: 26 October 2026.
 https://www.kimep.kz/school-of-computer-science-and-artificial-intelligence/bachelor-of-information-system/
 
 Edition/update: No update date shown. Last verified: 26 October 2026.
+
+## guideKz: Admission guide for Kazakhstan citizens (Kazakh, April 2026)
+
+https://www.kimep.kz/prospective-students/files/2026/04/HowToApplyKAZugrad.pdf
+
+Edition/update: April 2026 file path, linked from the live high-school page. Last verified: 18 November 2026. Adds the stricter English rules for LL.B. and B.I.L. applicants.
+
+## priceList: Tuition and fees for all programs, 2026–2027
+
+https://www.kimep.kz/prospective-students/files/2026/05/Tuition-and-fees-eng-2026-27.pdf
+
+Edition/update: 2026–2027 edition. Last verified: 18 November 2026. All undergraduate programs (including Economics, Journalism, PMA, IR, Management, Marketing, Accounting, Finance, Jurisprudence, International Law, Cognitive Sciences, Psychology, Foreign Languages, Translation, Information Systems, Computer Science and Political Science) are priced at KZT 163 230 per credit. Also lists late payment fee (29 950), late registration fee (15 380 per course), transcript (2 960), duplicate diploma (8 500), withdrawal fee (22 400).
 
 ## legacy: BIS · older Bang College page (Kazakh)
 
@@ -85,6 +97,32 @@ Edition/update: Live service. Last verified: 26 October 2026.
 https://www.kimep.kz/prospective-students/en/
 
 Edition/update: Live contact page. Last verified: 26 October 2026.
+
+## Re-verification log, 18 November 2026
+
+Opened and compared with `src/data.ts`: high-school requirements page, application-deadlines page, medical-documents page, scholarships page, tests page, the 2026–2027 English admission guide, the April 2026 Kazakh guide, the English fee sheet and the general price list. Results:
+
+- **Fees.** Every figure in `fees` matches the fee sheet and the price list (163 230 per credit; 9 130 per semester; 6 560 per year; 74 270 deposit; bed 108 050 per month; hall deposit 71 180 per semester; Foundation 682 320 per level, 225 contact hours). The 30–36 credit recommendation and the 4 896 900 / 5 876 280 / 23 831 580 examples also match. Previously unchecked items added: late payment 29 950, late registration 15 380 per course.
+- **One price for all programs.** The price list shows a single undergraduate rate for all 17 listed bachelor programs. The calculator therefore uses one rate; no per-program override is needed.
+- **Programs.** The official high-school page lists 16 bachelor programs with UNT rules (Economics, Management, Accounting and Audit, Finance, Public and Municipal Administration, Marketing, International Law, Jurisprudence, International Relations, Foreign Language: Two Foreign Languages, Cognitive Sciences, Translation Studies, Information Systems, Computer Science, Journalism, Psychology). The 2026–2027 guide additionally groups Political Science (6B03103) with International Relations and Translation Studies; the web page does not list it. The site includes Political Science with a visible "confirm with Admissions" note (see below).
+- **Thresholds.** Total 50 for most programs; 75 for International Law, Jurisprudence and Foreign Language: Two Foreign Languages. Reading and Mathematical Literacy minimum 3, other sections 5, except Cognitive Sciences: Mathematical Literacy minimum 5. Journalism: two online creative exams; UNT History of Kazakhstan and Reading Literacy scores are taken into account; no total threshold.
+- **Credits and ECTS.** Only BIS has official values (146 / 241, see conflict below). The earlier build copied 146 credits and 240 ECTS onto the other three programs; that was unsupported and has been removed. The calculator uses 146 credits only as the price-list example for a whole program and labels it so.
+- **Deadlines.** The intake schedule matches `deadlines` (Fall 2027 applications 16 October 2026–15 August 2027; enrollment 20 June–25 August 2027; classes 25 August 2027; Spring 2027 and Summer intakes as listed).
+- **Medical.** Form 075/u with therapist, ophthalmologist, ENT, surgeon and neurologist checks; fluorography, microreaction, stool test; narcology and psycho-neurology certificates (eGov); copy of Form 065/u; chest X-ray with radiologist conclusion; X-ray taken outside Kazakhstan needs verification by an Almaty radiologist.
+- **English.** The website states English is not an admission requirement; students without a determined level start at UF C; KIMEP's TOEFL institution code is 2104; Foundation has three levels of 225 contact hours and cannot be waived. LL.B. and B.I.L. applicants: IELTS 6.5+ gives direct placement; IELTS 5.5 or 6.0 (or equivalent) requires an interview (April 2026 guide). The IELTS/TOEFL/Duolingo/PTE/Cambridge/LanguageCert table matches the earlier data.
+- **Computer Science math placement test.** The tests page confirms a math placement test (20 multiple-choice questions, 50 minutes, maximum 20; 12 or more places into Calculus I, below 12 into College Algebra) for students of the BSCS program. It describes it for Computer Science students, not for every applicant.
+- **Scholarships.** The page publishes the 2026-intake Intellectual Olympiad only (15 grants of 100% and 15 of 50%, held 29 March 2026, tuition only, 4 years, GPA 3.50, 38-credit limit). No 2027 offer is published yet; the site does not present these as open.
+- **2027–2028 editions.** No 2027–2028 guide or price list is linked from the live pages and guessed file paths return 404, so the 2026–2027 files remain current.
+- **Admission contacts.** Phone and email values for Admissions, Financial Aid, Medical Center and Student Academic Support match the guides; Foundation English coordinator (+7 701 717 38 06) and Residence Hall (+7 727 237 47 73, +7 701 679 47 09) added from the fee sheet.
+
+## New or restated conflicts
+
+- **Political Science (6B03103).** Present in the English guide's UNT table, absent from the web page's program list. Shown with a confirmation note; the assistant is told to say so.
+- **Agreement format.** Both guides (English 2026–2027 and Kazakh April 2026) say sign, scan and upload under SIGNED CONTRACT; the web page still says to hand in two printed copies. Both shown.
+- **X-ray conclusion.** Medical page and guide: two radiologist stamps. High-school page: two doctors' signatures and two stamps, valid six months. Both shown.
+- **Application opening date.** Guide: 15 October every year; live intake schedule: 16 October 2026. Both shown.
+- **BIS ECTS.** 241 (current school page) vs 240 (older Bang College page). Both shown.
+- **Duolingo ranges for UF A / UF B overlap; TOEFL iBT table still uses the legacy scale.** Unchanged, flagged.
 
 ## Evidence and reconciliation
 
