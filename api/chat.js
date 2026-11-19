@@ -95,6 +95,36 @@ var sources = {
     lastVerified: verifiedEarlier,
     published: "Live service"
   },
+  catalog: {
+    title: "KIMEP Catalog 2026\u20132027 (442 pages)",
+    url: "https://www.kimep.kz/about/files/2026/06/Catalog-2026-2027.pdf",
+    lastVerified: "19 November 2026",
+    published: "2026\u20132027 edition, PDF created 3 July 2026"
+  },
+  vocational: {
+    title: "Guide for college graduates, April 2026 (Kazakh)",
+    url: base + "files/2026/04/HowToApplyKAZugrad-vocational-school.pdf",
+    lastVerified: "19 November 2026",
+    published: "Dated 6 April 2026"
+  },
+  transferGuide: {
+    title: "Guide for transfer and reinstated students, April 2026 (Kazakh)",
+    url: base + "files/2026/04/How-to-apply-Transfer-kaz.pdf",
+    lastVerified: "19 November 2026",
+    published: "Dated 6 April 2026"
+  },
+  intlGuide: {
+    title: "Guide for international students, April 2026 (Russian)",
+    url: base + "files/2026/04/HowToApplyRUSUgradINL.pdf",
+    lastVerified: "19 November 2026",
+    published: "Dated 6 April 2026"
+  },
+  scsm: {
+    title: "School of Computer Science and Mathematics brochure, June 2026 (Kazakh)",
+    url: "https://www.kimep.kz/school-of-computer-science-and-mathematics/files/2026/06/brochure_SCSM_kaz_web.pdf",
+    lastVerified: "19 November 2026",
+    published: "June 2026 file path"
+  },
   contacts: {
     title: "Admissions office",
     url: base + "en/",
@@ -239,9 +269,16 @@ var discrepancies = [
   {
     id: "ects",
     topic: "BIS ECTS credits",
-    values: ["241 ECTS (current School of Computer Science and AI page)", "240 ECTS (older Bang College page)"],
-    advice: "Both pages list 146 KIMEP credits. Confirm ECTS with the school.",
-    sources: ["program", "legacy"]
+    values: ["241 ECTS (current School of Computer Science and AI page)", "240 ECTS (older Bang College page and the 2024\u20132025 Catalog)", "242 ECTS (2026\u20132027 Catalog, also for Computer Science)"],
+    advice: "All sources list 146 KIMEP credits. Confirm ECTS with the school.",
+    sources: ["program", "legacy", "catalog"]
+  },
+  {
+    id: "schoolName",
+    topic: "Name of the school that teaches BIS and BSCS",
+    values: ["School of Computer Science and Artificial Intelligence (kimep.kz pages now)", "School of Computer Science and Mathematics (2026\u20132027 Catalog and the June 2026 school brochure)"],
+    advice: "It is the same school under an older name in the PDFs; the website name is the current one.",
+    sources: ["program", "catalog", "scsm"]
   },
   {
     id: "agreement",
@@ -828,6 +865,46 @@ function calculateTuition(input) {
   };
 }
 
+// src/catalog.ts
+var catalogChecked = "19 November 2026";
+var calendar = [
+  { text: "Fall 2026: classes 24 August to 14 December 2026 (15 weeks plus a study break 12 to 18 October); final assessments 15 and 17 to 27 December 2026; semester ends 27 December 2026. Orientation for freshmen 21 August 2026.", source: "catalog" },
+  { text: "Fall 2026 money and registration dates: second tuition installment due Friday 25 September 2026, third installment Friday 23 October 2026; administrative withdrawal of students with overdue tuition on Friday 20 November 2026; last day to reinstate after administrative withdrawal Friday 4 December 2026; last day to withdraw from a course with a W grade 14 December 2026.", source: "catalog" },
+  { text: "Spring 2027: advising from 2 November 2026; registration for freshmen from 7 December 2026 (first-year students who submitted original school documents from 14 December 2026); registration ends 10 January 2027; classes 11 January to 5 May 2027; final assessments 6, 8 and 10 to 19 May 2027; semester ends 19 May 2027; graduation ceremony Saturday 29 May 2027. Study break 1 to 7 March 2027.", source: "catalog" },
+  { text: "Summer 2027: Summer 1 is 6 weeks, classes 24 May to 2 July 2027; Summer 2 is 3 weeks, classes 12 to 30 July 2027. Summer tuition is paid 100% in advance, there is no installment plan for summer.", source: "catalog" },
+  { text: "Withdrawing from a course with a W grade: refund of 80% of the course tuition in the first week after the add/drop period, 60% in the second, 40% in the third, 20% in the fourth, then no refund. The add/drop period is the first week of classes; late registration in the second week needs the instructor's approval.", source: "catalog" },
+  { text: "Official holidays in the 2026-2027 calendar include Constitution Day (30 August), Republic Day (25 October), Independence Day (16 December), New Year, Women's Day, Nauryz, International Labor Day, Defenders of the Fatherland Day, Victory Day and Capital Day. Missed classes are made up on other days.", source: "catalog" },
+  { text: "The 2026-2027 Catalog does not contain the Fall 2027 calendar. For Fall 2027 use the admission intake schedule: classes start 25 August 2027.", source: "deadlines" }
+];
+var degrees = [
+  { text: "All 17 bachelor programs in the 2026-2027 Catalog need 146 KIMEP credits. ECTS: 240 for every program except Information Systems (BIS) and Computer Science (BSCS), which the 2026-2027 Catalog lists at 242 ECTS. (The BIS web page says 241 and an older page says 240; the 2024-2025 Catalog said 240.) Say that the number of credits is the same, 146, and name the ECTS differences if asked.", source: "catalog" },
+  { text: "General Education is 36 credits (56 ECTS) in every program. Every student also needs 4 credits of Physical Education and the State Exam in History of Kazakhstan. General Education must be completed by 60 credits; 12 credits of Academic English must be completed by 45 credits.", source: "catalog" },
+  { text: "Kazakh or Russian: 8 credits by 60 credits. Graduates of Russian-medium schools take 6 credits of Kazakh and 2 credits of Professional Kazakh; graduates of Kazakh-medium schools take 6 credits of Kazakh and 2 credits of Professional Russian; international students may choose Kazakh or Russian.", source: "catalog" },
+  { text: "Information Systems (BIS), 6B06101, 146 credits / 242 ECTS: General Education 36; Program Foundation required 32 and elective 6; Program Specialization required 45 and elective 9; free program electives 12; Final Attestation 6. The program covers analysis, design and deployment of applications, big data and analytics, neural networks, machine learning, deep learning and AI, several programming languages, and optional business minors. The catalog still names the school School of Computer Science and Mathematics; the website now calls it School of Computer Science and Artificial Intelligence.", source: "catalog" },
+  { text: "Computer Science (BSCS), 6B06102, 146 credits / 242 ECTS: same shape as BIS (General Education 36; Program Foundation 32 + 6; Specialization 45 + 9; free electives 12; Final Attestation 6). The 2026 school brochure (Kazakh) says the program follows ABET standards, is taught in English and offers focus areas in data analysis, software engineering, artificial intelligence and cybersecurity. All BSCS applicants take a math placement test.", source: "scsm" },
+  { text: "Bang College of Business (Accounting and Audit BACTA, Finance BFIN, Management BMGT, Marketing BMKT): 146 credits / 240 ECTS. General Education 36; Program Foundation 68 (56 required + 12 elective); Program Specialization 39 (30 required + 9 elective); Final Attestation 3 (a thesis or state examinations). Students normally choose a specialization in the second year (Accounting and Auditing, Finance, Management or Marketing).", source: "catalog" },
+  { text: "College of Social Sciences: Economics (BAE), International Relations (BIR), Political Science (BAPS), Public and Municipal Administration (BPMA), Journalism (BAJ) each need 146 credits / 240 ECTS. BAE, BIR, BPMA and BAPS: General Education 36; Program Foundation 66; Program Required 42; Final Attestation 2.", source: "catalog" },
+  { text: "Law School: Jurisprudence (LL.B., 6B04202) and International Law (B.I.L., 6B04201), 146 credits / 240 ECTS. LL.B.: General Education 36; required courses 63; National Law and Practice 9; major electives 21; other electives 12; Final Attestation 5. Law students take a law-specific version of the English course.", source: "catalog" },
+  { text: "College of Humanities and Education: Foreign Languages, Two Foreign Languages (BAFL, 6B01701), English and Translation Studies (BATS, 6B02301), Cognitive Science (BACS, 6B02302) and Psychology (BSP, 6B03102) each need 146 credits / 240 ECTS (General Education 36; Program Foundation 68 to 71; Specialization 36 to 39; Final Attestation 3).", source: "catalog" }
+];
+var policies = [
+  { text: "A KIMEP credit equals 50 student learning hours. A typical semester course has 45 class contact hours and is worth 3 credits. Tuition is the rate per credit times the credit equivalents you register for. A full-time undergraduate takes 12 or more credit equivalents a semester; Foundation English counts as a full-time load. Part-time students cannot receive scholarships, grants or tuition waivers.", source: "catalog" },
+  { text: "Year of study is set by credits earned: 0 to 30 first year, 31 to 68 second year, 69 to 106 third year, 107 and more fourth year. It decides when you can register (priority registration: fourth year first, freshmen later).", source: "catalog" },
+  { text: "Grading uses letter grades A to F with plus and minus (for example A = 4.00 points, B = 3.00). To graduate you need at least D minus in every course and a cumulative GPA of at least 2.00, plus all General Education, program and non-credit prerequisite requirements, and all payments settled.", source: "catalog" },
+  { text: "Academic probation: a student whose GPA is below 2.0 is on probation, can register for a restricted number of credits (at most 12 credit equivalents in Fall or Spring) and cannot receive KIMEP financial aid. Regular status returns when the GPA is 2.0 or higher. An undergraduate who has attempted 24 or more credits on probation and still has a GPA below 2.0 is withdrawn from KIMEP (reinstatement is possible).", source: "catalog" },
+  { text: "Honors: semester Dean's List needs a GPA of 3.75 or higher, President's List 4.0 or higher (full-time students). Degree with honors: Cum Laude GPA 4.00 or higher, Magna Cum Laude 4.15 or higher, Summa Cum Laude 4.25 or higher.", source: "catalog" },
+  { text: "Tuition payment options at the start of the academic year: (1) pay for all credits of the whole degree at once and keep this year's price for all years, (2) the same as an advance lump sum arranged with the Registrar's office, (3) pay the semester at its start, (4) pay in three installments. With installments, one third plus the student fee and annual medical fee is due before registration, one third by Friday of the 5th week and one third by Friday of the 9th week. Late payment is charged a late payment fee. On Friday of the 13th week students with overdue tuition are administratively withdrawn from courses, and reinstatement is possible in weeks 14 and 15 after paying. Refund requests of less than 100 000 KZT are not approved unless the student leaves KIMEP permanently or takes a leave of absence.", source: "catalog" },
+  { text: "Scholarship rules: every award has continuation conditions (full-time registration in Fall and Spring, a minimum cumulative GPA, and so on) stated in the Letter of Award. One semester of scholarship probation is possible, once and at the student's request, if the GPA fell below the required level but is at least 2.33. A GPA below 2.33 suspends the scholarship. Financial aid for newly admitted students is applied for separately through the Financial Aid Office with its own deadlines; the Admissions Office does not consult on grants.", source: "catalog" },
+  { text: "Curriculum version: KIMEP follows the curriculum in force when the student began studying, though the university can improve or substitute courses without disadvantaging students. A student can complete under a later catalog if advisers offer that option.", source: "catalog" }
+];
+var routes = [
+  { text: "College (vocational) graduates: KIMEP runs fast-track bachelor options for graduates of technical and vocational schools whose college specialty matches the chosen program (Ministry order No. 134 of 1 April 2019). Courses already passed in college can earn KIMEP credit when the grades are good on the five-point scale, for example History of Kazakhstan, Information and Communication Technologies, Kazakh language, philosophy, physical education, mathematics, professional Kazakh or Russian, and the basics of economics, politics or sociology. The guide lists a minimum UNT total of 25 for most listed programs and 35 for some, with at least 5 in every subject, for students who do not enter the fast track or who apply for KIMEP grants; the exact row for a program is in the guide's table, so send the person to Admissions to confirm. A college needs a state license and state attestation. Computer Science applicants take the math placement test.", source: "vocational" },
+  { text: "Transfer and reinstated students: upload an official transcript with a GPA of at least 2.0 on a four-point scale (or 50%), ID or passport, the IELTS, TOEFL or Duolingo certificate if there is one, and the syllabi of previous courses in English so KIMEP can consider credit transfer. Students from Kazakhstani universities also hand in a certificate from the university, the rector-approved transfer application, an academic reference, the school certificate with appendix and the UNT certificate. Students from foreign universities need the school certificate and an invitation letter. Medical documents are the same as for first-year applicants.", source: "transferGuide" },
+  { text: "International applicants (guide in Russian, 6 April 2026): applications are accepted from 15 October every year. After the application you get a student number and a mandatory Interview section in the Applicant Portal with written questions in English, each answer up to 300 words. Documents to upload: passport, school certificate with appendix, a bank statement showing enough money for at least one semester (at least 3 000 USD) or a letter of grant award, and a certificate of no criminal record. Originals are handed in on arrival. Foreign education documents need a notarized translation into Kazakh or Russian and recognition (nostrification) within the first semester. Medical documents are the same as for Kazakhstan students; X-ray done abroad must be confirmed by a radiologist in Almaty.", source: "intlGuide" },
+  { text: "International Baccalaureate: KIMEP gives credit for standard and higher level courses with grades 4 to 7 that match its General Education courses, and direct placement into academic courses for diploma holders with 24 or more of 45 points. At most 27 transfer credits per student (including 6 IB subjects and 9 credits of English). Nazarbayev Intellectual Schools: credit for Grade 12 Certificate courses with grades not lower than C and direct placement. For applicants who do not take the UNT (international, fast-track vocational graduates, transfers from foreign universities) a Math grade of at least 4 out of 5 (or 70%) on the diploma is required for Cognitive Science.", source: "catalog" },
+  { text: "Agreement: the April 2026 vocational-graduate guide still says to print, sign and hand in two copies of the Contract for Educational Services before course registration ends, like the website, while the English guide says to upload a signed scan. This is the same known conflict as before; confirm with Admissions.", source: "vocational" }
+];
+
 // src/knowledge/buildKnowledge.ts
 var kzt = (n) => String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 var src = (id) => `[source:${id}]`;
@@ -844,7 +921,7 @@ function programsBlock() {
     if (p.creative)
       return `- ${p.name} (${p.short}, ${p.code}): NO overall UNT threshold. ${p.note} ${src(p.source)}`;
     const mins = p.sectionNames.map((n, i) => `${n} \u2265${p.sectionMinimums[i]}`).join("; ");
-    return `- ${p.name} (${p.short}, ${p.code}; program id "${id}"): total \u2265${p.unt}/140; ${mins}; profile subjects: ${p.subjects.join(" + ")}.${p.note ? " Note: " + p.note : ""}${p.credits ? ` ${p.credits} KIMEP credits, ${p.ects} ECTS (an older page says 240 ECTS).` : ""} ${src(p.source)}`;
+    return `- ${p.name} (${p.short}, ${p.code}; program id "${id}"): total \u2265${p.unt}/140; ${mins}; profile subjects: ${p.subjects.join(" + ")}.${p.note ? " Note: " + p.note : ""}${p.credits ? ` ${p.credits} KIMEP credits, ${p.ects} ECTS (older sources say 240 ECTS, the 2026-2027 Catalog says 242).` : ""} ${src(p.source)}`;
   });
   return lines.join("\n");
 }
@@ -902,13 +979,19 @@ Not published anywhere we checked: grant passing scores, grant percentages for 2
   out.push(`## CONTACTS (use these when the handbook has no answer)
 ${contacts.map((c) => `- ${c.name} (${c.for}): ${[c.email, c.phone, c.mobile && "mobile/WhatsApp " + c.mobile].filter(Boolean).join(", ")} ${src(c.source)}`).join("\n")}
 Admissions Office address: 4 Abai Avenue, Almaty 050010, working hours 9:00\u201319:00 ${src("contacts")}.`);
+  const facts = (title, list) => `## ${title}
+${list.map((f) => `- ${f.text} ${src(f.source)}`).join("\n")}`;
+  out.push(facts(`ACADEMIC CALENDAR 2026-2027 (read from the Catalog on ${catalogChecked}; compare every date with TODAY'S DATE and say whether it is past, current or upcoming)`, calendar));
+  out.push(facts("DEGREE STRUCTURE: credits, ECTS and General Education of every bachelor program", degrees));
+  out.push(facts("STUDYING AT KIMEP: credits, GPA, payment and scholarship rules", policies));
+  out.push(facts("OTHER ENTRY ROUTES: college graduates, transfer, international, IB and NIS", routes));
   out.push(`## FAQ
 ${faq.map((f) => `Q: ${f.q}
 A: ${f.a} ${src(f.source)}`).join("\n")}`);
   out.push(`## KNOWN CONFLICTS BETWEEN OFFICIAL SOURCES (name BOTH values and advise to confirm)
 ${discrepancies.map((d) => `- ${d.topic}: ${d.values.join("  VS  ")}. ${d.advice} ${d.sources.map((s) => src(s)).join(" ")}`).join("\n")}`);
   out.push(`## NOT IN THE HANDBOOK (never guess; say you do not know and give the right contact)
-Grant passing scores and chances of getting a grant; scholarship percentages or amounts for 2027; fees for 2027\u20132028 or later years; number of places; admission probability for given scores; credits of programs other than Information Systems; ECTS of other programs; exact dormitory availability; course syllabi; other universities.`);
+Grant passing scores and chances of getting a grant; scholarship percentages or amounts for 2027; fees for 2027\u20132028 or later years; number of places; admission probability for given scores; course-by-course curricula (the handbook has only the structure and totals, the full list is in the Catalog PDF); exact dormitory availability; course syllabi; other universities.`);
   out.push(`## SOURCE INDEX
 ${Object.keys(sources).map((k) => `- ${k}: ${sources[k].title}: ${sources[k].url}`).join("\n")}`);
   return out.join("\n\n");

@@ -159,3 +159,28 @@ Two content-only crops (tables and headings, no photographs of people) taken wit
 - `kimep-unt-table.png`: heading and first two rows of the program table on https://www.kimep.kz/prospective-students/kz/admission/high-school-graduates/ (shown on UNT scores).
 
 Each is shown with a source caption and a link to the original. The pages are in Kazakh. They are quoted as evidence of what KIMEP publishes; the site's own numbers still come from `src/data.ts`. If KIMEP changes these pages, retake the crops.
+
+## PDF research, 19 November 2026
+
+Downloaded from kimep.kz and read in full (text extracted with `pdftotext`; the PDFs themselves are not stored in the repository, only the facts and their page references in `src/catalog.ts`):
+
+| Source id | File | What it adds |
+|---|---|---|
+| `catalog` | Catalog-2026-2027.pdf (442 pages, created 3 July 2026) | Academic calendar 2026-2027, credits and ECTS of every bachelor program, General Education, GPA, honors, probation, payment and scholarship rules, IB and NIS credit |
+| `vocational` | HowToApplyKAZugrad-vocational-school.pdf (6 April 2026) | College-graduate fast track, credit recognition, minimum UNT 25 or 35, two printed agreement copies |
+| `transferGuide` | How-to-apply-Transfer-kaz.pdf (6 April 2026) | Transfer and reinstatement documents, GPA 2.0 minimum |
+| `intlGuide` | HowToApplyRUSUgradINL.pdf (6 April 2026) | International route: written interview, bank statement of at least 3 000 USD, criminal-record certificate |
+| `scsm` | brochure_SCSM_kaz_web.pdf (June 2026) | Computer Science focus areas, ABET alignment |
+
+Also compared, not used as a source for current facts: the 2024-2025 Catalog and the 2025-2026 admission brochure (Kazakh). The English admission guide and the two fee sheets were already in the register above.
+
+### What changed compared with older material and with the site
+
+- **BIS ECTS is now three values:** 240 (2024-2025 Catalog, older Bang College page), 241 (current website page), 242 (2026-2027 Catalog, also for Computer Science). All say 146 credits. Recorded in the conflicts list; the site still shows the website value.
+- **School name:** the PDFs still say School of Computer Science and Mathematics; kimep.kz now says School of Computer Science and Artificial Intelligence and redirects the old address.
+- **BIS structure changed** from 36 / 68 / 36 / 6 credits (2024-2025) to General Education 36, Program Foundation 38, Specialization 54, free electives 12, Final Attestation 6 (2026-2027).
+- **Credits and ECTS for the other 15 programs** are now known from the catalog: 146 credits for all, 240 ECTS except BIS and BSCS. The website's per-program display is unchanged; the assistant uses the catalog facts.
+- **Calendar relative to today (19 November 2026):** Fall 2026 is in progress (classes end 14 December, exams until 27 December); administrative withdrawal for unpaid tuition is on 20 November 2026; Spring 2027 classes start 11 January 2027. The catalog has no Fall 2027 calendar; Fall 2027 dates stay from the admission intake schedule.
+- **Tuition:** the catalog does not state a rate; 163 230 KZT per credit still comes from the 2026-2027 price list.
+- **Agreement format conflict is confirmed again** by the April 2026 vocational guide (two printed copies).
+- **Not found:** course-by-course syllabi for the website, a 2027-2028 catalog, a 2027-2028 price list.

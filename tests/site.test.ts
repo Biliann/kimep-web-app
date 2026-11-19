@@ -59,3 +59,10 @@ test("no long dash (em dash) anywhere in site text, data or the assistant prompt
 test("a stray long dash in model output is replaced before display", () => {
   assert.equal(parseTags(`Total ${EM} 50 points`, false).body, "Total, 50 points");
 });
+
+test("handbook contains the facts read from the 2026-2027 Catalog and guides", async () => {
+  const { buildKnowledge } = await import("../src/knowledge/buildKnowledge.ts");
+  const k = buildKnowledge();
+  for (const needle of ["ACADEMIC CALENDAR 2026-2027", "classes 11 January to 5 May 2027", "146 KIMEP credits", "242 ECTS", "cumulative GPA of at least 2.00", "at least 3 000 USD", "OTHER ENTRY ROUTES", "[source:catalog]"])
+    assert.ok(k.includes(needle), needle);
+});

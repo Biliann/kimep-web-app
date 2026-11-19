@@ -4,6 +4,7 @@ import {
 } from "../data.ts";
 import { programs, programIds, sectionMaximums } from "../programs.ts";
 import { calculateTuition } from "../tuition.ts";
+import { calendar, degrees, policies, routes, catalogChecked, type Fact } from "../catalog.ts";
 
 // The assistant's whole "training" is this handbook. It is generated from the same
 // structured data that powers the website, so updating data.ts updates the assistant.
@@ -25,7 +26,7 @@ function programsBlock(): string {
     if (p.creative)
       return `- ${p.name} (${p.short}, ${p.code}): NO overall UNT threshold. ${p.note} ${src(p.source)}`;
     const mins = p.sectionNames.map((n, i) => `${n} ≥${p.sectionMinimums[i]}`).join("; ");
-    return `- ${p.name} (${p.short}, ${p.code}; program id "${id}"): total ≥${p.unt}/140; ${mins}; profile subjects: ${p.subjects.join(" + ")}.${p.note ? " Note: " + p.note : ""}${p.credits ? ` ${p.credits} KIMEP credits, ${p.ects} ECTS (an older page says 240 ECTS).` : ""} ${src(p.source)}`;
+    return `- ${p.name} (${p.short}, ${p.code}; program id "${id}"): total ≥${p.unt}/140; ${mins}; profile subjects: ${p.subjects.join(" + ")}.${p.note ? " Note: " + p.note : ""}${p.credits ? ` ${p.credits} KIMEP credits, ${p.ects} ECTS (older sources say 240 ECTS, the 2026-2027 Catalog says 242).` : ""} ${src(p.source)}`;
   });
   return lines.join("\n");
 }
@@ -93,12 +94,18 @@ Not published anywhere we checked: grant passing scores, grant percentages for 2
   out.push(`## CONTACTS (use these when the handbook has no answer)\n${contacts.map((c) => `- ${c.name} (${c.for}): ${[c.email, c.phone, c.mobile && "mobile/WhatsApp " + c.mobile].filter(Boolean).join(", ")} ${src(c.source)}`).join("\n")}
 Admissions Office address: 4 Abai Avenue, Almaty 050010, working hours 9:00–19:00 ${src("contacts")}.`);
 
+  const facts = (title: string, list: Fact[]) => `## ${title}\n${list.map((f) => `- ${f.text} ${src(f.source)}`).join("\n")}`;
+  out.push(facts(`ACADEMIC CALENDAR 2026-2027 (read from the Catalog on ${catalogChecked}; compare every date with TODAY'S DATE and say whether it is past, current or upcoming)`, calendar));
+  out.push(facts("DEGREE STRUCTURE: credits, ECTS and General Education of every bachelor program", degrees));
+  out.push(facts("STUDYING AT KIMEP: credits, GPA, payment and scholarship rules", policies));
+  out.push(facts("OTHER ENTRY ROUTES: college graduates, transfer, international, IB and NIS", routes));
+
   out.push(`## FAQ\n${faq.map((f) => `Q: ${f.q}\nA: ${f.a} ${src(f.source)}`).join("\n")}`);
 
   out.push(`## KNOWN CONFLICTS BETWEEN OFFICIAL SOURCES (name BOTH values and advise to confirm)\n${discrepancies.map((d) => `- ${d.topic}: ${d.values.join("  VS  ")}. ${d.advice} ${d.sources.map((s) => src(s as SourceKey)).join(" ")}`).join("\n")}`);
 
   out.push(`## NOT IN THE HANDBOOK (never guess; say you do not know and give the right contact)
-Grant passing scores and chances of getting a grant; scholarship percentages or amounts for 2027; fees for 2027–2028 or later years; number of places; admission probability for given scores; credits of programs other than Information Systems; ECTS of other programs; exact dormitory availability; course syllabi; other universities.`);
+Grant passing scores and chances of getting a grant; scholarship percentages or amounts for 2027; fees for 2027–2028 or later years; number of places; admission probability for given scores; course-by-course curricula (the handbook has only the structure and totals, the full list is in the Catalog PDF); exact dormitory availability; course syllabi; other universities.`);
 
   out.push(`## SOURCE INDEX\n${(Object.keys(sources) as SourceKey[]).map((k) => `- ${k}: ${sources[k].title}: ${sources[k].url}`).join("\n")}`);
   return out.join("\n\n");

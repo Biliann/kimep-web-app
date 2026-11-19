@@ -1091,5 +1091,216 @@
    "fees",
    "priceList"
   ]
+ },
+ {
+  "id": "en-credits-total",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "finance",
+  "question": "How many KIMEP credits do I need to graduate with a Bachelor of Finance?",
+  "mustInclude": [
+   "146"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "en-gpa-grad",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "What GPA do I need to graduate?",
+  "mustInclude": [
+   "2.0"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "en-probation",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "What happens to a student whose GPA falls below 2.0?",
+  "mustInclude": [
+   "probation"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "en-fall-end",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "When does the Fall 2026 semester end?",
+  "mustInclude": [
+   "27 December|December 27"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "en-dean-list",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "What semester GPA is needed for the Dean's List?",
+  "mustInclude": [
+   "3.75"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "en-college-grad",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "management",
+  "question": "I finished college. Is there a faster way to a bachelor degree at KIMEP?",
+  "mustInclude": [
+   "fast"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "vocational"
+  ]
+ },
+ {
+  "id": "en-intl-money",
+  "lang": "en",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "What bank balance does an international applicant need to show?",
+  "mustInclude": [
+   "3 000|3000"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "intlGuide"
+  ]
+ },
+ {
+  "id": "ru-spring-start",
+  "lang": "ru",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "Когда начинаются занятия весеннего семестра 2027?",
+  "mustInclude": [
+   "11 января"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "ru-ects-bis",
+  "lang": "ru",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "Сколько ECTS в программе Информационные системы?",
+  "mustInclude": [
+   "146"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [
+   "24[0-2]"
+  ],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog",
+   "program"
+  ]
+ },
+ {
+  "id": "ru-pe",
+  "lang": "ru",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "Сколько кредитов физкультуры нужно для диплома бакалавра?",
+  "mustInclude": [
+   "4"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "ru-installments",
+  "lang": "ru",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "Можно ли платить за обучение частями и когда?",
+  "mustInclude": [
+   "5-й|5-ой|пятой|пятница 5|5 недел"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "kk-spring-start",
+  "lang": "kk",
+  "kind": "fact",
+  "programId": "bis",
+  "question": "2027 жылғы көктемгі семестр қашан басталады?",
+  "mustInclude": [
+   "11 қаңтар|қаңтардың 11|11 января"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
+ },
+ {
+  "id": "kk-credits-total",
+  "lang": "kk",
+  "kind": "fact",
+  "programId": "finance",
+  "question": "Қаржы бағдарламасында бітіру үшін қанша кредит керек?",
+  "mustInclude": [
+   "146"
+  ],
+  "mustNotInclude": [],
+  "mustMatch": [],
+  "mustNotMatch": [],
+  "expectSource": [
+   "catalog"
+  ]
  }
 ]

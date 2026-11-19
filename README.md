@@ -34,7 +34,7 @@ NIM_FALLBACK_MODELS=mistralai/mistral-large-4-1t-a52b,nvidia/nemotron-3.5-lightn
 npm test                 # unit tests: checker, tuition, server, routes, translations, parsing
 npm run build            # type-check, bundle api/chat.js, build dist/
 npm run probe:models     # measure which NIM models work for your key (latency, facts, Kazakh)
-npm run eval:assistant   # 65 questions through the real /api/chat (add -- --report to write the report)
+npm run eval:assistant   # 78 questions through the real /api/chat (add -- --report to write the report)
 ```
 
 ## How the assistant works
@@ -75,6 +75,7 @@ src/pages/*.tsx          Home, Scores, Cost, Docs, Faq
 src/components/*.tsx     Shell (header, tab bar), ui (accordion, notes, sources)
 src/Assistant.tsx        chat panel;  src/assistant/  markdown, parsing, offline fallback
 src/knowledge/           handbook builder for the assistant
+src/catalog.ts           facts read from KIMEP's PDF catalog and guides (assistant only)
 src/checker.ts           UNT rules;  src/tuition.ts  tuition model (pure, tested)
 server/                  /api/chat handler, system prompt, tools, NIM client
 api/chat.js              generated bundle for Vercel

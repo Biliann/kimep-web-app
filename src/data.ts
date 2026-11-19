@@ -92,6 +92,36 @@ export const sources = {
     lastVerified: verifiedEarlier,
     published: "Live service",
   },
+  catalog: {
+    title: "KIMEP Catalog 2026–2027 (442 pages)",
+    url: "https://www.kimep.kz/about/files/2026/06/Catalog-2026-2027.pdf",
+    lastVerified: "19 November 2026",
+    published: "2026–2027 edition, PDF created 3 July 2026",
+  },
+  vocational: {
+    title: "Guide for college graduates, April 2026 (Kazakh)",
+    url: base + "files/2026/04/HowToApplyKAZugrad-vocational-school.pdf",
+    lastVerified: "19 November 2026",
+    published: "Dated 6 April 2026",
+  },
+  transferGuide: {
+    title: "Guide for transfer and reinstated students, April 2026 (Kazakh)",
+    url: base + "files/2026/04/How-to-apply-Transfer-kaz.pdf",
+    lastVerified: "19 November 2026",
+    published: "Dated 6 April 2026",
+  },
+  intlGuide: {
+    title: "Guide for international students, April 2026 (Russian)",
+    url: base + "files/2026/04/HowToApplyRUSUgradINL.pdf",
+    lastVerified: "19 November 2026",
+    published: "Dated 6 April 2026",
+  },
+  scsm: {
+    title: "School of Computer Science and Mathematics brochure, June 2026 (Kazakh)",
+    url: "https://www.kimep.kz/school-of-computer-science-and-mathematics/files/2026/06/brochure_SCSM_kaz_web.pdf",
+    lastVerified: "19 November 2026",
+    published: "June 2026 file path",
+  },
   contacts: {
     title: "Admissions office",
     url: base + "en/",
@@ -241,9 +271,16 @@ export const discrepancies = [
   {
     id: "ects",
     topic: "BIS ECTS credits",
-    values: ["241 ECTS (current School of Computer Science and AI page)", "240 ECTS (older Bang College page)"],
-    advice: "Both pages list 146 KIMEP credits. Confirm ECTS with the school.",
-    sources: ["program", "legacy"],
+    values: ["241 ECTS (current School of Computer Science and AI page)", "240 ECTS (older Bang College page and the 2024–2025 Catalog)", "242 ECTS (2026–2027 Catalog, also for Computer Science)"],
+    advice: "All sources list 146 KIMEP credits. Confirm ECTS with the school.",
+    sources: ["program", "legacy", "catalog"],
+  },
+  {
+    id: "schoolName",
+    topic: "Name of the school that teaches BIS and BSCS",
+    values: ["School of Computer Science and Artificial Intelligence (kimep.kz pages now)", "School of Computer Science and Mathematics (2026–2027 Catalog and the June 2026 school brochure)"],
+    advice: "It is the same school under an older name in the PDFs; the website name is the current one.",
+    sources: ["program", "catalog", "scsm"],
   },
   {
     id: "agreement",
