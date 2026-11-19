@@ -12,7 +12,7 @@ Node.js 22.13+ is required.
 
 ```bash
 git clone https://github.com/Biliann/kimep-web-app.git && cd kimep-web-app
-git checkout claude/nice-newton-n8j8tk     # until the pull request is merged
+git checkout claude/great-einstein-ym2q9e
 npm ci
 npm run setup      # asks for your NVIDIA key, checks it, writes .env.local
 npm run dev        # open http://localhost:5173
