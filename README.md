@@ -11,10 +11,14 @@ An independent student guide for bachelor applicants to KIMEP University: do my 
 Node.js 22.13+ is required.
 
 ```bash
+git clone https://github.com/Biliann/kimep-web-app.git && cd kimep-web-app
+git checkout claude/nice-newton-n8j8tk     # until the pull request is merged
 npm ci
-cp .env.example .env.local      # then put your key in .env.local
-npm run dev
+npm run setup      # asks for your NVIDIA key, checks it, writes .env.local
+npm run dev        # open http://localhost:5173
 ```
+
+`npm run setup` does the `.env.local` step below for you. To do it by hand: `cp .env.example .env.local` and fill it in.
 
 `.env.local` (git-ignored; only `.env.example` is committed):
 

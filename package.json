@@ -10,7 +10,9 @@
     "preview": "vite preview --host 0.0.0.0",
     "build:api": "node scripts/build-api.mjs",
     "probe:models": "node --experimental-strip-types --no-warnings scripts/probe-models.ts",
-    "eval:assistant": "node --experimental-strip-types --no-warnings scripts/eval-assistant.ts"
+    "eval:assistant": "node --experimental-strip-types --no-warnings scripts/eval-assistant.ts",
+    "setup": "node scripts/setup.mjs",
+    "start": "npm run dev"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.3.0",
