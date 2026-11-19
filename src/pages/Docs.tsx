@@ -97,7 +97,7 @@ export default function Docs() {
   const t = useT();
   return (
     <>
-      <Head title={t("Documents and dates")} lead={t("The steps, what to prepare and when.")} />
+      <Head title={t("Documents and dates")} />
       <div className="page">
         <Steps />
         <Checklist />

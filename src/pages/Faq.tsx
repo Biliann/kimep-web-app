@@ -59,7 +59,7 @@ export default function Faq() {
   const t = useT();
   return (
     <>
-      <Head title={t("Questions")} lead={t("Short answers from KIMEP's official sources.")} />
+      <Head title={t("Questions")} />
       <div className="page">
         <Questions />
         <Contacts />

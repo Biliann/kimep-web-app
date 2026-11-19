@@ -138,7 +138,7 @@ function English() {
     <section className="section" id="english">
       <h2>{t("English level")}</h2>
       <ul className="rules">
-        {englishRules.slice(0, 3).map((r) => <li key={r.text}>{r.text}</li>)}
+        {englishRules.slice(0, 2).map((r) => <li key={r.text}>{r.text}</li>)}
       </ul>
       <div className="scroll" tabIndex={0} role="region" aria-label={t("English levels and certificates")}>
         <table>
@@ -162,7 +162,7 @@ export default function Scores() {
   const t = useT();
   return (
     <>
-      <Head title={t("UNT scores")} lead={t("Check your points, compare programs and see what English level you need.")} />
+      <Head title={t("UNT scores")} />
       <div className="page">
         <Checker />
         <Requirements />

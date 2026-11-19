@@ -125,12 +125,9 @@ select { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns
 .fact b { font-size: 1.375rem; font-weight: 500; color: var(--p-700); line-height: 1.2; }
 .fact span { font-size: .875rem; color: var(--muted); }
 .actions { display: grid; border-top: 1px solid var(--line); }
-.action { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; min-height: 76px; }
+.action { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 14px; padding: 16px 4px; border-bottom: 1px solid var(--line); text-decoration: none; color: inherit; min-height: 64px; }
 .action:hover { background: var(--p-50); }
-.action .ic { width: 44px; height: 44px; color: var(--p-700); display: grid; place-items: center; }
-.action .ic svg { width: 24px; height: 24px; }
 .action b { display: block; color: var(--p-700); font-weight: 600; font-size: 1.125rem; }
-.action small { color: var(--muted); font-size: .9375rem; }
 .action > svg { width: 20px; height: 20px; color: var(--p-700); }
 @media (min-width: 720px) { .facts { grid-template-columns: repeat(4, 1fr); } .fact { padding-right: 24px; } .actions { grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
 
@@ -177,9 +174,6 @@ input[type="range"] { padding: 0; accent-color: var(--p-700); min-height: 32px; 
 .total { background: var(--p-700); color: #fff; border-radius: var(--r); padding: 18px 20px; display: grid; gap: 4px; }
 .total small { opacity: .85; }
 .total b { font-size: clamp(1.75rem, 5vw, 2.25rem); letter-spacing: -0.02em; line-height: 1.1; }
-.periods { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
-.period { background: var(--p-50); border-radius: var(--r-sm); padding: 10px 12px; display: grid; gap: 2px; }
-.period small { color: var(--muted); font-size: .75rem; } .period b { color: var(--p-800); font-size: .9375rem; }
 .breakdown { width: 100%; border-collapse: collapse; font-size: .9375rem; }
 .breakdown th, .breakdown td { padding: 9px 4px; border-top: 1px solid var(--line); text-align: right; vertical-align: top; }
 .breakdown th:first-child, .breakdown td:first-child { text-align: left; font-weight: 500; }

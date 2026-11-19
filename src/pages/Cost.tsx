@@ -6,7 +6,7 @@ import { kzt, num } from "../format";
 import { programs } from "../programs";
 import { useSelectedProgram } from "../programSelection";
 import { tuitionRules } from "../data";
-import { Head, Note, ProgramPicker, Sources } from "../components/ui";
+import { Head, ProgramPicker, Sources } from "../components/ui";
 
 function Stepper({ value, min, max, onChange, label }: { value: number; min: number; max: number; onChange: (n: number) => void; label: string }) {
   const clamp = (n: number) => Math.min(max, Math.max(min, n));
@@ -94,7 +94,6 @@ function Calculator() {
             <div className="chips" role="group" aria-labelledby="gl">
               {[0, 25, 50, 100].map((n) => <button key={n} type="button" className="chip" aria-pressed={grant === n} onClick={() => setGrant(n)}>{n}%</button>)}
             </div>
-            <span className="hint">{t("A grant covers tuition only, never fees or deposits. These percentages are scenarios; ask Financial Aid what is available.")}</span>
           </div>
         </div>
         <div style={{ display: "grid", gap: 16 }} aria-live="polite">
@@ -105,9 +104,6 @@ function Calculator() {
           <div className="chips" role="group" aria-label={t("Show total for")}>
             {(["semester", "year", "program"] as const).map((v) => <button key={v} type="button" className="chip" aria-pressed={view === v} onClick={() => setView(v)}>{periodLabel[v]}</button>)}
           </div>
-          <div className="periods">
-            {(["semester", "year", "program"] as const).map((v) => <div className="period" key={v}><small>{periodLabel[v]}</small><b>{num(r[v].total)}</b></div>)}
-          </div>
           <table className="breakdown">
             <thead><tr><th>{t("Item")}</th><th>KZT</th></tr></thead>
             <tbody>
@@ -116,7 +112,7 @@ function Calculator() {
                 if (!lines.length) return null;
                 return (
                   <Fragment key={g}>
-                    <tr className="grp"><td colSpan={2}>{title}{note ? ` · ${note}` : ""}</td></tr>
+                    {g !== "tuition" && <tr className="grp"><td colSpan={2}>{title}{note ? ` · ${note}` : ""}</td></tr>}
                     {lines.map((l) => <tr key={l.id}><td>{t(lineName[l.id])}</td><td>{num(l.amount)}</td></tr>)}
                     {g === "tuition" && b.grant > 0 && <tr className="neg"><td>{t("Grant (what if)")} {grant}%</td><td>−{num(b.grant)}</td></tr>}
                   </Fragment>
@@ -140,7 +136,6 @@ function Scholarships() {
       <h2>{t("Scholarships")}</h2>
       <p>{t("The published 2026 offer was the Intellectual Olympiad: 15 grants of 100% and 15 of 50% of tuition, for 2026 graduates. Grants cover tuition only. Nothing for 2027 is published yet.")}</p>
       <p><a href={sources.aid.url} target="_blank" rel="noreferrer">{t("Official scholarships page")}</a> · {scholarships2026.contact}</p>
-      <Note summary={t("Percentages in the calculator are only scenarios.")}>{t("We do not know your chance of a grant, grant passing scores or the number of places. Financial Aid has its own deadlines, separate from admission.")}</Note>
     </section>
   );
 }
@@ -149,7 +144,7 @@ export default function Cost() {
   const t = useT();
   return (
     <>
-      <Head title={t("Cost of study")} lead={t("Estimate tuition and fees for your plan.")} />
+      <Head title={t("Cost of study")} />
       <div className="page">
         <Calculator />
         <Scholarships />

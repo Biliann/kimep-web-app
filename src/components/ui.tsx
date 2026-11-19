@@ -40,7 +40,7 @@ export function Sources({ ids }: { ids: SourceKey[] }) {
   return (
     <footer className="sources">
       <details>
-        <summary>{t("Sources")}: {list.map((i) => sources[i].title).slice(0, 2).join(" · ")}{list.length > 2 ? " …" : ""} · {t("verified")} {verified}</summary>
+        <summary>{t("Sources")} · {t("verified")} {verified}</summary>
         <ul>
           {list.map((i) => (
             <li key={i}><a href={sources[i].url} target="_blank" rel="noreferrer">{sources[i].title}</a> <span className="muted">· {sources[i].published}</span></li>

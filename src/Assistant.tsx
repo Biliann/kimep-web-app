@@ -110,7 +110,7 @@ export default function Assistant() {
       {open && (
         <section className="asst-panel" id="asst-panel" aria-label={t("KIMEP Pathway assistant")}>
           <header>
-            <div><b>{t("KIMEP Pathway assistant")}</b><small>{t("AI answers from official sources")}</small></div>
+            <div><b>{t("KIMEP Pathway assistant")}</b></div>
             <button type="button" className="icon" onClick={reset} aria-label={t("Start over")} title={t("Start over")}><RotateCcw aria-hidden="true" /></button>
             <button type="button" className="icon" onClick={() => { setOpen(false); launcher.current?.focus(); }} aria-label={t("Close assistant")}><X aria-hidden="true" /></button>
           </header>
