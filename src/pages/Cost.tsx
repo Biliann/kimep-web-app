@@ -148,11 +148,13 @@ function Scholarships() {
 export default function Cost() {
   const t = useT();
   return (
-    <div className="page">
+    <>
       <Head title={t("Cost of study")} lead={t("Estimate tuition and fees for your plan.")} />
-      <Calculator />
-      <Scholarships />
-      <Sources ids={["fees", "priceList", "aid"]} />
-    </div>
+      <div className="page">
+        <Calculator />
+        <Scholarships />
+        <Sources ids={["fees", "priceList", "aid"]} />
+      </div>
+    </>
   );
 }

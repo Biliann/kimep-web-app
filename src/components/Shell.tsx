@@ -18,7 +18,7 @@ export function Header({ route }: { route: Route }) {
     <header className="header">
       <div className="header-in">
         <a className="brand" href={href("home")} aria-label={t("KIMEP Pathway, home")}>
-          <img src="/kimep-logo.png" alt="" width="27" height="36" />
+          <img src="/kimep-logo.png" alt="" width="44" height="58" />
           <span>Pathway</span>
         </a>
         <nav className="nav" aria-label={t("Main navigation")}>
@@ -33,6 +33,13 @@ export function Header({ route }: { route: Route }) {
         </div>
       </div>
     </header>
+  );
+}
+
+export function Footer() {
+  const t = useT();
+  return (
+    <footer className="footer"><div className="wrap">{t("Independent student project, not an official KIMEP service. Only KIMEP makes admission decisions.")}</div></footer>
   );
 }
 

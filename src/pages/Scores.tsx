@@ -161,12 +161,14 @@ function English() {
 export default function Scores() {
   const t = useT();
   return (
-    <div className="page">
+    <>
       <Head title={t("UNT scores")} lead={t("Check your points, compare programs and see what English level you need.")} />
-      <Checker />
-      <Requirements />
-      <English />
-      <Sources ids={["school", "admission", "guideKz"]} />
-    </div>
+      <div className="page">
+        <Checker />
+        <Requirements />
+        <English />
+        <Sources ids={["school", "admission", "guideKz"]} />
+      </div>
+    </>
   );
 }

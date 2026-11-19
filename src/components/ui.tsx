@@ -67,5 +67,10 @@ export function ProgramPicker({ label }: { label?: string }) {
 }
 
 export function Head({ title, lead }: { title: string; lead?: string }) {
-  return <div className="head"><h1>{title}</h1>{lead && <p className="lead">{lead}</p>}</div>;
+  return (
+    <header className="band"><div className="wrap">
+      <h1>{title}</h1>
+      {lead && <p className="lead">{lead}</p>}
+    </div></header>
+  );
 }

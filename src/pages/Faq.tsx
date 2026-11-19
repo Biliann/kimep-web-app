@@ -58,11 +58,13 @@ function Contacts() {
 export default function Faq() {
   const t = useT();
   return (
-    <div className="page">
+    <>
       <Head title={t("Questions")} lead={t("Short answers from KIMEP's official sources.")} />
-      <Questions />
-      <Contacts />
-      <Sources ids={["school", "admission", "fees", "contacts"]} />
-    </div>
+      <div className="page">
+        <Questions />
+        <Contacts />
+        <Sources ids={["school", "admission", "fees", "contacts"]} />
+      </div>
+    </>
   );
 }

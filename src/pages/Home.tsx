@@ -21,33 +21,33 @@ export default function Home() {
     { to: href("docs"), Icon: FileText, title: t("Which documents, and by when?"), sub: t("Checklist and deadlines") },
   ];
   return (
-    <div className="page">
-      <section className="hero">
-        <div className="hero-top rise" style={{ ["--i" as string]: 0 }}>
-          <img src="/kimep-logo.png" alt="KIMEP University" width="54" height="72" />
+    <>
+      <section className="band hero">
+        <div className="wrap">
           <h1>{t("Your way into KIMEP")}</h1>
+          <p className="lead">{t("Scores, costs, documents and dates for bachelor applicants, in one place.")}</p>
+          <ProgramPicker />
         </div>
-        <p className="lead rise" style={{ ["--i" as string]: 1 }}>{t("Scores, costs, documents and dates for bachelor applicants, in one place.")}</p>
-        <div className="rise" style={{ ["--i" as string]: 2 }}><ProgramPicker /></div>
       </section>
-      <section aria-label={t("Key numbers")} className="facts rise" style={{ ["--i" as string]: 3 }}>
-        {facts.map(([k, v]) => (<div className="fact" key={k}><b>{v}</b><span>{k}</span></div>))}
-      </section>
-      <section className="actions" aria-label={t("What do you want to know?")}>
-        {actions.map(({ to, Icon, title, sub }, i) => (
-          <a className="action rise" style={{ ["--i" as string]: 4 + i }} href={to} key={to}>
-            <span className="ic"><Icon aria-hidden="true" /></span>
-            <span><b>{title}</b><small>{sub}</small></span>
+      <div className="page">
+        <section aria-label={t("Key numbers")} className="facts">
+          {facts.map(([k, v]) => (<div className="fact" key={k}><b>{v}</b><span>{k}</span></div>))}
+        </section>
+        <section className="actions" aria-label={t("What do you want to know?")}>
+          {actions.map(({ to, Icon, title, sub }) => (
+            <a className="action" href={to} key={to}>
+              <span className="ic"><Icon aria-hidden="true" /></span>
+              <span><b>{title}</b><small>{sub}</small></span>
+              <ChevronRight aria-hidden="true" />
+            </a>
+          ))}
+          <a className="action" href={portal} target="_blank" rel="noreferrer">
+            <span className="ic"><ExternalLink aria-hidden="true" /></span>
+            <span><b>{t("Where do I apply?")}</b><small>{t("Official KIMEP Applicant Portal")}</small></span>
             <ChevronRight aria-hidden="true" />
           </a>
-        ))}
-        <a className="action rise" style={{ ["--i" as string]: 7 }} href={portal} target="_blank" rel="noreferrer">
-          <span className="ic"><ExternalLink aria-hidden="true" /></span>
-          <span><b>{t("Where do I apply?")}</b><small>{t("Official KIMEP Applicant Portal")}</small></span>
-          <ChevronRight aria-hidden="true" />
-        </a>
-      </section>
-      <p className="footer">{t("Independent student project, not an official KIMEP service. Only KIMEP makes admission decisions.")}</p>
-    </div>
+        </section>
+      </div>
+    </>
   );
 }

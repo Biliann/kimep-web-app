@@ -1,10 +1,10 @@
-import "@fontsource-variable/inter";
+import "@fontsource-variable/roboto";
 import { lazy, StrictMode, Suspense, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import "./style.css";
 import { useLanguage, useT } from "./i18n";
 import { useRoute } from "./router";
-import { Header, TabBar } from "./components/Shell";
+import { Footer, Header, TabBar } from "./components/Shell";
 import Home from "./pages/Home";
 import Scores from "./pages/Scores";
 import Cost from "./pages/Cost";
@@ -31,6 +31,7 @@ function App() {
       <a className="skip" href="#main">{t("Skip to content")}</a>
       <Header route={route} />
       <main id="main"><View /></main>
+      <Footer />
       <TabBar route={route} />
       <Suspense fallback={null}><Assistant /></Suspense>
     </>

@@ -96,12 +96,14 @@ function Deadlines() {
 export default function Docs() {
   const t = useT();
   return (
-    <div className="page">
+    <>
       <Head title={t("Documents and dates")} lead={t("The steps, what to prepare and when.")} />
-      <Steps />
-      <Checklist />
-      <Deadlines />
-      <Sources ids={["admission", "guideKz", "school", "medical", "deadlines"]} />
-    </div>
+      <div className="page">
+        <Steps />
+        <Checklist />
+        <Deadlines />
+        <Sources ids={["admission", "guideKz", "school", "medical", "deadlines"]} />
+      </div>
+    </>
   );
 }
