@@ -1,4 +1,4 @@
-# Verification — 26 October 2026
+# Verification, 26 October 2026
 
 Story: a prospective BIS applicant opens the handbook, checks basic UNT eligibility, prepares documents, understands English placement and costs, then follows official application links. All user interaction is frontend-only; no backend or database is required for this phase.
 
@@ -38,17 +38,17 @@ Screenshots: `screenshots/desktop.jpg` and `screenshots/mobile.jpg`. The mobile 
 
 This does not certify university approval or exhaustive accessibility compliance. No physical iOS/Android, screen-reader or cross-browser test was available. External pages can change, redirect language or become unavailable after verification. Scholarship awards and international/transfer eligibility need university review. Production publishing status is verified by Sites separately from the local browser checks.
 
-## Purple and white update — 26 October 2026
+## Purple and white update, 26 October 2026
 
 Simplified the home page to four primary actions, a short BIS summary and supporting links. Removed the decorative campus drawing, large promotional cards and serif headlines. Applied purple and white styling across the existing views. Logo bytes match the uploaded original (SHA-256 checked); rendered image reports its correct native dimensions of 406 × 536. Production TypeScript/Vite build passed. Desktop preview and mobile-width layout were visually checked. Existing admissions logic and source verification dates were preserved.
 
-## Predefined assistant demo — 29 October 2026
+## Predefined assistant demo, 29 October 2026
 
 Added a purple bottom-right AI assistant launcher and a non-modal, responsive chat panel. All six sample question buttons reuse existing FAQ answers and source metadata. The panel is explicitly labeled as an MVP concept with predefined answers, not a live AI service. No text entry, model, API calls or persistent chat storage were introduced.
 
 TypeScript and Vite production build passed. Browser checks confirmed open/close, all sample buttons, visible answers, conversation reset, Escape dismissal with focus return, and the English next-step link opening the correct page. Checked in desktop Chromium and a 390px-wide iframe; the mobile panel fits the viewport and the conversation scrolls separately. No application console errors were captured. Screenshot: `screenshots/assistant-demo.jpg`.
 
-## English, Russian and Kazakh — 29 October 2026
+## English, Russian and Kazakh, 29 October 2026
 
 Added a shared, persistent EN/RU/KZ language selector and translated navigation, page content, forms, validation, checklist stages, FAQ, fee information, deadlines, contacts and predefined assistant. Scores, prices, document identifiers, URLs and rules retain the original structured source values. Official certificate titles and portal field names are preserved. Browser coverage checks across all ten detail views found only intentionally retained certificate names and email addresses as standalone English text in Kazakh mode. Tested Russian empty-score validation, Russian assistant answer, Kazakh deadline filtering after a language change and checklist progress after switching languages and refreshing. Fixed deadline filters to retain canonical internal values across language changes. Dates use explicit month names because the browser runtime returned placeholder month names for Kazakh Intl formatting.
 

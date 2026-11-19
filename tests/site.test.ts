@@ -4,6 +4,9 @@ import { parseHash } from "../src/router.ts";
 import { translations } from "../src/translations.ts";
 import { tokenizeInline, parseTags, toBlocks } from "../src/assistant/parse.ts";
 import { localAnswer } from "../src/assistant/local.ts";
+import { buildSystemPrompt } from "../server/systemPrompt.ts";
+import * as data from "../src/data.ts";
+import { programs } from "../src/programs.ts";
 
 test("old hash links redirect into the five new sections", () => {
   const cases: [string, string, string][] = [
@@ -42,4 +45,17 @@ test("offline fallback answers from the FAQ and gives up on unrelated questions"
   assert.equal(localAnswer("how much does tuition cost per credit", faq)?.source, "fees");
   assert.equal(localAnswer("medical documents list", faq)?.source, "medical");
   assert.equal(localAnswer("weather tomorrow in paris", faq), null);
+});
+
+const EM = String.fromCharCode(0x2014);
+test("no long dash (em dash) anywhere in site text, data or the assistant prompt", () => {
+  assert.ok(!JSON.stringify(translations).includes(EM), "translations");
+  assert.ok(!JSON.stringify(data).includes(EM), "data.ts");
+  assert.ok(!JSON.stringify(programs).includes(EM), "programs.ts");
+  const prompt = buildSystemPrompt({ language: "ru", programId: "bis", programName: "Information Systems", today: new Date("2026-11-19") });
+  assert.ok(!prompt.includes(EM), "system prompt and knowledge base");
+  assert.match(prompt, /Never use the long dash/);
+});
+test("a stray long dash in model output is replaced before display", () => {
+  assert.equal(parseTags(`Total ${EM} 50 points`, false).body, "Total, 50 points");
 });

@@ -81,7 +81,7 @@ Originals of the school certificate and transcript can be submitted from 15 June
   out.push(`## DOCUMENT CHECKLIST\n${documents.map((d) => `- [${d.stage}] ${d.title}: ${d.detail} ${src(d.source)}`).join("\n")}`);
 
   out.push(`## DEADLINES (2027 intakes) ${src("deadlines")}
-Fall 2027 is the intake for new Kazakhstan high-school graduates: applications 16 October 2026 – 15 August 2027, enrollment 20 June – 25 August 2027, classes start 25 August 2027. Spring 2027 and Summer 2027 rows are for transfer/reinstated and/or international applicants, not for new Kazakhstan school graduates. Applying early is recommended. Financial Aid has its own deadlines.
+Fall 2027 is the intake for new Kazakhstan high-school graduates: applications 16 October 2026 to 15 August 2027, enrollment 20 June to 25 August 2027, classes start 25 August 2027. Spring 2027 and Summer 2027 rows are for transfer/reinstated and/or international applicants, not for new Kazakhstan school graduates. Applying early is recommended. Financial Aid has its own deadlines.
 ${deadlines.map((d) => `- ${d.category} · ${d.intake}: applications ${d.start} to ${d.end}; enrollment ${d.enrollment}; classes start ${d.classes}`).join("\n")}`);
 
   out.push(`## SCHOLARSHIPS ${src("aid")}
@@ -100,6 +100,6 @@ Admissions Office address: 4 Abai Avenue, Almaty 050010, working hours 9:00–19
   out.push(`## NOT IN THE HANDBOOK (never guess; say you do not know and give the right contact)
 Grant passing scores and chances of getting a grant; scholarship percentages or amounts for 2027; fees for 2027–2028 or later years; number of places; admission probability for given scores; credits of programs other than Information Systems; ECTS of other programs; exact dormitory availability; course syllabi; other universities.`);
 
-  out.push(`## SOURCE INDEX\n${(Object.keys(sources) as SourceKey[]).map((k) => `- ${k}: ${sources[k].title} — ${sources[k].url}`).join("\n")}`);
+  out.push(`## SOURCE INDEX\n${(Object.keys(sources) as SourceKey[]).map((k) => `- ${k}: ${sources[k].title}: ${sources[k].url}`).join("\n")}`);
   return out.join("\n\n");
 }

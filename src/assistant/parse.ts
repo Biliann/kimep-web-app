@@ -10,6 +10,8 @@ export function tokenizeInline(text: string): Token[] {
     return { type: "text", text: part };
   });
 }
+/** Safety net for the "no long dash" rule in the system prompt: a stray em dash becomes a comma. */
+export const noLongDash = (s: string) => s.replace(/\s*\u2014\s*/g, ", ");
 export function parseTags(text: string, streaming: boolean) {
   const sources: string[] = [];
   const pages: string[] = [];
@@ -19,7 +21,7 @@ export function parseTags(text: string, streaming: boolean) {
     return "";
   });
   if (streaming) body = body.replace(/\[[^\]]{0,24}$/, ""); // hide a half-typed tag
-  return { body: body.replace(/[ \t]+\n/g, "\n").trim(), sources: [...new Set(sources)], pages: [...new Set(pages)] };
+  return { body: noLongDash(body).replace(/[ \t]+\n/g, "\n").trim(), sources: [...new Set(sources)], pages: [...new Set(pages)] };
 }
 export type Block = { kind: "p" | "ul" | "ol"; lines: string[] };
 export function toBlocks(text: string): Block[] {

@@ -66,6 +66,7 @@ function grade(c: Case, text: string): string[] {
   if (c.maxChars && stripTags(text).length > c.maxChars) fails.push(`too long (${stripTags(text).length} > ${c.maxChars})`);
   const l = langOk(c.lang, text); if (l) fails.push(l);
   for (const k of leaks) if (text.includes(k)) fails.push(`leak "${k}"`);
+  if (text.includes(String.fromCharCode(0x2014))) fails.push("contains a long dash");
   return fails;
 }
 

@@ -118,7 +118,7 @@ function Requirements() {
             <button type="button" className="row" key={id} data-selected={selected === id} aria-pressed={selected === id} onClick={() => setSelectedProgram(id)}>
               <span className="name"><b>{t(p.name.replace(/^Bachelor of /, ""))}</b><small>{p.code} · {p.short}{p.note ? " · " + t(p.note) : ""}</small></span>
               <span><span className="lab">{t("Minimum")}</span><b>{p.creative ? t("Creative exams") : `${p.unt} / 140`}</b></span>
-              <span><span className="lab">{t("Profile subjects")}</span>{p.creative ? "—" : p.subjects.map(t).join(" + ")}</span>
+              <span><span className="lab">{t("Profile subjects")}</span>{p.creative ? "-" : p.subjects.map(t).join(" + ")}</span>
               <span><span className="lab">{t("Section minimums")}</span>{p.creative ? t("UNT History and Reading are considered") : p.sectionMinimums.join(" · ")}</span>
             </button>
           );
