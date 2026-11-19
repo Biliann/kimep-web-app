@@ -65,3 +65,16 @@ Added a shared, persistent EN/RU/KZ language selector and translated navigation,
 **Limits.** Model latency on the free NIM tier varies from 2 s to well over a minute depending on the model and the hour; the chain and the offline fallback exist for that reason. No physical phone, screen reader or Safari test was possible. KIMEP's pages can change after verification.
 
 First eval run scored 58/65. Causes and fixes: a model wrote `[source:school, tests]` (the parser now accepts lists and the prompt asks for one tag per source); two answers stalled mid-stream for 55 s (added an idle timeout and a reset-and-next-model step); three expectations were too strict although the answers were right (a 50% grant total, "I do not have information" wording, shortfall number), so the cases were corrected. Final run: 65/65.
+
+## Restyle, minimalism, no long dashes, screenshots, PDF research, 19 November 2026
+
+**What changed.** Header, title bands and flat layout follow the general look of kimep.kz (purple `#5a4490` to `#3f2f65`, Roboto, bold uppercase navigation, crest-style logo tab); no code or text was copied. The independent-project notice is now a footer on every page. Text-only home actions, no repeated lead lines, no period tiles in the calculator, fewer notes. The long dash is gone from site text, translations, docs and the assistant prompt (rule 14), with a display safety net and a unit test. Two cropped screenshots of official KIMEP pages (tables only, no people) with source captions and links. The assistant handbook now includes facts from the 2026-2027 Catalog and April 2026 guides (see `SOURCES.md`).
+
+**Automated.**
+- `npm test`: 45 tests pass (new: no long dash anywhere, stray dash replaced, handbook contains the catalog facts).
+- `npm run build`: passes (type-check, `api/chat.js` bundle, Vite build).
+- axe-core (WCAG 2 A/AA, 2.1 AA, best practice), Playwright Chromium: 96 runs = every section and sub-anchor in Russian, Kazakh and English at 1366 px and 390 px, plus the five main pages with the assistant open. 0 violations, no horizontal overflow, no console errors. An earlier run showed contrast failures only with the assistant open; they were measured during the panel's entrance animation and disappeared when the check waited for it to finish.
+
+**Not done: `npm run eval:assistant`.** It needs the NVIDIA NIM key. `.env.local` is git-ignored and is not in the cloud container. A key saved through the secure credential form was rejected by NVIDIA (HTTP 401), so no live model call could be made. The 65 earlier cases last passed 65/65 on 18 November; the 13 cases added for the catalog facts (ids `en-credits-total`, `en-gpa-grad`, `en-probation`, `en-fall-end`, `en-dean-list`, `en-college-grad`, `en-intl-money`, `ru-spring-start`, `ru-ects-bis`, `ru-pe`, `ru-installments`, `kk-spring-start`, `kk-credits-total`) have never been run, and the eval now also fails any answer that contains a long dash. Run `npm run eval:assistant -- --report` locally before merging.
+
+**Limits.** The two screenshots are of pages in Kazakh and will go stale when KIMEP edits them. Catalog facts were extracted from a two-column PDF; the college-graduate UNT minimums (25 or 35) are stated in general terms because the table could not be mapped to programs reliably.

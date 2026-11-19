@@ -129,7 +129,7 @@ select { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns
 .action:hover { background: var(--p-50); }
 .action b { display: block; color: var(--p-700); font-weight: 600; font-size: 1.125rem; }
 .action > svg { width: 20px; height: 20px; color: var(--p-700); }
-@media (min-width: 720px) { .facts { grid-template-columns: repeat(4, 1fr); } .fact { padding-right: 24px; } .actions { grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
+@media (min-width: 720px) { .facts { grid-template-columns: repeat(3, 1fr); } .fact { padding-right: 24px; } .actions { grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
 
 /* official-page screenshots */
 .shot { margin: 0; display: grid; gap: 8px; }
