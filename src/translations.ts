@@ -1,1486 +1,349 @@
+// Russian and Kazakh strings. Key = the English text shown on the site. Generated list: only strings the UI uses.
+// Check coverage with: node --experimental-strip-types scripts/missing-translations.ts
 export const translations: Record<string, [string, string]> = {
-  Overview: ["Обзор", "Шолу"],
-  "Admission checker": ["Проверка требований", "Талаптарды тексеру"],
-  "Information Systems": ["Информационные системы", "Ақпараттық жүйелер"],
-  "Documents checklist": ["Список документов", "Құжаттар тізімі"],
-  "How to apply": ["Как подать заявку", "Өтініш беру тәртібі"],
-  "English placement": ["Уровень английского", "Ағылшын тілі деңгейі"],
-  "Tuition & financial aid": [
-    "Стоимость и финансовая помощь",
-    "Оқу ақысы және қаржылық көмек",
-  ],
-  "Dates & deadlines": ["Даты и сроки", "Күндер мен мерзімдер"],
-  "Common questions": ["Частые вопросы", "Жиі қойылатын сұрақтар"],
-  "Contacts & links": ["Контакты и ссылки", "Байланыс және сілтемелер"],
-  "Official source": ["Официальный источник", "Ресми дереккөз"],
-  "Verified from KIMEP:": [
-    "Проверено по источникам KIMEP:",
-    "KIMEP дереккөздері бойынша тексерілді:",
-  ],
-  "Check your requirements": ["Проверьте требования", "Талаптарды тексеріңіз"],
-  "See the basic UNT rules for your application.": [
-    "Узнайте основные требования по ЕНТ.",
-    "ҰБТ бойынша негізгі талаптарды біліңіз.",
-  ],
-  "Prepare your documents": ["Подготовьте документы", "Құжаттарды дайындаңыз"],
-  "Use a checklist that saves your progress.": [
-    "Отмечайте готовые документы — прогресс сохраняется.",
-    "Дайын құжаттарды белгілеңіз — ілгерілеу сақталады.",
-  ],
-  "Follow the application steps": [
-    "Пройдите этапы поступления",
-    "Түсу кезеңдерімен танысыңыз",
-  ],
-  "Know what to do, from applying to registration.": [
-    "Все шаги: от заявки до регистрации на курсы.",
-    "Өтініш беруден пәндерге тіркелуге дейінгі қадамдар.",
-  ],
-  "Explore Information Systems": [
-    "О программе «Информационные системы»",
-    "«Ақпараттық жүйелер» бағдарламасы",
-  ],
-  "Understand the program and what you study.": [
-    "Узнайте о программе и изучаемых предметах.",
-    "Бағдарлама мен оқытылатын пәндер туралы біліңіз.",
-  ],
-  "KIMEP ADMISSIONS GUIDE": ["ПОСТУПЛЕНИЕ В KIMEP", "KIMEP-КЕ ТҮСУ НҰСҚАУЛЫҒЫ"],
-  "Applying to KIMEP,": ["Поступление в KIMEP —", "KIMEP-ке түсу —"],
-  "made simple.": ["понятно и просто.", "түсінікті әрі оңай."],
-  "Requirements, documents and next steps.": [
-    "Требования, документы и дальнейшие шаги.",
-    "Талаптар, құжаттар және келесі қадамдар.",
-  ],
-  "Everything you need to get started.": [
-    "Всё необходимое для начала.",
-    "Бастауға қажетті ақпарат.",
-  ],
-  "Check my requirements": ["Проверить требования", "Талаптарды тексеру"],
-  "Independent student project · Not an official university service": [
-    "Независимый студенческий проект · Неофициальный сервис",
-    "Тәуелсіз студенттік жоба · Ресми университет қызметі емес",
-  ],
-  "Visit the official KIMEP University website": [
-    "Открыть официальный сайт KIMEP",
-    "KIMEP ресми сайтын ашу",
-  ],
-  "KIMEP University": ["Университет KIMEP", "KIMEP университеті"],
-  "Where would you like to start?": [
-    "С чего хотите начать?",
-    "Неден бастағыңыз келеді?",
-  ],
-  "Information Systems at a glance": [
-    "Кратко об информационных системах",
-    "Ақпараттық жүйелер туралы қысқаша",
-  ],
-  "View requirements": ["Посмотреть требования", "Талаптарды қарау"],
-  "UNT minimum": ["Минимум ЕНТ", "ҰБТ минимумы"],
-  "Section minimums also apply.": [
-    "Также есть минимумы по каждому разделу.",
-    "Әр бөлім бойынша да ең төменгі балл талап етіледі.",
-  ],
-  "Profile subjects": ["Профильные предметы", "Бейіндік пәндер"],
-  "Standard high-school route.": [
-    "Стандартный путь для выпускников школ.",
-    "Мектеп түлектеріне арналған стандартты жол.",
-  ],
-  English: ["Английский", "Ағылшын тілі"],
-  "IELTS or placement": [
-    "IELTS или определение уровня",
-    "IELTS немесе деңгейді анықтау",
-  ],
-  "See your English options →": [
-    "Варианты по английскому →",
-    "Ағылшын тілі бойынша нұсқалар →",
-  ],
-  "More useful information": ["Дополнительная информация", "Қосымша ақпарат"],
-  "Contact KIMEP": ["Связаться с KIMEP", "KIMEP-пен байланысу"],
-  "01 / YOUR STARTING POINT": ["01 / ПЕРВЫЙ ШАГ", "01 / АЛҒАШҚЫ ҚАДАМ"],
-  "Check the basic requirements.": [
-    "Проверьте основные требования.",
-    "Негізгі талаптарды тексеріңіз.",
-  ],
-  "A quick guide for your situation. Your answers stay in this tab and are not sent anywhere.":
-    [
-      "Проверка для вашей ситуации. Ответы остаются в этой вкладке и никуда не отправляются.",
-      "Жағдайыңызға сай қысқа тексеру. Жауаптар осы қойындыда қалады және ешқайда жіберілмейді.",
-    ],
-  "Tell us about your application": [
-    "Расскажите о своей заявке",
-    "Өтінішіңіз туралы мәлімет беріңіз",
-  ],
-  Citizenship: ["Гражданство", "Азаматтық"],
-  "Kazakhstan citizen": ["Гражданин Казахстана", "Қазақстан азаматы"],
-  "International applicant": ["Иностранный абитуриент", "Шетелдік талапкер"],
-  "Education route": ["Предыдущее образование", "Алдыңғы білім"],
-  "High-school graduate / final year": [
-    "Выпускник школы / выпускной класс",
-    "Мектеп түлегі / бітіруші сынып",
-  ],
-  "Transfer / reinstatement": [
-    "Перевод / восстановление",
-    "Ауысу / қайта қабылдану",
-  ],
-  "Vocational / college graduate": ["Выпускник колледжа", "Колледж түлегі"],
-  "Intended program": ["Выбранная программа", "Таңдалған бағдарлама"],
-  "Bachelor of Information Systems": [
-    "Бакалавриат «Информационные системы»",
-    "«Ақпараттық жүйелер» бакалавриаты",
-  ],
-  "Another program": ["Другая программа", "Басқа бағдарлама"],
-  "UNT profile subjects": ["Профильные предметы ЕНТ", "ҰБТ бейіндік пәндері"],
-  "Mathematics + Informatics": [
-    "Математика + Информатика",
-    "Математика + Информатика",
-  ],
-  "Another combination / not sure": [
-    "Другая комбинация / не уверен(а)",
-    "Басқа комбинация / сенімді емеспін",
-  ],
-  "Enter your five UNT section scores": [
-    "Введите баллы по пяти разделам ЕНТ",
-    "ҰБТ-ның бес бөлімі бойынша балдарыңызды енгізіңіз",
-  ],
-  "Your total is calculated from these scores.": [
-    "Общий балл рассчитывается по этим значениям.",
-    "Жалпы балл осы мәндерден есептеледі.",
-  ],
-  "English certificate": [
-    "Сертификат по английскому",
-    "Ағылшын тілі сертификаты",
-  ],
-  "No certificate yet": ["Сертификата пока нет", "Сертификат әзірге жоқ"],
-  "Another accepted certificate": [
-    "Другой принимаемый сертификат",
-    "Қабылданатын басқа сертификат",
-  ],
-  "Check my next step": ["Узнать следующий шаг", "Келесі қадамды білу"],
-  "No certificate yet? Ask Admissions to arrange English placement.": [
-    "Нет сертификата? Уточните в приёмной комиссии, как определить уровень английского.",
-    "Сертификат жоқ па? Ағылшын деңгейін анықтау тәртібін қабылдау комиссиясынан сұраңыз.",
-  ],
-  "Your certificate must be valid and reviewed by KIMEP for English placement.":
-    [
-      "Для определения уровня KIMEP должен проверить действующий сертификат.",
-      "Деңгейді анықтау үшін KIMEP жарамды сертификатты тексеруі керек.",
-    ],
-  "Open the documents checklist →": [
-    "Открыть список документов →",
-    "Құжаттар тізімін ашу →",
-  ],
-  "Guidance you can understand.": [
-    "Понятные рекомендации.",
-    "Түсінікті нұсқаулық.",
-  ],
-  "Meeting a score threshold is one part of applying. KIMEP makes the final admission decision.":
-    [
-      "Проходной балл — только одно из условий. Окончательное решение принимает KIMEP.",
-      "Шекті балл — талаптардың бір бөлігі ғана. Соңғы шешімді KIMEP қабылдайды.",
-    ],
-  "Checks all five UNT sections": [
-    "Проверяет все пять разделов ЕНТ",
-    "ҰБТ-ның барлық бес бөлімін тексереді",
-  ],
-  "Uses the published BIS thresholds": [
-    "Использует опубликованные минимумы BIS",
-    "BIS үшін жарияланған шекті балдарды қолданады",
-  ],
-  "Points special cases to Admissions": [
-    "Направляет особые случаи в приёмную комиссию",
-    "Ерекше жағдайлар бойынша қабылдау комиссиясына бағыттайды",
-  ],
-  "This checker uses fixed rules. It does not assess scholarships, certificate validity, visa eligibility or admission approval.":
-    [
-      "Проверка работает по заданным правилам. Она не определяет право на грант или визу, действительность сертификата и решение о зачислении.",
-      "Тексеру бекітілген ережелерге негізделген. Ол грант не виза алу құқығын, сертификаттың жарамдылығын немесе қабылдау шешімін анықтамайды.",
-    ],
-  "02 / EXPLORE YOUR PROGRAM": ["02 / О ПРОГРАММЕ", "02 / БАҒДАРЛАМА ТУРАЛЫ"],
-  "Information Systems.": ["Информационные системы.", "Ақпараттық жүйелер."],
-  "Learn how technology, data and business work together.": [
-    "Узнайте, как связаны технологии, данные и бизнес.",
-    "Технология, деректер және бизнестің байланысын біліңіз.",
-  ],
-  "Build software, organize data and understand how companies use information to make decisions.":
-    [
-      "Создавайте программы, работайте с данными и изучайте, как компании используют информацию для принятия решений.",
-      "Бағдарлама жасауды, деректермен жұмыс істеуді және компаниялардың ақпарат негізінде шешім қабылдауын үйреніңіз.",
-    ],
-  "KIMEP credits": ["Кредиты KIMEP", "KIMEP кредиттері"],
-  "ECTS on school page": [
-    "ECTS на странице факультета",
-    "Факультет парағындағы ECTS",
-  ],
-  "~4": ["~4", "~4"],
-  "years · fee-sheet pathway": [
-    "года · пример из таблицы стоимости",
-    "жыл · оқу ақысы кестесіндегі мысал",
-  ],
-  "UNT · section rules apply": [
-    "ЕНТ · с минимумами по разделам",
-    "ҰБТ · бөлім минимумдары ескеріледі",
-  ],
-  "Build systems": ["Создание систем", "Жүйелерді жасау"],
-  "Programming, web and backend development, databases and computer networks.":
-    [
-      "Программирование, веб- и серверная разработка, базы данных и компьютерные сети.",
-      "Бағдарламалау, веб және серверлік әзірлеу, дерекқорлар мен компьютерлік желілер.",
-    ],
-  "Work with data": ["Работа с данными", "Деректермен жұмыс"],
-  "Statistics, data visualization, business intelligence and machine learning.":
-    [
-      "Статистика, визуализация данных, бизнес-аналитика и машинное обучение.",
-      "Статистика, деректерді визуализациялау, бизнес-аналитика және машиналық оқыту.",
-    ],
-  "Understand organizations": ["Понимание бизнеса", "Бизнесті түсіну"],
-  "Business foundations, information systems and IT project management.": [
-    "Основы бизнеса, информационные системы и управление IT-проектами.",
-    "Бизнес негіздері, ақпараттық жүйелер және IT-жобаларды басқару.",
-  ],
-  "Where these skills can lead": [
-    "Возможные направления карьеры",
-    "Мансаптың ықтимал бағыттары",
-  ],
-  "Possible directions include software development, systems analysis, business intelligence and IT project work. These are examples based on the skills taught, not promised jobs.":
-    [
-      "Возможные направления: разработка ПО, системный анализ, бизнес-аналитика и IT-проекты. Это примеры применения навыков, а не гарантия трудоустройства.",
-      "Ықтимал бағыттар: бағдарламалық жасақтама әзірлеу, жүйелік талдау, бизнес-аналитика және IT-жобалар. Бұл — дағдыларды қолдану мысалдары, жұмысқа орналасу кепілдігі емес.",
-    ],
-  "Software developer": ["Разработчик ПО", "Бағдарламалық жасақтама әзірлеуші"],
-  "Systems analyst": ["Системный аналитик", "Жүйелік талдаушы"],
-  "Data / BI analyst": ["Аналитик данных / BI", "Деректер / BI талдаушысы"],
-  "IT project coordinator": [
-    "Координатор IT-проектов",
-    "IT-жобалар үйлестірушісі",
-  ],
-  "A published difference to confirm:": [
-    "Расхождение, которое нужно уточнить:",
-    "Нақтылау қажет айырмашылық:",
-  ],
-  "the current school page lists 146 credits / 241 ECTS. The older Bang College page lists 146 / 240. We display the program’s current school page; ask the school which curriculum applies to your intake. Four years is the fee sheet’s example pathway, not a guaranteed duration.":
-    [
-      "На странице нынешнего факультета указано 146 кредитов / 241 ECTS, на старой странице Bang College — 146 / 240. Здесь используются данные нынешнего факультета. Уточните учебный план для вашего набора. Четыре года — пример из таблицы стоимости, а не гарантированный срок.",
-      "Қазіргі факультет парағында 146 кредит / 241 ECTS, ескі Bang College парағында 146 / 240 көрсетілген. Мұнда қазіргі факультет деректері берілген. Өз қабылдау жылыңыздың оқу жоспарын нақтылаңыз. Төрт жыл — оқу ақысы кестесіндегі мысал, кепілдендірілген мерзім емес.",
-    ],
-  "Compare older source ↗": [
-    "Сравнить со старым источником ↗",
-    "Ескі дереккөзбен салыстыру ↗",
-  ],
-  "Check requirements": ["Проверить требования", "Талаптарды тексеру"],
-  "See application steps": ["Этапы подачи заявки", "Өтініш беру қадамдары"],
-  "03 / ADMISSION REQUIREMENTS": [
-    "03 / ТРЕБОВАНИЯ К ПОСТУПЛЕНИЮ",
-    "03 / ТҮСУ ТАЛАПТАРЫ",
-  ],
-  "What you need to apply.": [
-    "Что нужно для поступления.",
-    "Түсу үшін не қажет.",
-  ],
-  "The standard route below is for Kazakhstan high-school graduates applying to Information Systems.":
-    [
-      "Ниже — стандартный путь для выпускников школ Казахстана, поступающих на «Информационные системы».",
-      "Төменде «Ақпараттық жүйелерге» түсетін Қазақстан мектептері түлектеріне арналған стандартты жол берілген.",
-    ],
-  "REQUIRED · STANDARD LOCAL ROUTE": [
-    "ОБЯЗАТЕЛЬНО · СТАНДАРТНЫЙ ПУТЬ",
-    "МІНДЕТТІ · СТАНДАРТТЫ ЖОЛ",
-  ],
-  "UNT: the total is only part of it.": [
-    "ЕНТ: важен не только общий балл.",
-    "ҰБТ: жалпы балл ғана маңызды емес.",
-  ],
-  "minimum overall": ["минимум в сумме", "жалпы ең төменгі балл"],
-  minimum: ["минимум", "ең төменгі балл"],
-  "Profile subjects:": ["Профильные предметы:", "Бейіндік пәндер:"],
-  "Mathematics + Informatics.": [
-    "Математика + Информатика.",
-    "Математика + Информатика.",
-  ],
-  "PLACEMENT · ENGLISH STUDY ROUTE": [
-    "ОПРЕДЕЛЕНИЕ УРОВНЯ АНГЛИЙСКОГО",
-    "АҒЫЛШЫН ДЕҢГЕЙІН АНЫҚТАУ",
-  ],
-  "Your English level sets your starting point.": [
-    "Уровень английского определяет, с чего начать.",
-    "Ағылшын деңгейіңіз қай деңгейден бастайтыныңызды анықтайды.",
-  ],
-  "A valid accepted certificate can replace KIMEP’s English placement test. IELTS is one option.":
-    [
-      "Действующий принимаемый сертификат может заменить тест KIMEP. IELTS — один из вариантов.",
-      "Қабылданатын жарамды сертификат KIMEP тестін алмастыра алады. IELTS — нұсқалардың бірі.",
-    ],
-  "For example, the published IELTS Academic threshold for Academic English is 5.5 overall with at least 5.0 in every section.":
-    [
-      "Например, для Academic English опубликован минимум IELTS Academic 5.5 в целом и не ниже 5.0 в каждом разделе.",
-      "Мысалы, Academic English үшін жарияланған IELTS Academic минимумы — жалпы 5.5 және әр бөлімде кемінде 5.0.",
-    ],
-  "Lower levels have Foundation / Provisional routes. Ask KIMEP which route applies to you.":
-    [
-      "Для более низких уровней есть Foundation / Provisional. Уточните подходящий путь в KIMEP.",
-      "Төменірек деңгейлер үшін Foundation / Provisional жолдары бар. Өзіңізге сәйкес жолды KIMEP-тен нақтылаңыз.",
-    ],
-  "See English placement": ["Об определении уровня", "Деңгейді анықтау туралы"],
-  "Education documents": ["Документы об образовании", "Білім туралы құжаттар"],
-  "Certificate and transcript copies, followed by the originals. Foreign education documents need recognition and notarized Kazakh or Russian translation.":
-    [
-      "Сначала копии аттестата и приложения, затем оригиналы. Иностранные документы требуют признания и нотариального перевода на казахский или русский.",
-      "Алдымен аттестат пен қосымшаның көшірмелері, кейін түпнұсқалар. Шетелдік білім құжаттарын тану және қазақ не орыс тіліне нотариалды аудару қажет.",
-    ],
-  "Medical documents": ["Медицинские документы", "Медициналық құжаттар"],
-  "Prepare the university’s medical package and submit it to the Medical Center before registration.":
-    [
-      "Подготовьте медицинские документы по списку университета и сдайте их в Медцентр до регистрации на курсы.",
-      "Университет тізіміндегі медициналық құжаттарды дайындап, пәндерге тіркелгенге дейін Медицина орталығына тапсырыңыз.",
-    ],
-  "Open checklist →": ["Открыть список →", "Тізімді ашу →"],
-  "Other applicant routes": [
-    "Другие категории абитуриентов",
-    "Талапкерлердің басқа санаттары",
-  ],
-  "International, vocational, transfer, IB, NIS and other special cases need route-specific review. Do not assume the standard checker covers you.":
-    [
-      "Иностранные абитуриенты, выпускники колледжей, переводы, IB, НИШ и другие особые случаи требуют отдельной проверки. Стандартная форма подходит не всем.",
-      "Шетелдік талапкерлер, колледж түлектері, ауысушылар, IB, НЗМ және басқа ерекше жағдайлар бөлек қаралады. Стандартты тексеру бәріне бірдей қолданылмайды.",
-    ],
-  "Ask Admissions →": [
-    "Спросить приёмную комиссию →",
-    "Қабылдау комиссиясынан сұрау →",
-  ],
-  "04 / GET ORGANIZED": [
-    "04 / ПОДГОТОВЬТЕ ДОКУМЕНТЫ",
-    "04 / ҚҰЖАТТАРДЫ ДАЙЫНДАҢЫЗ",
-  ],
-  "Your documents checklist.": [
-    "Ваш список документов.",
-    "Құжаттарыңыздың тізімі.",
-  ],
-  "For the standard Kazakhstan high-school route. No account, uploads or personal documents needed here.":
-    [
-      "Для стандартного поступления после школы в Казахстане. Регистрация и загрузка личных документов здесь не нужны.",
-      "Қазақстан мектебінен кейінгі стандартты түсу жолы үшін. Мұнда тіркелу немесе жеке құжаттарды жүктеу қажет емес.",
-    ],
-  "steps ready": ["шагов выполнено", "қадам орындалды"],
-  of: ["из", "/"],
-  "Progress saved in this browser": [
-    "Прогресс сохранён в этом браузере",
-    "Ілгерілеу осы браузерде сақталды",
-  ],
-  "Browser storage unavailable · progress lasts for this visit": [
-    "Хранилище недоступно · прогресс только на этот визит",
-    "Сақтау қолжетімсіз · ілгерілеу осы кіргенде ғана сақталады",
-  ],
-  "Checklist progress": ["Прогресс по списку", "Тізім бойынша ілгерілеу"],
-  Reset: ["Сбросить", "Тазарту"],
-  "Clear your checklist progress?": [
-    "Сбросить отметки в списке?",
-    "Тізімдегі белгілерді тазарту керек пе?",
-  ],
-  "Yes, clear it": ["Да, сбросить", "Иә, тазарту"],
-  "Keep progress": ["Оставить отметки", "Белгілерді сақтау"],
-  "International and transfer applicants need a different document list.": [
-    "Для иностранных абитуриентов и переводов нужен другой список.",
-    "Шетелдік талапкерлер мен ауысушыларға басқа тізім қажет.",
-  ],
-  "Contact Admissions": [
-    "Свяжитесь с приёмной комиссией",
-    "Қабылдау комиссиясымен байланысыңыз",
-  ],
-  "before using this as your final checklist.": [
-    "перед использованием этого списка как окончательного.",
-    "бұл тізімді түпкілікті тізім ретінде қолданбас бұрын.",
-  ],
-  "Before applying": ["До подачи заявки", "Өтініш бергенге дейін"],
-  "Online application": ["Онлайн-заявка", "Онлайн өтініш"],
-  "After receiving your school certificate": [
-    "После получения аттестата",
-    "Аттестат алғаннан кейін",
-  ],
-  "Before enrollment": ["До зачисления", "Оқуға қабылданғанға дейін"],
-  "Official source for": ["Официальный источник:", "Ресми дереккөз:"],
-  "See the medical checks and supporting certificates": [
-    "Медосмотры и дополнительные справки",
-    "Медициналық тексерулер және қосымша анықтамалар",
-  ],
-  "KIMEP lists therapist, eye doctor, ENT, surgeon and neurologist checks, plus fluorography, microreaction and a stool test for helminth eggs. Narcology and psycho-neurology certificates are listed as supporting records for obtaining Form 075/u and can be requested through eGov.":
-    [
-      "KIMEP указывает осмотры терапевта, окулиста, ЛОРа, хирурга и невролога, флюорографию, микрореакцию и анализ кала на яйца гельминтов. Для получения формы 075/у также указаны справки из наркологической и психоневрологической организаций; их можно запросить через eGov.",
-      "KIMEP терапевт, офтальмолог, ЛОР, хирург және невролог тексерулерін, флюорографияны, микрореакцияны және гельминт жұмыртқаларына нәжіс талдауын көрсетеді. 075/у нысаны үшін наркологиялық және психоневрологиялық ұйымдардың анықтамалары да берілген; оларды eGov арқылы сұратуға болады.",
-    ],
-  "The admissions PDF has a misplaced neurologist entry; the medical page lists it clearly. Confirm the exact package with the center before arranging tests.":
-    [
-      "В PDF упоминание невролога расположено отдельно; на медицинской странице оно указано явно. Перед обследованиями уточните полный список в Медцентре.",
-      "PDF-та невролог туралы тармақ бөлек орналасқан; медициналық парақта ол анық көрсетілген. Тексеруден бұрын толық тізімді орталықтан нақтылаңыз.",
-    ],
-  "Ticking a box records your own progress. It does not verify a document or submit it to KIMEP. Clear browser data or use another device and this progress will not be available.":
-    [
-      "Отметки отражают только ваш прогресс. Они не подтверждают документы и не отправляют их в KIMEP. При очистке браузера или переходе на другое устройство отметки будут недоступны.",
-      "Белгілер тек өз ілгерілеуіңізді көрсетеді. Олар құжатты растамайды және KIMEP-ке жібермейді. Браузер деректерін тазартқанда немесе басқа құрылғыда белгілер қолжетімсіз болады.",
-    ],
-  "05 / ONE STEP AT A TIME": ["05 / ШАГ ЗА ШАГОМ", "05 / ҚАДАМДАР БОЙЫНША"],
-  "From application to registration.": [
-    "От заявки до регистрации на курсы.",
-    "Өтініштен пәндерге тіркелуге дейін.",
-  ],
-  "Start early. Add documents as they become available, and keep checking your email.":
-    [
-      "Начните заранее. Добавляйте документы по мере получения и проверяйте почту.",
-      "Ертерек бастаңыз. Құжаттарды алған сайын қосып, поштаңызды тексеріп отырыңыз.",
-    ],
-  "Under 18?": ["Вам нет 18 лет?", "18 жасқа толмадыңыз ба?"],
-  "The current guide says a parent or legal guardian must also sign your agreement. The PDF asks for a signed upload, while the web page mentions two paper copies. Follow the portal instructions and ask Admissions to confirm whether both are needed.":
-    [
-      "По текущему руководству договор также подписывает родитель или законный представитель. PDF требует загрузить подписанный скан, сайт упоминает две бумажные копии. Следуйте порталу и уточните в приёмной комиссии, нужны ли оба варианта.",
-      "Қазіргі нұсқаулық бойынша шартқа ата-ана не заңды өкіл де қол қоюы керек. PDF қол қойылған сканды жүктеуді, сайт екі қағаз дананы көрсетеді. Портал нұсқауын орындап, екі нұсқа да қажет пе екенін комиссиядан нақтылаңыз.",
-    ],
-  "Open the official Applicant Portal": [
-    "Открыть официальный портал абитуриента",
-    "Ресми талапкер порталын ашу",
-  ],
-  "06 / FIND YOUR STARTING LEVEL": [
-    "06 / ОПРЕДЕЛИТЕ УРОВЕНЬ",
-    "06 / ДЕҢГЕЙІҢІЗДІ АНЫҚТАҢЫЗ",
-  ],
-  "Do I need IELTS?": ["Нужен ли IELTS?", "IELTS қажет пе?"],
-  "IELTS is one way to show your English level. It is not the only way to apply.":
-    [
-      "IELTS — один из способов подтвердить английский. Он не является единственным вариантом для поступления.",
-      "IELTS — ағылшын деңгейін растау жолдарының бірі. Өтініш берудің жалғыз жолы емес.",
-    ],
-  "No certificate yet?": ["Пока нет сертификата?", "Сертификат әзірге жоқ па?"],
-  "You still have a next step.": [
-    "Можно сделать следующий шаг.",
-    "Келесі қадамды жасай аласыз.",
-  ],
-  "Complete your application and upload your ID, then arrange KIMEP English placement through Admissions.":
-    [
-      "Заполните заявку и загрузите удостоверение, затем согласуйте определение уровня через приёмную комиссию.",
-      "Өтінішті толтырып, жеке куәлікті жүктеңіз, кейін қабылдау комиссиясы арқылы деңгейді анықтау тәртібін келісіңіз.",
-    ],
-  "View official test information": [
-    "Официальная информация о тестах",
-    "Тесттер туралы ресми ақпарат",
-  ],
-  "What does placement mean?": [
-    "Что значит определение уровня?",
-    "Деңгейді анықтау деген не?",
-  ],
-  "Placement decides which English courses you start with. It is separate from checking your UNT results.":
-    [
-      "Оно определяет, с каких курсов английского вы начнёте. Это отдельный процесс от проверки ЕНТ.",
-      "Бұл ағылшынның қай курсынан бастайтыныңызды анықтайды. ҰБТ нәтижелерін тексеруден бөлек жүргізіледі.",
-    ],
-  "The table includes Academic English and Foundation / Provisional levels. A lower level can mean extra English study, time and fees.":
-    [
-      "В таблице есть Academic English и Foundation / Provisional. Более низкий уровень может потребовать дополнительных занятий, времени и оплаты.",
-      "Кестеде Academic English және Foundation / Provisional деңгейлері бар. Төменірек деңгей қосымша сабақ, уақыт және төлемді қажет етуі мүмкін.",
-    ],
-  "Final placement and certificate acceptance belong to KIMEP.": [
-    "Окончательный уровень и принятие сертификата определяет KIMEP.",
-    "Соңғы деңгейді және сертификатты қабылдауды KIMEP анықтайды.",
-  ],
-  "PUBLISHED PLACEMENT TABLE": [
-    "ОПУБЛИКОВАННАЯ ТАБЛИЦА УРОВНЕЙ",
-    "ЖАРИЯЛАНҒАН ДЕҢГЕЙ КЕСТЕСІ",
-  ],
-  "Compare your certificate.": [
-    "Сравните свой сертификат.",
-    "Сертификатыңызды салыстырыңыз.",
-  ],
-  Certificate: ["Сертификат", "Сертификат"],
-  "Duolingo · confirm unclear bands": [
-    "Duolingo · уточните спорные диапазоны",
-    "Duolingo · түсініксіз аралықтарды нақтылаңыз",
-  ],
-  "TOEFL iBT · legacy scale": [
-    "TOEFL iBT · прежняя шкала",
-    "TOEFL iBT · бұрынғы шкала",
-  ],
-  "Legacy scale only.": ["Только прежняя шкала.", "Тек бұрынғы шкала."],
-  "KIMEP’s table still displays the old TOEFL scale and says the 1–6 values will be updated. Do not convert or use these values for a new-format result. Ask Admissions for current thresholds and section rules.":
-    [
-      "Таблица KIMEP пока содержит прежнюю шкалу TOEFL и сообщает о будущем обновлении значений 1–6. Не используйте эти числа для нового формата. Уточните актуальные минимумы и требования по разделам в приёмной комиссии.",
-      "KIMEP кестесінде әлі бұрынғы TOEFL шкаласы берілген және 1–6 мәндері жаңартылатыны жазылған. Бұл мәндерді жаңа форматқа қолданбаңыз. Қазіргі шекті балдар мен бөлім талаптарын комиссиядан сұраңыз.",
-    ],
-  "The official table needs clarification.": [
-    "Официальная таблица требует уточнения.",
-    "Ресми кестені нақтылау қажет.",
-  ],
-  "Its A and B bands overlap, and the B row gives a section minimum that does not fit part of its overall range. These values are reproduced for transparency and are not used for automatic placement.":
-    [
-      "Диапазоны A и B пересекаются, а минимум по разделам в строке B не согласуется с частью общего диапазона. Значения приведены для прозрачности и не используются для автоматического определения уровня.",
-      "A және B аралықтары қабаттасады, B жолындағы бөлім минимумы жалпы аралықтың бір бөлігіне сәйкес келмейді. Мәндер ашықтық үшін көрсетілген, деңгейді автоматты анықтауға қолданылмайды.",
-    ],
-  "Starting level": ["Начальный уровень", "Бастапқы деңгей"],
-  "Legacy TOEFL iBT overall": [
-    "Общий TOEFL iBT по прежней шкале",
-    "Бұрынғы шкаладағы жалпы TOEFL iBT",
-  ],
-  "The official table also lists legacy section bands. Open the source for those bands; this overview cannot determine TOEFL eligibility.":
-    [
-      "В источнике также есть диапазоны по разделам прежней шкалы. Откройте источник: этот обзор не определяет соответствие TOEFL.",
-      "Дереккөзде бұрынғы шкаланың бөлім аралықтары да бар. Дереккөзді ашыңыз: бұл шолу TOEFL сәйкестігін анықтамайды.",
-    ],
-  "CEFR is a framework for language levels. UF means Undergraduate Foundation. A score is not an admission decision.":
-    [
-      "CEFR — система языковых уровней. UF означает Undergraduate Foundation — подготовительный английский для бакалавриата. Балл не является решением о зачислении.",
-      "CEFR — тіл деңгейлерінің жүйесі. UF — Undergraduate Foundation, бакалавриатқа арналған дайындық ағылшын тілі. Балл оқуға қабылдау шешімі емес.",
-    ],
-  "07 / PLAN YOUR BUDGET": [
-    "07 / СПЛАНИРУЙТЕ БЮДЖЕТ",
-    "07 / БЮДЖЕТТІ ЖОСПАРЛАҢЫЗ",
-  ],
-  "Understand the cost.": ["Разберитесь в стоимости.", "Оқу құнын біліңіз."],
-  "Published undergraduate prices for 2026–2027. These are not a quote for 2027–2028.":
-    [
-      "Опубликованные цены бакалавриата на 2026–2027 год. Это не расчёт на 2027–2028 год.",
-      "Бакалавриаттың 2026–2027 жылға жарияланған бағалары. Бұл 2027–2028 жылға арналған есеп емес.",
-    ],
-  "TUITION PER KIMEP CREDIT": [
-    "СТОИМОСТЬ КРЕДИТА KIMEP",
-    "БІР KIMEP КРЕДИТІНІҢ ҚҰНЫ",
-  ],
-  "You pay for the number of credits you take.": [
-    "Оплата зависит от количества выбранных кредитов.",
-    "Төлем таңдалған кредиттер санына байланысты.",
-  ],
-  "Credits to estimate": [
-    "Кредиты для расчёта",
-    "Есептеуге арналған кредиттер",
-  ],
-  "Tuition only ·": ["Только обучение ·", "Тек оқу ақысы ·"],
-  "credits ×": ["кредитов ×", "кредит ×"],
-  "Enter a whole number from 1 to 60.": [
-    "Введите целое число от 1 до 60.",
-    "1-ден 60-қа дейінгі бүтін санды енгізіңіз.",
-  ],
-  "An estimate at the published rate. Fees, housing, English preparation and future price changes are separate. Course load depends on your plan.":
-    [
-      "Это расчёт по опубликованной ставке. Сборы, проживание, подготовительный английский и будущие изменения цен учитываются отдельно. Нагрузка зависит от учебного плана.",
-      "Бұл — жарияланған мөлшерлеме бойынша есеп. Алымдар, тұру, дайындық ағылшын тілі және болашақ баға өзгерістері бөлек есептеледі. Жүктеме оқу жоспарына байланысты.",
-    ],
-  "PUBLISHED YEARLY EXAMPLE": [
-    "ПРИМЕР НА УЧЕБНЫЙ ГОД",
-    "ОҚУ ЖЫЛЫНА АРНАЛҒАН МЫСАЛ",
-  ],
-  "30–36 credits": ["30–36 кредитов", "30–36 кредит"],
-  "Tuition for one year at the 2026–2027 rate, before other charges.": [
-    "Стоимость за год по ставке 2026–2027 без других платежей.",
-    "Басқа төлемдерсіз, 2026–2027 мөлшерлемесі бойынша бір жылдық оқу ақысы.",
-  ],
-  "The fee sheet uses a four-year, 146-credit pathway as an example. Study length and your bill depend on your course plan and English placement.":
-    [
-      "В таблице приведён пример на четыре года и 146 кредитов. Срок обучения и сумма зависят от плана и уровня английского.",
-      "Кестеде төрт жыл және 146 кредит мысалы берілген. Оқу мерзімі мен төлем оқу жоспары және ағылшын деңгейіне байланысты.",
-    ],
-  "Fees can change in later years. Confirm payment terms and your final amount with KIMEP.":
-    [
-      "В следующие годы цены могут меняться. Уточните условия оплаты и итоговую сумму в KIMEP.",
-      "Кейінгі жылдары бағалар өзгеруі мүмкін. Төлем шарттары мен соңғы соманы KIMEP-тен нақтылаңыз.",
-    ],
-  "Other fees and deposits": [
-    "Другие сборы и депозиты",
-    "Басқа алымдар мен депозиттер",
-  ],
-  Item: ["Наименование", "Атауы"],
-  "Amount, KZT": ["Сумма, тенге", "Сома, теңге"],
-  "When it applies": ["Период оплаты", "Төлем кезеңі"],
-  "Deposits are shown separately from tuition. Ask the relevant office about collection, carry-over and refund conditions.":
-    [
-      "Депозиты указаны отдельно. Уточните в соответствующем отделе условия внесения, переноса и возврата.",
-      "Депозиттер бөлек көрсетілген. Төлеу, келесі кезеңге ауыстыру және қайтару шарттарын тиісті бөлімнен сұраңыз.",
-    ],
-  "FINANCIAL AID": ["ФИНАНСОВАЯ ПОМОЩЬ", "ҚАРЖЫЛЫҚ КӨМЕК"],
-  "Explore support early.": [
-    "Узнайте о поддержке заранее.",
-    "Қолдау туралы ертерек біліңіз.",
-  ],
-  "Scholarships have their own applications, eligibility rules and deadlines. Admission does not guarantee funding. Many 2026 offers are already past their deadline; confirm availability for your intake.":
-    [
-      "Для грантов предусмотрены отдельные заявки, условия и сроки. Зачисление не гарантирует финансирование. Сроки многих конкурсов 2026 года уже истекли — уточните возможности для вашего набора.",
-      "Гранттарға бөлек өтініштер, талаптар және мерзімдер белгіленген. Қабылдану қаржыландыруға кепілдік бермейді. 2026 жылғы көптеген байқаулардың мерзімі өтті — өз қабылдау жылыңызға мүмкіндіктерді нақтылаңыз.",
-    ],
-  "View official scholarship opportunities": [
-    "Официальная информация о грантах",
-    "Гранттар туралы ресми ақпарат",
-  ],
-  "Financial Aid Office": ["Отдел финансовой помощи", "Қаржылық көмек бөлімі"],
-  "Mobile / WhatsApp: +7 707 970 43 16": [
-    "Мобильный / WhatsApp: +7 707 970 43 16",
-    "Ұялы / WhatsApp: +7 707 970 43 16",
-  ],
-  "08 / SAVE THE DATES": ["08 / ВАЖНЫЕ ДАТЫ", "08 / МАҢЫЗДЫ КҮНДЕР"],
-  "Plan around your intake.": [
-    "Учитывайте свой набор.",
-    "Қабылдау кезеңіңізді ескеріңіз.",
-  ],
-  "Dates depend on your applicant category. The latest published schedule includes 2027 intakes.":
-    [
-      "Даты зависят от категории абитуриента. Последнее опубликованное расписание включает наборы 2027 года.",
-      "Күндер талапкер санатына байланысты. Соңғы жарияланған кестеде 2027 жылғы қабылдау кезеңдері бар.",
-    ],
-  "Filter deadlines": ["Фильтр сроков", "Мерзімдерді сүзу"],
-  All: ["Все", "Барлығы"],
-  Fall: ["Осень", "Күз"],
-  Spring: ["Весна", "Көктем"],
-  Summer: ["Лето", "Жаз"],
-  "All intakes": ["Все наборы", "Барлық қабылдау кезеңдері"],
-  "APPLICATION DEADLINE": [
-    "КРАЙНИЙ СРОК ПОДАЧИ",
-    "ӨТІНІШ БЕРУДІҢ СОҢҒЫ МЕРЗІМІ",
-  ],
-  "Applications open": ["Начало приёма", "Өтініш қабылдаудың басталуы"],
-  "Enrollment period": ["Период зачисления", "Оқуға қабылдау кезеңі"],
-  "Classes start": ["Начало занятий", "Сабақтың басталуы"],
-  "Two different opening dates are published.": [
-    "Опубликованы две разные даты начала.",
-    "Екі түрлі басталу күні жарияланған.",
-  ],
-  "The 2026–2027 brochure says applications open each year on 15 October; the live 2027 schedule gives 16 October 2026. We use the intake-specific schedule above. These are not scholarship deadlines. Source page update date is not shown; last verified":
-    [
-      "В брошюре 2026–2027 указано ежегодное начало 15 октября, в расписании набора 2027 — 16 октября 2026. Выше используется расписание конкретного набора. Это не сроки грантов. Дата обновления источника не указана; проверено",
-      "2026–2027 кітапшасында жыл сайын 15 қазан, ал 2027 қабылдау кестесінде 2026 жылғы 16 қазан көрсетілген. Жоғарыда нақты қабылдау кестесі қолданылды. Бұл грант мерзімдері емес. Дереккөз жаңартылған күн көрсетілмеген; тексерілген күн",
-    ],
-  "09 / STRAIGHTFORWARD ANSWERS": [
-    "09 / ПОНЯТНЫЕ ОТВЕТЫ",
-    "09 / ТҮСІНІКТІ ЖАУАПТАР",
-  ],
-  "Questions? Start here.": [
-    "Есть вопросы? Начните здесь.",
-    "Сұрақтар бар ма? Осы жерден бастаңыз.",
-  ],
-  "Short, predefined answers based on official information. Search by a word such as IELTS, UNT or medical.":
-    [
-      "Краткие готовые ответы по официальной информации. Ищите по словам: IELTS, ЕНТ, медицинские.",
-      "Ресми ақпаратқа негізделген қысқа дайын жауаптар. IELTS, ҰБТ, медициналық сияқты сөздермен іздеңіз.",
-    ],
-  "Search common questions": ["Поиск по вопросам", "Сұрақтардан іздеу"],
-  "Search your question…": ["Найдите свой вопрос…", "Сұрағыңызды іздеңіз…"],
-  "Clear search": ["Очистить поиск", "Іздеуді тазарту"],
-  answer: ["ответ", "жауап"],
-  answers: ["ответов", "жауап"],
-  "No matching questions yet.": [
-    "Подходящих вопросов не найдено.",
-    "Сәйкес сұрақ табылмады.",
-  ],
-  "Try a shorter word, or ask KIMEP Admissions directly.": [
-    "Попробуйте более короткое слово или обратитесь в приёмную комиссию KIMEP.",
-    "Қысқарақ сөзді қолданыңыз немесе KIMEP қабылдау комиссиясына хабарласыңыз.",
-  ],
-  "Find the right contact →": [
-    "Найти нужный контакт →",
-    "Қажетті байланысты табу →",
-  ],
-  "10 / THE RIGHT PEOPLE": ["10 / НУЖНЫЕ КОНТАКТЫ", "10 / ҚАЖЕТТІ БАЙЛАНЫСТАР"],
-  "Get help from KIMEP.": [
-    "Получите помощь KIMEP.",
-    "KIMEP көмегіне жүгініңіз.",
-  ],
-  "Use the office that handles your question. This independent guide cannot make admissions decisions.":
-    [
-      "Обратитесь в отдел, отвечающий за ваш вопрос. Этот независимый справочник не принимает решений о зачислении.",
-      "Сұрағыңызға жауапты бөлімге хабарласыңыз. Бұл тәуелсіз нұсқаулық қабылдау туралы шешім шығармайды.",
-    ],
-  "Mobile / WhatsApp:": ["Мобильный / WhatsApp:", "Ұялы / WhatsApp:"],
-  "Official links": ["Официальные ссылки", "Ресми сілтемелер"],
-  "KIMEP University website": [
-    "Сайт университета KIMEP",
-    "KIMEP университетінің сайты",
-  ],
-  "Admissions: 4 Abai Avenue, Valikhanov building, Almaty 050010. Some English links redirect to Kazakh pages; use the language selector on the official website.":
-    [
-      "Приёмная комиссия: проспект Абая, 4, корпус Валиханова, Алматы 050010. Некоторые английские ссылки ведут на казахские страницы; выберите язык на официальном сайте.",
-      "Қабылдау комиссиясы: Абай даңғылы, 4, Уәлиханов ғимараты, Алматы 050010. Кейбір ағылшын сілтемелері қазақша парақтарға бағыттайды; ресми сайтта тілді таңдаңыз.",
-    ],
-  "About this project": ["О проекте", "Жоба туралы"],
-  "Phase 1 of a student university project: a simple admissions information guide, with Information Systems as the pilot. It is not an official KIMEP service.":
-    [
-      "Первый этап студенческого проекта: простой справочник по поступлению с пилотной программой «Информационные системы». Это неофициальный сервис KIMEP.",
-      "Студенттік жобаның бірінші кезеңі: «Ақпараттық жүйелер» пилоттық бағдарламасы бойынша түсу нұсқаулығы. Бұл KIMEP-тің ресми қызметі емес.",
-    ],
-  "No account is needed. Checker answers stay in memory; document checklist progress is stored only in your browser. The site has no application submission or live AI chatbot. The assistant demo uses predefined sample questions and answers.":
-    [
-      "Аккаунт не нужен. Ответы проверки хранятся в памяти, отметки списка — только в браузере. Сайт не отправляет заявки и не использует действующий ИИ-чатбот. Демоверсия показывает заранее подготовленные вопросы и ответы.",
-      "Аккаунт қажет емес. Тексеру жауаптары жадта, тізім белгілері тек браузерде сақталады. Сайт өтініш жібермейді және нақты ИИ-чатботты қолданбайды. Демо алдын ала дайындалған сұрақтар мен жауаптарды көрсетеді.",
-    ],
-  "Verified on": ["Проверено", "Тексерілген күн"],
-  ". Requirements can change after this date.": [
-    ". После этой даты требования могут измениться.",
-    ". Осы күннен кейін талаптар өзгеруі мүмкін.",
-  ],
-  "Skip to content": ["Перейти к содержимому", "Мазмұнға өту"],
-  "Independent admissions guide": [
-    "Независимый справочник по поступлению",
-    "Түсу бойынша тәуелсіз нұсқаулық",
-  ],
-  "Explore the guide": ["Разделы справочника", "Нұсқаулық бөлімдері"],
-  "Main navigation": ["Основная навигация", "Негізгі навигация"],
-  "Based on official KIMEP sources.": [
-    "На основе официальных источников KIMEP.",
-    "KIMEP ресми дереккөздеріне негізделген.",
-  ],
-  "Independent student project.": [
-    "Независимый студенческий проект.",
-    "Тәуелсіз студенттік жоба.",
-  ],
-  "Apply at KIMEP": ["Подать заявку в KIMEP", "KIMEP-ке өтініш беру"],
-  "Close navigation": ["Закрыть меню", "Мәзірді жабу"],
-  "Close menu": ["Закрыть меню", "Мәзірді жабу"],
-  "Open menu": ["Открыть меню", "Мәзірді ашу"],
-  ADMISSIONS: ["ПОСТУПЛЕНИЕ", "ОҚУҒА ТҮСУ"],
-  "Independent student project. Always confirm final requirements with KIMEP University.":
-    [
-      "Независимый студенческий проект. Окончательные требования всегда уточняйте в KIMEP.",
-      "Тәуелсіз студенттік жоба. Түпкілікті талаптарды әрқашан KIMEP университетінен нақтылаңыз.",
-    ],
-  "Sources & contacts": ["Источники и контакты", "Дереккөздер және байланыс"],
-  "26 October 2026": ["26 октября 2026", "2026 жылғы 26 қазан"],
-  "School of Computer Science and Artificial Intelligence": [
-    "Факультет компьютерных наук и искусственного интеллекта",
-    "Компьютер ғылымдары және жасанды интеллект факультеті",
-  ],
-  "Reading Literacy": ["Грамотность чтения", "Оқу сауаттылығы"],
-  "Mathematical Literacy": [
-    "Математическая грамотность",
-    "Математикалық сауаттылық",
-  ],
-  "History of Kazakhstan": ["История Казахстана", "Қазақстан тарихы"],
-  Mathematics: ["Математика", "Математика"],
-  Informatics: ["Информатика", "Информатика"],
-  "Undergraduate tuition": ["Обучение в бакалавриате", "Бакалавриатта оқу"],
-  "per KIMEP credit": ["за кредит KIMEP", "бір KIMEP кредитіне"],
-  "Student activity fee": ["Студенческий сбор", "Студенттік жарна"],
-  "per semester": ["за семестр", "бір семестрге"],
-  "Student fee": ["Студенческий платёж", "Студенттік төлем"],
-  "Medical examination fee": ["Сбор за медосмотр", "Медициналық тексеру ақысы"],
-  "per academic year": ["за учебный год", "бір оқу жылына"],
-  "Textbook security deposit": [
-    "Залог за учебники",
-    "Оқулықтар үшін кепілдік жарна",
-  ],
-  Deposit: ["Депозит", "Депозит"],
-  Tuition: ["Обучение", "Оқу ақысы"],
-  "Residence hall bed": ["Место в общежитии", "Жатақханадағы орын"],
-  "per month, if used": ["за месяц при проживании", "тұрған жағдайда бір айға"],
-  "Optional housing": ["Проживание по выбору", "Қалауы бойынша тұру"],
-  "Residence hall security deposit": [
-    "Депозит за общежитие",
-    "Жатақхана кепілдік жарнасы",
-  ],
-  "per semester, if used": [
-    "за семестр при проживании",
-    "тұрған жағдайда бір семестрге",
-  ],
-  "Foundation English": [
-    "Подготовительный английский (Foundation)",
-    "Дайындық ағылшын тілі (Foundation)",
-  ],
-  "per level, if assigned": [
-    "за уровень, если назначен",
-    "тағайындалса, бір деңгейге",
-  ],
-  "Conditional cost": ["При назначении", "Тағайындалған жағдайда"],
-  "Academic English": ["Академический английский", "Академиялық ағылшын тілі"],
-  "Foundation A / Provisional A": [
-    "Foundation A / Provisional A",
-    "Foundation A / Provisional A",
-  ],
-  "Foundation B / Provisional B": [
-    "Foundation B / Provisional B",
-    "Foundation B / Provisional B",
-  ],
-  "Foundation C / Provisional C": [
-    "Foundation C / Provisional C",
-    "Foundation C / Provisional C",
-  ],
-  "B1 low": ["B1 начальный", "B1 бастапқы"],
-  "Not listed": ["Не указан", "Көрсетілмеген"],
-  "Choose an email you check regularly": [
-    "Укажите почту, которую регулярно проверяете",
-    "Үнемі тексеретін поштаңызды көрсетіңіз",
-  ],
-  "KIMEP sends official decisions and messages there.": [
-    "KIMEP отправляет туда официальные решения и сообщения.",
-    "KIMEP ресми шешімдер мен хабарламаларды сол жерге жібереді.",
-  ],
-  "Upload both sides of your ID": [
-    "Загрузите обе стороны удостоверения",
-    "Жеке куәліктің екі жағын жүктеңіз",
-  ],
-  "This checklist covers Kazakhstan high-school applicants. International and transfer routes need separate review.":
-    [
-      "Список предназначен для выпускников школ Казахстана. Иностранные абитуриенты и переводы рассматриваются отдельно.",
-      "Тізім Қазақстан мектептерінің түлектеріне арналған. Шетелдік талапкерлер мен ауысушылар бөлек қаралады.",
-    ],
-  "Upload your photo in the Photo field": [
-    "Загрузите фото в поле Photo",
-    "Фотосуретті Photo өрісіне жүктеңіз",
-  ],
-  "JPEG, 300 ppi, at least 8 MP, high quality with low compression.": [
-    "JPEG, 300 ppi, не менее 8 МП, высокое качество с низким сжатием.",
-    "JPEG, 300 ppi, кемінде 8 МП, аз сығылған жоғары сапа.",
-  ],
-  "Upload a valid English certificate, if you have one": [
-    "Загрузите действующий сертификат по английскому, если есть",
-    "Бар болса, жарамды ағылшын сертификатын жүктеңіз",
-  ],
-  "Optional certificate upload. Without one, arrange KIMEP English placement. Tick this after choosing your route.":
-    [
-      "Сертификат загружается при наличии. Если его нет, согласуйте определение уровня KIMEP. Отметьте после выбора варианта.",
-      "Сертификат бар болса жүктеледі. Жоқ болса, KIMEP деңгей анықтауын келісіңіз. Нұсқаны таңдаған соң белгілеңіз.",
-    ],
-  "Upload your certificate and transcript": [
-    "Загрузите аттестат и приложение",
-    "Аттестат пен қосымшаны жүктеңіз",
-  ],
-  "Add copies as soon as the originals are available.": [
-    "Добавьте копии сразу после получения оригиналов.",
-    "Түпнұсқаларды алған бойда көшірмелерін қосыңыз.",
-  ],
-  "Enter your UNT results and ICT number": [
-    "Введите результаты ЕНТ и номер ИКТ",
-    "ҰБТ нәтижелері мен ТЖК нөмірін енгізіңіз",
-  ],
-  "ICT is the test identifier shown with your UNT results.": [
-    "ИКТ — идентификатор тестирования, указанный в результатах ЕНТ.",
-    "ТЖК — ҰБТ нәтижелерінде көрсетілген тестілеу идентификаторы.",
-  ],
-  "Submit the original certificate and transcript": [
-    "Сдайте оригинал аттестата с приложением",
-    "Аттестат пен қосымшаның түпнұсқасын тапсырыңыз",
-  ],
-  "The 2026–2027 guide says originals can be submitted from 15 June. Confirm the date for your intake.":
-    [
-      "В руководстве 2026–2027 оригиналы принимаются с 15 июня. Уточните дату для вашего набора.",
-      "2026–2027 нұсқаулығында түпнұсқалар 15 маусымнан қабылданады. Өз қабылдау кезеңіңіздің күнін нақтылаңыз.",
-    ],
-  "Prepare Form 075/u": ["Подготовьте форму 075/у", "075/у нысанын дайындаңыз"],
-  "Health certificate with physician checks and tests listed by KIMEP. Ask the Medical Center about the exact examinations.":
-    [
-      "Медицинская справка с осмотрами и анализами по списку KIMEP. Точный перечень уточните в Медцентре.",
-      "KIMEP тізіміндегі дәрігер тексерулері мен талдаулары бар анықтама. Нақты тізімді Медицина орталығынан сұраңыз.",
-    ],
-  "Copy your vaccination record · Form 065/u": [
-    "Сделайте копию прививочной карты · 065/у",
-    "Егу картасының көшірмесін жасаңыз · 065/у",
-  ],
-  "A copy from your vaccination or outpatient card.": [
-    "Копия из прививочной или амбулаторной карты.",
-    "Егу немесе амбулаториялық картадан көшірме.",
-  ],
-  "Prepare the chest X-ray and conclusion": [
-    "Подготовьте флюорографию с заключением",
-    "Флюорографияны қорытындысымен дайындаңыз",
-  ],
-  "Attach it to Form 075/u. The medical page requests two radiologist stamps; the admissions page also specifies two signatures and validity within six months. Confirm with the center.":
-    [
-      "Приложите к форме 075/у. Медицинская страница требует две печати рентгенолога; страница поступления также указывает две подписи и срок до шести месяцев. Уточните в центре.",
-      "075/у нысанына тіркеңіз. Медициналық парақта рентгенологтың екі мөрі, қабылдау парағында қосымша екі қолтаңба және алты айдан аспайтын мерзім көрсетілген. Орталықтан нақтылаңыз.",
-    ],
-  "Submit medical originals to the Medical Center": [
-    "Сдайте оригиналы медицинских документов в Медцентр",
-    "Медициналық түпнұсқаларды Медицина орталығына тапсырыңыз",
-  ],
-  "The center may require translation of foreign records. An X-ray taken outside Kazakhstan needs verification by an Almaty radiologist.":
-    [
-      "Для иностранных документов может потребоваться перевод. Флюорографию из другой страны должен подтвердить рентгенолог в Алматы.",
-      "Шетелдік құжаттарға аударма қажет болуы мүмкін. Қазақстаннан тыс түсірілген флюорографияны Алматы рентгенологы растауы керек.",
-    ],
-  "Review, sign and upload your agreement": [
-    "Прочитайте, подпишите и загрузите договор",
-    "Шартты оқып, қол қойып, жүктеңіз",
-  ],
-  "Use Acceptance Package, sign every page and upload under SIGNED CONTRACT. If under 18, a parent or guardian also signs. Ask whether paper copies are required.":
-    [
-      "Откройте Acceptance Package, подпишите каждую страницу и загрузите в SIGNED CONTRACT. До 18 лет также подписывает родитель или опекун. Уточните необходимость бумажных копий.",
-      "Acceptance Package бөлімін ашып, әр бетке қол қойып, SIGNED CONTRACT өрісіне жүктеңіз. 18 жасқа дейін ата-ана не қамқоршы да қол қояды. Қағаз даналар қажет пе екенін сұраңыз.",
-    ],
-  "Confirm registration readiness with advising": [
-    "Уточните готовность к регистрации у консультанта",
-    "Тіркелуге дайындықты кеңесшіден нақтылаңыз",
-  ],
-  "Admission alone does not finish course registration. Complete the agreement, medical requirements and university instructions.":
-    [
-      "Зачисление не завершает регистрацию на курсы. Выполните требования по договору, медицинским документам и инструкции университета.",
-      "Қабылдану пәндерге тіркелуді аяқтамайды. Шарт, медициналық құжаттар және университет нұсқауларын орындаңыз.",
-    ],
-  "Apply online": ["Подайте онлайн-заявку", "Онлайн өтініш беріңіз"],
-  "Start in the official Applicant Portal. Upload ID, photo and any valid English certificate.":
-    [
-      "Начните на официальном портале. Загрузите удостоверение, фото и действующий сертификат по английскому при наличии.",
-      "Ресми порталдан бастаңыз. Жеке куәлік, фото және бар болса жарамды ағылшын сертификатын жүктеңіз.",
-    ],
-  "Add your education and UNT records": [
-    "Добавьте документы об образовании и ЕНТ",
-    "Білім құжаттары мен ҰБТ деректерін қосыңыз",
-  ],
-  "Upload your certificate and transcript when ready. Enter your UNT scores and ICT number.":
-    [
-      "Загрузите аттестат с приложением, когда получите. Укажите баллы ЕНТ и номер ИКТ.",
-      "Аттестат пен қосымшаны алған соң жүктеңіз. ҰБТ балдары мен ТЖК нөмірін енгізіңіз.",
-    ],
-  "Deliver originals and medical documents": [
-    "Сдайте оригиналы и медицинские документы",
-    "Түпнұсқалар мен медициналық құжаттарды тапсырыңыз",
-  ],
-  "Give education originals to Admissions and medical originals to the Medical Center.":
-    [
-      "Документы об образовании сдайте в приёмную комиссию, медицинские — в Медцентр.",
-      "Білім түпнұсқаларын қабылдау комиссиясына, медициналық құжаттарды Медицина орталығына тапсырыңыз.",
-    ],
-  "Confirm your English level": [
-    "Подтвердите уровень английского",
-    "Ағылшын деңгейін растаңыз",
-  ],
-  "Use a valid accepted certificate or the KIMEP placement procedure. Your level determines your English study route.":
-    [
-      "Предоставьте принимаемый действующий сертификат или пройдите определение уровня KIMEP. Уровень определит программу английского.",
-      "Қабылданатын жарамды сертификатты беріңіз немесе KIMEP деңгей анықтауынан өтіңіз. Деңгей ағылшын оқу жолын анықтайды.",
-    ],
-  "Read your decision and sign the agreement": [
-    "Получите решение и подпишите договор",
-    "Шешімді оқып, шартқа қол қойыңыз",
-  ],
-  "Check email and Acceptance Package. The current guide asks for a signed scan; the web page still mentions paper copies. Confirm both with Admissions.":
-    [
-      "Проверьте почту и Acceptance Package. Руководство требует подписанный скан, сайт также упоминает бумажные копии. Уточните оба требования в приёмной комиссии.",
-      "Поштаны және Acceptance Package бөлімін тексеріңіз. Нұсқаулық қол қойылған сканды, сайт қағаз даналарды да көрсетеді. Екі талапты комиссиядан нақтылаңыз.",
-    ],
-  "Prepare to register for courses": [
-    "Подготовьтесь к регистрации на курсы",
-    "Пәндерге тіркелуге дайындалыңыз",
-  ],
-  "Contact Student Academic Support for scheduling, tuition calculation and registration steps.":
-    [
-      "По расписанию, расчёту стоимости и регистрации обратитесь в Центр академической поддержки.",
-      "Кесте, оқу ақысын есептеу және тіркелу бойынша Академиялық қолдау орталығына хабарласыңыз.",
-    ],
-  "Undergraduate · Kazakhstan & international": [
-    "Бакалавриат · местные и иностранные абитуриенты",
-    "Бакалавриат · жергілікті және шетелдік талапкерлер",
-  ],
-  "Fall 2027": ["Осень 2027", "Күз 2027"],
-  "International applicants": [
-    "Иностранные абитуриенты",
-    "Шетелдік талапкерлер",
-  ],
-  "Spring 2027": ["Весна 2027", "Көктем 2027"],
-  "Transfer & reinstatement": [
-    "Перевод и восстановление",
-    "Ауысу және қайта қабылдану",
-  ],
-  "Summer I 2027": ["Лето I 2027", "Жаз I 2027"],
-  "Summer II 2027": ["Лето II 2027", "Жаз II 2027"],
-  Admissions: ["Приёмная комиссия", "Қабылдау комиссиясы"],
-  "Applications, documents and admission decisions": [
-    "Заявки, документы и решения о зачислении",
-    "Өтініштер, құжаттар және қабылдау шешімдері",
-  ],
-  "Financial Aid": ["Финансовая помощь", "Қаржылық көмек"],
-  "Scholarship eligibility, deadlines and funding": [
-    "Условия грантов, сроки и финансирование",
-    "Грант талаптары, мерзімдер және қаржыландыру",
-  ],
-  "Medical Center": ["Медицинский центр", "Медицина орталығы"],
-  "Medical forms, checks and foreign medical records": [
-    "Медицинские формы, обследования и иностранные меддокументы",
-    "Медициналық нысандар, тексерулер және шетелдік медициналық құжаттар",
-  ],
-  "Student Academic Support": [
-    "Академическая поддержка студентов",
-    "Студенттерді академиялық қолдау",
-  ],
-  "Course registration, schedules and tuition calculation": [
-    "Регистрация на курсы, расписание и расчёт стоимости",
-    "Пәндерге тіркелу, кесте және оқу ақысын есептеу",
-  ],
-  "What UNT score do I need for Information Systems?": [
-    "Какой балл ЕНТ нужен для информационных систем?",
-    "Ақпараттық жүйелерге қандай ҰБТ балы қажет?",
-  ],
-  "At least 50 overall. Reading Literacy and Mathematical Literacy each need 3; History of Kazakhstan and both profile subjects each need 5. These are the published basic thresholds, not a scholarship guarantee.":
-    [
-      "Минимум 50 в сумме. По грамотности чтения и математической грамотности — по 3, по истории Казахстана и каждому профильному предмету — по 5. Это базовые опубликованные минимумы, а не гарантия гранта.",
-      "Жалпы кемінде 50. Оқу және математикалық сауаттылықтан кемінде 3-тен, Қазақстан тарихы мен әр бейіндік пәннен 5-тен қажет. Бұл — жарияланған негізгі минимумдар, грант кепілдігі емес.",
-    ],
-  "Which profile subjects should I take?": [
-    "Какие профильные предметы выбрать?",
-    "Қандай бейіндік пәндерді таңдау керек?",
-  ],
-  "Mathematics and Informatics for the standard Information Systems high-school route. Vocational and transfer routes need separate assessment.":
-    [
-      "Для стандартного поступления после школы — математика и информатика. Выпускникам колледжей и переводящимся нужна отдельная оценка.",
-      "Мектептен кейінгі стандартты жол үшін — математика және информатика. Колледж түлектері мен ауысушылар бөлек бағаланады.",
-    ],
-  "Do I need IELTS to apply?": [
-    "Нужен ли IELTS для подачи заявки?",
-    "Өтініш беру үшін IELTS қажет пе?",
-  ],
-  "IELTS is not the only route. KIMEP accepts listed valid English certificates or uses its placement procedure. A lower English level can lead to Foundation English. Confirm your assigned route with Admissions.":
-    [
-      "IELTS — не единственный вариант. KIMEP принимает указанные действующие сертификаты или определяет уровень своим тестированием. При более низком уровне возможен Foundation English. Уточните свой путь в приёмной комиссии.",
-      "IELTS — жалғыз нұсқа емес. KIMEP көрсетілген жарамды сертификаттарды қабылдайды немесе өз тәртібімен деңгейді анықтайды. Төменірек деңгейде Foundation English тағайындалуы мүмкін. Өз жолыңызды комиссиядан нақтылаңыз.",
-    ],
-  "Can I start before I receive my school certificate?": [
-    "Можно ли начать до получения аттестата?",
-    "Аттестат алғанға дейін бастауға бола ма?",
-  ],
-  "Yes. Start your online application with available documents, then add your education records as soon as you receive them.":
-    [
-      "Да. Начните онлайн-заявку с имеющимися документами и добавьте документы об образовании после получения.",
-      "Иә. Қолда бар құжаттармен онлайн өтінішті бастап, білім құжаттарын алған соң қосыңыз.",
-    ],
-  "When do I submit the original certificate?": [
-    "Когда сдавать оригинал аттестата?",
-    "Аттестат түпнұсқасын қашан тапсыру керек?",
-  ],
-  "The 2026–2027 guide gives 15 June as the start for originals. Submit the certificate and transcript to Admissions and confirm the date for your own intake.":
-    [
-      "В руководстве 2026–2027 приём оригиналов начинается 15 июня. Сдайте аттестат с приложением в приёмную комиссию и уточните дату вашего набора.",
-      "2026–2027 нұсқаулығында түпнұсқа қабылдау 15 маусымнан басталады. Аттестат пен қосымшаны комиссияға тапсырып, өз қабылдау кезеңіңіздің күнін нақтылаңыз.",
-    ],
-  "Which medical documents do I need?": [
-    "Какие медицинские документы нужны?",
-    "Қандай медициналық құжаттар қажет?",
-  ],
-  "Form 075/u, a vaccination record copy (065/u), and the chest X-ray with conclusion. The Medical Center lists physician checks, lab tests and supporting certificates. Use the expanded checklist for details.":
-    [
-      "Форма 075/у, копия прививочной карты 065/у и флюорография с заключением. Медцентр также указывает осмотры, анализы и дополнительные справки. Подробности — в расширенном списке.",
-      "075/у нысаны, 065/у егу картасының көшірмесі және қорытындысы бар флюорография. Орталық дәрігер тексерулерін, талдаулар мен қосымша анықтамаларды да көрсетеді. Толығырақ кеңейтілген тізімде.",
-    ],
-  "Can an international student apply?": [
-    "Может ли поступить иностранный студент?",
-    "Шетелдік студент өтініш бере ала ма?",
-  ],
-  "Yes. Contact Admissions about the international route, education recognition, interview and immigration requirements. The local UNT checker does not assess international eligibility.":
-    [
-      "Да. Уточните в приёмной комиссии порядок для иностранных граждан, признание образования, собеседование и миграционные требования. Проверка местного ЕНТ не определяет право иностранного абитуриента на поступление.",
-      "Иә. Шетелдік азаматтарға арналған тәртіп, білімді тану, сұхбат және көші-қон талаптарын комиссиядан сұраңыз. Жергілікті ҰБТ тексеруі шетелдік талапкердің түсу құқығын анықтамайды.",
-    ],
-  "Where do I submit my application?": [
-    "Где подать заявку?",
-    "Өтінішті қайда беру керек?",
-  ],
-  "Use KIMEP’s official Applicant Portal. This student project does not receive your documents or submit an application for you.":
-    [
-      "Используйте официальный портал абитуриента KIMEP. Этот студенческий проект не принимает документы и не подаёт заявку за вас.",
-      "KIMEP ресми талапкер порталын пайдаланыңыз. Бұл студенттік жоба құжат қабылдамайды және сіздің атыңыздан өтініш бермейді.",
-    ],
-  "How will I know the admission decision?": [
-    "Как узнать решение о поступлении?",
-    "Қабылдау шешімін қалай білемін?",
-  ],
-  "Check your email and the Acceptance Package area of the Applicant Portal. Only KIMEP can issue the decision.":
-    [
-      "Проверьте почту и раздел Acceptance Package портала. Решение может выдать только KIMEP.",
-      "Пошта мен порталдың Acceptance Package бөлімін тексеріңіз. Шешімді тек KIMEP шығарады.",
-    ],
-  "How much is tuition?": ["Сколько стоит обучение?", "Оқу ақысы қанша?"],
-  "The 2026–2027 rate is KZT 163,230 per KIMEP credit. Multiply it by your credit load, then account for fees and any assigned Foundation English. Future-year rates may change.":
-    [
-      "В 2026–2027 году ставка — 163 230 тенге за кредит KIMEP. Умножьте на число кредитов и отдельно учтите сборы и назначенный Foundation English. В следующие годы ставка может меняться.",
-      "2026–2027 мөлшерлемесі — бір KIMEP кредитіне 163 230 теңге. Кредит санына көбейтіп, алымдар мен тағайындалған Foundation English ақысын бөлек ескеріңіз. Келесі жылдары мөлшерлеме өзгеруі мүмкін.",
-    ],
-  "Who can help with scholarships?": [
-    "Кто поможет с грантами?",
-    "Гранттар бойынша кім көмектеседі?",
-  ],
-  "Financial Aid: finaid@kimep.kz, +7 727 270 43 16. Funding has separate rules and deadlines. Admission does not guarantee a scholarship.":
-    [
-      "Отдел финансовой помощи: finaid@kimep.kz, +7 727 270 43 16. Для финансирования есть отдельные правила и сроки. Зачисление не гарантирует грант.",
-      "Қаржылық көмек бөлімі: finaid@kimep.kz, +7 727 270 43 16. Қаржыландырудың бөлек ережелері мен мерзімдері бар. Қабылдану грантқа кепілдік бермейді.",
-    ],
-  "Can I register for courses immediately?": [
-    "Можно ли сразу зарегистрироваться на курсы?",
-    "Пәндерге бірден тіркелуге бола ма?",
-  ],
-  "Follow your enrollment instructions first. An unsigned agreement or incomplete medical documents can block registration. Ask Student Academic Support for your next step.":
-    [
-      "Сначала выполните инструкции по зачислению. Неподписанный договор или неполные медицинские документы могут блокировать регистрацию. Следующий шаг уточните в Центре академической поддержки.",
-      "Алдымен қабылдау нұсқауларын орындаңыз. Қол қойылмаған шарт немесе толық емес медициналық құжаттар тіркелуге кедергі болуы мүмкін. Келесі қадамды Академиялық қолдау орталығынан сұраңыз.",
-    ],
-  "What UNT score do I need?": [
-    "Какой балл ЕНТ нужен?",
-    "Қандай ҰБТ балы қажет?",
-  ],
-  "Which UNT subjects do I need?": [
-    "Какие предметы ЕНТ нужны?",
-    "Қандай ҰБТ пәндері қажет?",
-  ],
-  "Explore English placement": [
-    "Об уровне английского",
-    "Ағылшын деңгейі туралы",
-  ],
-  "What medical documents do I need?": [
-    "Какие меддокументы нужны?",
-    "Қандай медициналық құжаттар қажет?",
-  ],
-  "Open documents checklist": [
-    "Открыть список документов",
-    "Құжаттар тізімін ашу",
-  ],
-  "How much does tuition cost?": [
-    "Сколько стоит обучение?",
-    "Оқу ақысы қанша?",
-  ],
-  "See tuition and fees": ["Стоимость и сборы", "Оқу ақысы мен алымдар"],
-  "Where do I apply?": ["Где подать заявку?", "Өтінішті қайда беремін?"],
-  "Admissions assistant": ["Помощник абитуриента", "Талапкер көмекшісі"],
-  "AI concept · MVP demo": [
-    "Концепция ИИ · Демо MVP",
-    "ИИ тұжырымдамасы · MVP демо",
-  ],
-  "Close assistant": ["Закрыть помощника", "Көмекшіні жабу"],
-  "A preview of our planned AI assistant. Choose a sample question to see a predefined answer.":
-    [
-      "Пример будущего ИИ-помощника. Выберите вопрос, чтобы увидеть заранее подготовленный ответ.",
-      "Жоспарланған ИИ-көмекшінің үлгісі. Дайын жауапты көру үшін сұрақты таңдаңыз.",
-    ],
-  "Sample conversation": ["Пример диалога", "Диалог үлгісі"],
-  "ASSISTANT DEMO": ["ДЕМО ПОМОЩНИКА", "КӨМЕКШІ ДЕМОСЫ"],
-  "Hi! Planning to apply to KIMEP? Let’s start with a common question.": [
-    "Здравствуйте! Планируете поступать в KIMEP? Начнём с частого вопроса.",
-    "Сәлеметсіз бе! KIMEP-ке түскіңіз келе ме? Жиі қойылатын сұрақтан бастайық.",
-  ],
-  YOU: ["ВЫ", "СІЗ"],
-  "Ask another sample question": [
-    "Выберите следующий вопрос",
-    "Келесі сұрақты таңдаңыз",
-  ],
-  "Try a sample question": [
-    "Выберите пример вопроса",
-    "Сұрақ үлгісін таңдаңыз",
-  ],
-  "Start again": ["Начать заново", "Қайта бастау"],
-  "Predefined answers · No live AI": [
-    "Готовые ответы · Без действующего ИИ",
-    "Дайын жауаптар · Нақты ИИ қосылмаған",
-  ],
-  "Sources checked": ["Источники проверены", "Дереккөздер тексерілді"],
-  ". Confirm final rules with KIMEP.": [
-    ". Итоговые правила уточняйте в KIMEP.",
-    ". Түпкілікті ережелерді KIMEP-тен нақтылаңыз.",
-  ],
-  "Close admissions assistant demo": [
-    "Закрыть демо помощника",
-    "Көмекші демосын жабу",
-  ],
-  "Open admissions assistant demo": [
-    "Открыть демо помощника",
-    "Көмекші демосын ашу",
-  ],
-  "AI assistant": ["ИИ-помощник", "ИИ-көмекші"],
-  Demo: ["Демо", "Демо"],
-  "This program needs a separate check.": [
-    "Для этой программы нужна отдельная проверка.",
-    "Бұл бағдарламаны бөлек тексеру қажет.",
-  ],
-  "The pilot checker covers Information Systems only. Ask Admissions for the rules for your program.":
-    [
-      "Пилотная проверка охватывает только информационные системы. Уточните требования своей программы в приёмной комиссии.",
-      "Пилоттық тексеру тек Ақпараттық жүйелерді қамтиды. Өз бағдарламаңыздың талаптарын комиссиядан сұраңыз.",
-    ],
-  "Your application needs an individual review.": [
-    "Ваша заявка требует индивидуального рассмотрения.",
-    "Өтінішіңіз жеке қаралуы керек.",
-  ],
-  "International, vocational and transfer routes can have different rules. Contact Admissions; the local high-school UNT thresholds are not applied to you.":
-    [
-      "Для иностранных абитуриентов, колледжей и переводов могут действовать другие правила. Обратитесь в приёмную комиссию: местные школьные минимумы ЕНТ к вам не применяются.",
-      "Шетелдік талапкерлерге, колледж түлектеріне және ауысушыларға басқа ережелер қолданылуы мүмкін. Комиссияға хабарласыңыз: жергілікті мектеп түлектерінің ҰБТ минимумдары сізге қолданылмайды.",
-    ],
-  "Check your UNT profile subjects.": [
-    "Проверьте профильные предметы ЕНТ.",
-    "ҰБТ бейіндік пәндерін тексеріңіз.",
-  ],
-  "The standard Information Systems route requires Mathematics + Informatics. Ask Admissions about your options.":
-    [
-      "Стандартный путь требует математику и информатику. Уточните свои варианты в приёмной комиссии.",
-      "Стандартты жол математика мен информатиканы талап етеді. Нұсқаларыңызды комиссиядан нақтылаңыз.",
-    ],
-  "Enter all five valid section scores.": [
-    "Введите корректные баллы всех пяти разделов.",
-    "Бес бөлімнің дұрыс балдарын енгізіңіз.",
-  ],
-  "Use whole numbers: literacy sections 0–10, History 0–20, profile subjects 0–50.":
-    [
-      "Используйте целые числа: грамотность 0–10, история 0–20, профильные предметы 0–50.",
-      "Бүтін сандарды қолданыңыз: сауаттылық бөлімдері 0–10, тарих 0–20, бейіндік пәндер 0–50.",
-    ],
-  "Your scores are below the published minimum.": [
-    "Ваши баллы ниже опубликованного минимума.",
-    "Балдарыңыз жарияланған минимумнан төмен.",
-  ],
-  "Below section minimum:": [
-    "Ниже минимума по разделам:",
-    "Бөлім минимумы орындалмады:",
-  ],
-  "All section minimums are met.": [
-    "Все минимумы по разделам выполнены.",
-    "Барлық бөлім минимумдары орындалды.",
-  ],
-  "You appear to meet the basic UNT requirement.": [
-    "По указанным баллам вы соответствуете базовому требованию ЕНТ.",
-    "Көрсетілген балдар бойынша ҰБТ-ның негізгі талабына сәйкес келесіз.",
-  ],
-  Language: ["Язык", "Тіл"],
-  points: ["баллов", "балл"],
-  Requirements: ["Требования", "Талаптар"],
-  "Undergraduate admission guide, 2026–2027": [
-    "Руководство по поступлению в бакалавриат, 2026–2027",
-    "Бакалавриатқа түсу нұсқаулығы, 2026–2027",
-  ],
-  "High-school graduate requirements": [
-    "Требования к выпускникам школ",
-    "Мектеп түлектеріне қойылатын талаптар",
-  ],
-  "BIS · School of Computer Science and Artificial Intelligence": [
-    "BIS · Факультет компьютерных наук и ИИ",
-    "BIS · Компьютер ғылымдары және ИИ факультеті",
-  ],
-  "BIS · older Bang College page (Kazakh)": [
-    "BIS · Старая страница Bang College (казахский)",
-    "BIS · Bang College ескі парағы (қазақша)",
-  ],
-  "Undergraduate tuition and fees, 2026–2027": [
-    "Стоимость и сборы бакалавриата, 2026–2027",
-    "Бакалавриат оқу ақысы мен алымдары, 2026–2027",
-  ],
-  "Undergraduate fees, Kazakh edition, 2026–2027": [
-    "Стоимость бакалавриата, казахская версия, 2026–2027",
-    "Бакалавриат оқу ақысы, қазақша нұсқа, 2026–2027",
-  ],
-  "Application deadlines · 2027 intakes": [
-    "Сроки подачи · Наборы 2027",
-    "Өтініш мерзімдері · 2027 қабылдауы",
-  ],
-  "Scholarships for newly admitted students": [
-    "Гранты для новых студентов",
-    "Жаңа қабылданған студенттерге гранттар",
-  ],
-  "KIMEP tests, interviews and exams": [
-    "Тесты, собеседования и экзамены KIMEP",
-    "KIMEP тесттері, сұхбаттары және емтихандары",
-  ],
-  "Transfer and reinstatement": [
-    "Перевод и восстановление",
-    "Ауысу және қайта қабылдану",
-  ],
-  "International students at KIMEP": [
-    "Иностранные студенты в KIMEP",
-    "KIMEP-тегі шетелдік студенттер",
-  ],
-  "Official applicant portal": [
-    "Официальный портал абитуриента",
-    "Ресми талапкер порталы",
-  ],
-  "Admissions office": ["Приёмная комиссия", "Қабылдау комиссиясы"],
+  "0 to": ["от 0 до","0-ден"],
+  "2026–2027 edition": ["Редакция 2026–2027","2026–2027 басылымы"],
+  "2026–2027 edition, May 2026 path": ["Редакция 2026–2027 (файл за май 2026)","2026–2027 басылымы (2026 жылғы мамыр файлы)"],
+  "2026–2027 offers": ["Предложения 2026–2027","2026–2027 ұсыныстары"],
+  "2026–2027 rates. KIMEP may change them in later academic years. Late payment and late registration fees are not included.": ["Ставки 2026–2027. KIMEP может изменить их в следующих учебных годах. Штрафы за просрочку оплаты и позднюю регистрацию не включены.","2026–2027 бағалары. KIMEP оларды келесі оқу жылдарында өзгертуі мүмкін. Кешіктіріп төлеу және кеш тіркелу айыппұлдары есептелмеген."],
+  "2027 intake schedule; no page update date": ["График набора 2027; дата обновления страницы не указана","2027 қабылдау кестесі; бет жаңартылған күні көрсетілмеген"],
+  "A copy from your vaccination or outpatient card.": ["Копия из прививочной или амбулаторной карты.","Егу немесе амбулаториялық картадан көшірме."],
+  "A grant covers tuition only, never fees or deposits. These percentages are scenarios; ask Financial Aid what is available.": ["Грант покрывает только обучение, но не сборы и депозиты. Проценты — это сценарии; что доступно, уточняйте в Financial Aid.","Грант тек оқу ақысын жабады, төлемдер мен депозиттерді емес. Пайыздар — сценарийлер; не қолжетімді екенін Financial Aid-тен нақтылаңыз."],
+  "A mandatory English program for students whose English level is below Academic English. It has three levels (UF A, UF B, UF C); each is 225 contact hours and costs KZT 682,320. It cannot be waived and a poor grade means retaking the level.": ["Обязательная программа английского для студентов с уровнем ниже Academic English. Три уровня (UF A, UF B, UF C); каждый — 225 контактных часов, 682 320 KZT. От неё нельзя отказаться, при плохой оценке уровень пересдаётся.","Ағылшын деңгейі Academic English-тен төмен студенттерге арналған міндетті бағдарлама. Үш деңгей (UF A, UF B, UF C); әрқайсысы 225 байланыс сағаты, 682 320 KZT. Одан бас тартуға болмайды, нашар баға алса деңгей қайта оқылады."],
+  "A valid accepted certificate exempts you from the KIMEP English test. KIMEP's TOEFL institution code is 2104.": ["Действующий принимаемый сертификат освобождает от английского теста KIMEP. Код KIMEP для TOEFL — 2104.","Жарамды қабылданатын сертификат KIMEP ағылшын тестінен босатады. TOEFL үшін KIMEP коды — 2104."],
+  "Academic English": ["Академический английский","Академиялық ағылшын тілі"],
+  "Accommodation for students from outside Almaty and international students": ["Проживание для студентов не из Алматы и иностранных студентов","Алматыдан тыс жерлерден келген және шетелдік студенттерге тұру"],
+  "Accounting and Audit": ["Учёт и аудит","Есеп және аудит"],
+  "Add copies as soon as the originals are available.": ["Добавьте копии сразу после получения оригиналов.","Түпнұсқаларды алған бойда көшірмелерін қосыңыз."],
+  "Add your education and UNT records": ["Добавьте документы об образовании и ЕНТ","Білім құжаттары мен ҰБТ деректерін қосыңыз"],
+  "Admission alone does not finish course registration. Complete the agreement, medical requirements and university instructions.": ["Зачисление не завершает регистрацию на курсы. Выполните требования по договору, медицинским документам и инструкции университета.","Қабылдану пәндерге тіркелуді аяқтамайды. Шарт, медициналық құжаттар және университет нұсқауларын орындаңыз."],
+  "Admissions": ["Приёмная комиссия","Қабылдау комиссиясы"],
+  "Admissions made clearer": ["Поступление проще","Түсу оңайырақ"],
+  "Admissions office": ["Приёмная комиссия","Қабылдау комиссиясы"],
+  "After receiving your school certificate": ["После получения аттестата","Аттестат алғаннан кейін"],
+  "Agreement: the guides say sign, scan and upload under SIGNED CONTRACT, while the website page says to hand in two printed copies. Chest X-ray: two radiologist stamps, or two signatures plus two stamps valid for 6 months. Confirm both with Admissions and the Medical Center.": ["Договор: в гидах сказано подписать, отсканировать и загрузить в поле SIGNED CONTRACT, а на странице сайта — сдать две печатные копии. Рентген грудной клетки: две печати рентгенолога либо две подписи и две печати, срок действия 6 месяцев. Уточните оба пункта в приёмной комиссии и Медицинском центре.","Шарт: нұсқаулықтарда қол қойып, сканерлеп, SIGNED CONTRACT ұяшығына жүктеу керек делінген, ал сайт бетінде екі басылған көшірме тапсыру керек. Кеуде рентгені: рентгенологтың екі мөрі немесе екі қол және екі мөр, жарамдылығы 6 ай. Екеуін де қабылдау комиссиясынан және Медициналық орталықтан нақтылаңыз."],
+  "AI answers from official sources": ["ИИ отвечает по официальным источникам","ЖИ ресми дереккөздер бойынша жауап береді"],
+  "AI can make mistakes. Check important details with official KIMEP sources.": ["ИИ может ошибаться. Сверяйте важное с официальными источниками KIMEP.","ЖИ қателесуі мүмкін. Маңызды мәліметтерді KIMEP-тің ресми дереккөздерімен салыстырыңыз."],
+  "All": ["Все","Барлығы"],
+  "All Computer Science students take a math placement test.": ["Все студенты Computer Science сдают тест по математике.","Барлық Computer Science студенттері математикадан деңгей анықтау тестін тапсырады."],
+  "Application deadlines · 2027 intakes": ["Сроки подачи · Наборы 2027","Өтініш мерзімдері · 2027 қабылдауы"],
+  "Applications open on 16 October 2026 according to the live schedule; the guide says 15 October. Applying early is recommended.": ["По актуальному графику приём заявок открывается 16 октября 2026; в гиде указано 15 октября. Подавать лучше заранее.","Өзекті кесте бойынша өтініш қабылдау 2026 жылғы 16 қазанда басталады; нұсқаулықта 15 қазан деп жазылған. Алдын ала өтініш берген дұрыс."],
+  "Applications, documents and admission decisions": ["Заявки, документы и решения о зачислении","Өтініштер, құжаттар және қабылдау шешімдері"],
+  "Apply by (Fall 2027)": ["Подача до (осень 2027)","Өтініш беру мерзімі (2027 күзі)"],
+  "Apply online": ["Подайте онлайн-заявку","Онлайн өтініш беріңіз"],
+  "Apply until": ["Подать до","Өтініш беру мерзімі"],
+  "April 2026 file path": ["Файл за апрель 2026","2026 жылғы сәуір файлы"],
+  "Are there scholarships for 2027 applicants?": ["Есть ли гранты для абитуриентов 2027 года?","2027 жылғы талапкерлерге гранттар бар ма?"],
+  "Ask Admissions about your options.": ["Уточните варианты в приёмной комиссии.","Мүмкіндіктерді қабылдау комиссиясынан нақтылаңыз."],
+  "Ask the assistant": ["Спросить ассистента","Көмекшіден сұрау"],
+  "At least 50 overall. Reading Literacy and Mathematical Literacy each need 3; History of Kazakhstan and both profile subjects each need 5. These are the published basic thresholds, not a scholarship guarantee.": ["Минимум 50 в сумме. По грамотности чтения и математической грамотности — по 3, по истории Казахстана и каждому профильному предмету — по 5. Это базовые опубликованные минимумы, а не гарантия гранта.","Жалпы кемінде 50. Оқу және математикалық сауаттылықтан кемінде 3-тен, Қазақстан тарихы мен әр бейіндік пәннен 5-тен қажет. Бұл — жарияланған негізгі минимумдар, грант кепілдігі емес."],
+  "Attach it to Form 075/u. The medical page requests two radiologist stamps; the admissions page also specifies two signatures and validity within six months. Confirm with the center.": ["Приложите к форме 075/у. Медицинская страница требует две печати рентгенолога; страница поступления также указывает две подписи и срок до шести месяцев. Уточните в центре.","075/у нысанына тіркеңіз. Медициналық парақта рентгенологтың екі мөрі, қабылдау парағында қосымша екі қолтаңба және алты айдан аспайтын мерзім көрсетілген. Орталықтан нақтылаңыз."],
+  "Bachelor of Laws (LL.B.) and Bachelor of International Law (B.I.L.) applicants: IELTS 6.5+ (or an equivalent approved certificate) means direct placement in academic courses. IELTS 5.5 or 6.0 (or an equivalent) requires an interview; the result may be admission with parallel English study, or a recommendation to choose an alternative academic track.": ["Абитуриенты LL.B. и B.I.L.: IELTS 6.5+ (или эквивалентный принимаемый сертификат) — сразу на академические курсы. IELTS 5.5 или 6.0 (или эквивалент) — обязательное собеседование; по его итогам возможно зачисление с параллельным изучением английского или рекомендация выбрать другую траекторию.","LL.B. және B.I.L. талапкерлері: IELTS 6.5+ (немесе баламалы бекітілген сертификат) — академиялық пәндерге тікелей орналастырылады. IELTS 5.5 немесе 6.0 (немесе баламасы) — міндетті сұхбат; нәтижесі бойынша ағылшын тілін қатар оқыту шартымен қабылдау немесе басқа академиялық траекторияны таңдау ұсынылуы мүмкін."],
+  "Basic eligibility is not an admission or scholarship guarantee.": ["Базовое соответствие не гарантирует ни зачисление, ни грант.","Негізгі талапқа сәйкестік қабылдауға немесе грантқа кепілдік бермейді."],
+  "Before applying": ["До подачи заявки","Өтініш бергенге дейін"],
+  "Before enrollment": ["До зачисления","Оқуға қабылданғанға дейін"],
+  "BELA status lets new students register for fall courses early. You need valid UNT scores in the applicant portal, a registered English test result, the original school certificate handed in, and a signed BELA agreement. It changes to normal status after the August enrollment order.": ["Статус BELA позволяет новым студентам рано регистрироваться на осенние курсы. Нужны баллы ЕНТ в портале абитуриента, зарегистрированный результат английского, сданный оригинал аттестата и подписанное соглашение BELA. После августовского приказа о зачислении статус становится обычным.","BELA мәртебесі жаңа студенттерге күзгі пәндерге ерте тіркелуге мүмкіндік береді. Талапкер порталында ҰБТ балдары, тіркелген ағылшын тесті нәтижесі, аттестаттың тапсырылған түпнұсқасы және қол қойылған BELA келісімі қажет. Тамыздағы қабылдау бұйрығынан кейін мәртебе қалыпты болады."],
+  "Below the section minimum": ["Ниже минимума по разделу","Бөлім минимумынан төмен"],
+  "Biology": ["Биология","Биология"],
+  "BIS · older Bang College page (Kazakh)": ["BIS · Старая страница Bang College (казахский)","BIS · Bang College ескі парағы (қазақша)"],
+  "BIS · School of Computer Science and Artificial Intelligence": ["BIS · Факультет компьютерных наук и ИИ","BIS · Компьютер ғылымдары және ИИ факультеті"],
+  "Can an international student apply?": ["Может ли поступить иностранный студент?","Шетелдік студент өтініш бере ала ма?"],
+  "Can I register for courses immediately?": ["Можно ли сразу зарегистрироваться на курсы?","Пәндерге бірден тіркелуге бола ма?"],
+  "Can I start before I receive my school certificate?": ["Можно ли начать до получения аттестата?","Аттестат алғанға дейін бастауға бола ма?"],
+  "Cancel": ["Отмена","Бас тарту"],
+  "Check email and Acceptance Package. The current guide asks for a signed scan; the web page still mentions paper copies. Confirm both with Admissions.": ["Проверьте почту и Acceptance Package. Руководство требует подписанный скан, сайт также упоминает бумажные копии. Уточните оба требования в приёмной комиссии.","Поштаны және Acceptance Package бөлімін тексеріңіз. Нұсқаулық қол қойылған сканды, сайт қағаз даналарды да көрсетеді. Екі талапты комиссиядан нақтылаңыз."],
+  "Check my scores": ["Проверить баллы","Балдарды тексеру"],
+  "Check your email and the Acceptance Package area of the Applicant Portal. Only KIMEP can issue the decision.": ["Проверьте почту и раздел Acceptance Package портала. Решение может выдать только KIMEP.","Пошта мен порталдың Acceptance Package бөлімін тексеріңіз. Шешімді тек KIMEP шығарады."],
+  "Check your points, compare programs and see what English level you need.": ["Проверьте баллы, сравните программы и узнайте, какой уровень английского нужен.","Балдарыңызды тексеріңіз, бағдарламаларды салыстырыңыз және ағылшын деңгейін біліңіз."],
+  "Check your UNT points": ["Проверьте баллы ЕНТ","ҰБТ балдарын тексеріңіз"],
+  "Checklist and deadlines": ["Список и сроки","Тізім және мерзімдер"],
+  "Checklist progress": ["Прогресс списка","Тізім барысы"],
+  "Choose an email you check regularly": ["Укажите почту, которую регулярно проверяете","Үнемі тексеретін поштаңызды көрсетіңіз"],
+  "Choose semesters": ["Выбрать семестры","Семестрлерді таңдау"],
+  "Chosen period": ["Выбранный период","Таңдалған кезең"],
+  "Classes start": ["Начало занятий","Сабақ басталуы"],
+  "Clear all ticks?": ["Снять все отметки?","Барлық белгілерді алу керек пе?"],
+  "Close assistant": ["Закрыть ассистента","Көмекшіні жабу"],
+  "closed": ["закрыто","жабық"],
+  "Cognitive Sciences": ["Когнитивные науки","Когнитивті ғылымдар"],
+  "College or vocational graduate": ["Выпускник колледжа или другое образование","Колледж немесе кәсіптік білім түлегі"],
+  "Computer Science": ["Информатика (Computer Science)","Компьютерлік ғылымдар (Computer Science)"],
+  "Confirm its UNT subjects with Admissions before relying on this row.": ["Уточните предметы ЕНТ в приёмной комиссии, прежде чем опираться на эту строку.","Бұл жолға сүйенбес бұрын ҰБТ пәндерін қабылдау комиссиясынан нақтылаңыз."],
+  "Confirm registration readiness with advising": ["Уточните готовность к регистрации у консультанта","Тіркелуге дайындықты кеңесшіден нақтылаңыз"],
+  "Confirm your English level": ["Подтвердите уровень английского","Ағылшын деңгейін растаңыз"],
+  "Contact Student Academic Support for scheduling, tuition calculation and registration steps.": ["По расписанию, расчёту стоимости и регистрации обратитесь в Центр академической поддержки.","Кесте, оқу ақысын есептеу және тіркелу бойынша Академиялық қолдау орталығына хабарласыңыз."],
+  "Contacts": ["Контакты","Байланыс"],
+  "Copy your vaccination record · Form 065/u": ["Сделайте копию прививочной карты · 065/у","Егу картасының көшірмесін жасаңыз · 065/у"],
+  "Cost": ["Стоимость","Құны"],
+  "Cost of study": ["Стоимость обучения","Оқу құны"],
+  "Course registration, schedules and tuition calculation": ["Регистрация на курсы, расписание и расчёт стоимости","Пәндерге тіркелу, кесте және оқу ақысын есептеу"],
+  "Creative exam": ["Творческий экзамен","Шығармашылық емтихан"],
+  "Creative exams": ["Творческие экзамены","Шығармашылық емтихандар"],
+  "Creative exams instead of profile subjects.": ["Творческие экзамены вместо профильных предметов.","Бейіндік пәндердің орнына шығармашылық емтихандар."],
+  "credits": ["кредитов","кредит"],
+  "Credits": ["Кредитов","Кредит саны"],
+  "Credits per semester": ["Кредитов в семестр","Семестрдегі кредит саны"],
+  "credits, the example in KIMEP's price list; check your program's catalog": ["кредитов — пример из прайса KIMEP; точное число смотрите в каталоге программы","кредит — KIMEP прайсындағы мысал; нақты санын бағдарлама каталогынан қараңыз"],
+  "Deadlines": ["Сроки","Мерзімдер"],
+  "Defaults: 3, 3, 5, 5, 5. Cognitive Sciences needs 5 in Mathematical Literacy.": ["Обычно 3, 3, 5, 5, 5. Для Cognitive Sciences по математической грамотности нужно 5.","Әдетте 3, 3, 5, 5, 5. Cognitive Sciences үшін математикалық сауаттылықтан 5 керек."],
+  "Deliver originals and medical documents": ["Сдайте оригиналы и медицинские документы","Түпнұсқалар мен медициналық құжаттарды тапсырыңыз"],
+  "Deposits": ["Депозиты","Депозиттер"],
+  "details": ["подробнее","толығырақ"],
+  "Did you take these profile subjects?": ["Вы сдавали эти профильные предметы?","Сіз осы бейіндік пәндерді тапсырдыңыз ба?"],
+  "Do I need IELTS to apply?": ["Нужен ли IELTS для подачи заявки?","Өтініш беру үшін IELTS қажет пе?"],
+  "Do I need IELTS?": ["Нужен ли IELTS?","IELTS керек пе?"],
+  "Do Law applicants need a higher English level?": ["Нужен ли более высокий английский для права?","Құқыққа ағылшын тілінің деңгейі жоғары болуы керек пе?"],
+  "Do my scores qualify?": ["Прохожу ли я по баллам?","Балдарым жете ме?"],
+  "Documents": ["Документы","Құжаттар"],
+  "Documents & dates": ["Документы и сроки","Құжаттар мен мерзімдер"],
+  "Documents and dates": ["Документы и сроки","Құжаттар мен мерзімдер"],
+  "Documents checklist": ["Список документов","Құжаттар тізімі"],
+  "Duolingo ranges for UF A and UF B overlap, and TOEFL iBT still shows the old 0–120 scale although a new 1–6 scale started on 21 January 2026. Ask Admissions how your result is placed.": ["Диапазоны Duolingo для UF A и UF B пересекаются, а TOEFL iBT всё ещё указан по старой шкале 0–120, хотя с 21 января 2026 действует новая шкала 1–6. Уточните в приёмной комиссии, как засчитают ваш результат.","UF A және UF B үшін Duolingo аралықтары қиылысады, ал TOEFL iBT әлі де ескі 0–120 шкаласымен берілген, бірақ 2026 жылғы 21 қаңтардан бастап жаңа 1–6 шкаласы енгізілді. Нәтижеңіз қалай есептелетінін қабылдау комиссиясынан нақтылаңыз."],
+  "Economics": ["Экономика","Экономика"],
+  "elective": ["предмет по выбору","таңдау пәні"],
+  "English is not an admission requirement for bachelor programs, but teaching at KIMEP is in English, so every student's English level must be determined.": ["Английский не является условием поступления на бакалавриат, но обучение в KIMEP идёт на английском, поэтому уровень английского определяется у каждого студента.","Ағылшын тілі бакалавриатқа түсу шарты емес, бірақ KIMEP-те оқу ағылшын тілінде жүреді, сондықтан әр студенттің ағылшын деңгейі анықталуы тиіс."],
+  "English level": ["Уровень английского","Ағылшын тілі деңгейі"],
+  "English levels and certificates": ["Уровни английского и сертификаты","Ағылшын тілі деңгейлері мен сертификаттар"],
+  "Enrollment": ["Зачисление","Студенттер қатарына қабылдау"],
+  "Enter your UNT results and ICT number": ["Введите результаты ЕНТ и номер ИКТ","ҰБТ нәтижелері мен ТЖК нөмірін енгізіңіз"],
+  "Estimate tuition and fees for your plan.": ["Оцените обучение и сборы для вашего плана.","Жоспарыңыз бойынша оқу ақысы мен төлемдерді есептеңіз."],
+  "Fall 2027": ["Осень 2027","Күз 2027"],
+  "Filter by minimum": ["Фильтр по минимуму","Минимум бойынша сүзгі"],
+  "Filter deadlines": ["Фильтр сроков","Мерзімдер сүзгісі"],
+  "Finance": ["Финансы","Қаржы"],
+  "Financial Aid": ["Финансовая помощь","Қаржылық көмек"],
+  "Financial Aid: finaid@kimep.kz, +7 727 270 43 16. Funding has separate rules and deadlines. Admission does not guarantee a scholarship.": ["Отдел финансовой помощи: finaid@kimep.kz, +7 727 270 43 16. Для финансирования есть отдельные правила и сроки. Зачисление не гарантирует грант.","Қаржылық көмек бөлімі: finaid@kimep.kz, +7 727 270 43 16. Қаржыландырудың бөлек ережелері мен мерзімдері бар. Қабылдану грантқа кепілдік бермейді."],
+  "Financial Aid: finaid@kimep.kz, +7 727 270 43 16. The Admissions Office does not advise on scholarships.": ["Financial Aid: finaid@kimep.kz, +7 727 270 43 16. Приёмная комиссия не консультирует по стипендиям.","Financial Aid: finaid@kimep.kz, +7 727 270 43 16. Қабылдау комиссиясы стипендия бойынша кеңес бермейді."],
+  "First academic year": ["Первый учебный год","Бірінші оқу жылы"],
+  "First semester": ["Первый семестр","Бірінші семестр"],
+  "Follow your enrollment instructions first. An unsigned agreement or incomplete medical documents can block registration. Ask Student Academic Support for your next step.": ["Сначала выполните инструкции по зачислению. Неподписанный договор или неполные медицинские документы могут блокировать регистрацию. Следующий шаг уточните в Центре академической поддержки.","Алдымен қабылдау нұсқауларын орындаңыз. Қол қойылмаған шарт немесе толық емес медициналық құжаттар тіркелуге кедергі болуы мүмкін. Келесі қадамды Академиялық қолдау орталығынан сұраңыз."],
+  "Foreign Language": ["Иностранный язык","Шет тілі"],
+  "Foreign Language: Two Foreign Languages": ["Иностранный язык: два иностранных языка","Шетел тілі: екі шетел тілі"],
+  "Form 075/u, a vaccination record copy (065/u), and the chest X-ray with conclusion. The Medical Center lists physician checks, lab tests and supporting certificates. Use the expanded checklist for details.": ["Форма 075/у, копия прививочной карты 065/у и флюорография с заключением. Медцентр также указывает осмотры, анализы и дополнительные справки. Подробности — в расширенном списке.","075/у нысаны, 065/у егу картасының көшірмесі және қорытындысы бар флюорография. Орталық дәрігер тексерулерін, талдаулар мен қосымша анықтамаларды да көрсетеді. Толығырақ кеңейтілген тізімде."],
+  "Foundation A / Provisional A": ["Foundation A / Provisional A","Foundation A / Provisional A"],
+  "Foundation B / Provisional B": ["Foundation B / Provisional B","Foundation B / Provisional B"],
+  "Foundation C / Provisional C": ["Foundation C / Provisional C","Foundation C / Provisional C"],
+  "Foundation English": ["Foundation English","Foundation English"],
+  "Foundation English has three levels, UF A, UF B and UF C. Each level is 225 contact hours (3 hours a day, 5 days a week) and costs KZT 682 320. It is a mandatory part of the program and cannot be waived; a poor grade means retaking it.": ["В Foundation English три уровня: UF A, UF B и UF C. Каждый уровень — 225 контактных часов (3 часа в день, 5 дней в неделю), стоимость 682 320 KZT. Это обязательная часть программы, отказаться нельзя; при плохой оценке уровень пересдаётся.","Foundation English-тің үш деңгейі бар: UF A, UF B және UF C. Әр деңгей — 225 байланыс сағаты (күніне 3 сағат, аптасына 5 күн), құны 682 320 KZT. Бұл бағдарламаның міндетті бөлігі, одан бас тартуға болмайды; нашар баға алса, деңгей қайта оқылады."],
+  "Foundation English levels": ["Уровни Foundation English","Foundation English деңгейлері"],
+  "Foundations of Law": ["Основы права","Құқық негіздері"],
+  "Four options: one payment for the whole period of study when you sign the contract (the tuition then stays unchanged); one payment for each semester at its start; three installments within the semester; or an individual schedule arranged with the Financial Aid Office (+7 727 270 43 16).": ["Четыре варианта: единовременный платёж за весь период обучения при подписании договора (тогда стоимость не меняется); оплата за семестр в его начале; три платежа в семестр; либо индивидуальный график через Financial Aid (+7 727 270 43 16).","Төрт нұсқа: шартқа қол қою кезінде бүкіл оқу кезеңі үшін бір рет төлеу (сонда құн өзгермейді); әр семестрдің басында төлеу; семестр ішінде үш бөліп төлеу; немесе Financial Aid-пен жеке кесте жасау (+7 727 270 43 16)."],
+  "Geography": ["География","География"],
+  "Give education originals to Admissions and medical originals to the Medical Center.": ["Документы об образовании сдайте в приёмную комиссию, медицинские — в Медцентр.","Білім түпнұсқаларын қабылдау комиссиясына, медициналық құжаттарды Медицина орталығына тапсырыңыз."],
+  "Grant (what if)": ["Грант (сценарий)","Грант (сценарий)"],
+  "Grant covers, what if (% of tuition)": ["Грант покрывает, сценарий (% обучения)","Грант жабады, сценарий (оқу ақысының %)"],
+  "Health certificate with physician checks and tests listed by KIMEP. Ask the Medical Center about the exact examinations.": ["Медицинская справка с осмотрами и анализами по списку KIMEP. Точный перечень уточните в Медцентре.","KIMEP тізіміндегі дәрігер тексерулері мен талдаулары бар анықтама. Нақты тізімді Медицина орталығынан сұраңыз."],
+  "Hi! Ask me about UNT scores, tuition, documents, deadlines or English. I answer only from KIMEP's official sources.": ["Здравствуйте! Спросите про баллы ЕНТ, стоимость, документы, сроки или английский. Я отвечаю только по официальным источникам KIMEP.","Сәлем! ҰБТ балдары, оқу ақысы, құжаттар, мерзімдер немесе ағылшын тілі туралы сұраңыз. Мен тек KIMEP-тің ресми дереккөздері бойынша жауап беремін."],
+  "High-school graduate requirements": ["Требования к выпускникам школ","Мектеп түлектеріне қойылатын талаптар"],
+  "History of Kazakhstan": ["История Казахстана","Қазақстан тарихы"],
+  "Home": ["Главная","Басты бет"],
+  "How can I pay tuition?": ["Как можно оплатить обучение?","Оқу ақысын қалай төлеуге болады?"],
+  "How do Journalism applicants apply?": ["Как поступают на Journalism?","Journalism-ға қалай түседі?"],
+  "How much is tuition per year?": ["Сколько стоит обучение в год?","Оқу ақысы жылына қанша?"],
+  "How much is tuition?": ["Сколько стоит обучение?","Оқу ақысы қанша?"],
+  "How much will it cost?": ["Сколько это стоит?","Бұл қанша тұрады?"],
+  "How to apply": ["Как подать заявку","Өтініш беру тәртібі"],
+  "How will I know the admission decision?": ["Как узнать решение о поступлении?","Қабылдау шешімін қалай білемін?"],
+  "I could not find this in the handbook.": ["Я не нашёл этого в справочнике.","Мен мұны анықтамалықтан таппадым."],
+  "I need the residence hall": ["Нужно общежитие","Маған жатақхана керек"],
+  "ICT is the test identifier shown with your UNT results.": ["ИКТ — идентификатор тестирования, указанный в результатах ЕНТ.","ТЖК — ҰБТ нәтижелерінде көрсетілген тестілеу идентификаторы."],
+  "IELTS is not the only route. KIMEP accepts listed valid English certificates or uses its placement procedure. A lower English level can lead to Foundation English. Confirm your assigned route with Admissions.": ["IELTS — не единственный вариант. KIMEP принимает указанные действующие сертификаты или определяет уровень своим тестированием. При более низком уровне возможен Foundation English. Уточните свой путь в приёмной комиссии.","IELTS — жалғыз нұсқа емес. KIMEP көрсетілген жарамды сертификаттарды қабылдайды немесе өз тәртібімен деңгейді анықтайды. Төменірек деңгейде Foundation English тағайындалуы мүмкін. Өз жолыңызды комиссиядан нақтылаңыз."],
+  "Independent student project, not an official KIMEP service. Only KIMEP makes admission decisions.": ["Независимый студенческий проект, не официальный сервис KIMEP. Решение о зачислении принимает только KIMEP.","Тәуелсіз студенттік жоба, KIMEP-тің ресми сервисі емес. Қабылдау туралы шешімді тек KIMEP қабылдайды."],
+  "Informatics": ["Информатика","Информатика"],
+  "Information Systems": ["Информационные системы","Ақпараттық жүйелер"],
+  "International applicants": ["Иностранные абитуриенты","Шетелдік талапкерлер"],
+  "International Law": ["Международное право","Халықаралық құқық"],
+  "International Relations": ["Международные отношения","Халықаралық қатынастар"],
+  "International student": ["Иностранный студент","Шетелдік студент"],
+  "International students at KIMEP": ["Иностранные студенты в KIMEP","KIMEP-тегі шетелдік студенттер"],
+  "Is there a math test for Computer Science?": ["Есть ли тест по математике для Computer Science?","Computer Science үшін математикадан тест бар ма?"],
+  "Is tuition the same for every program?": ["Одинакова ли цена для всех программ?","Оқу ақысы барлық бағдарламада бірдей ме?"],
+  "Item": ["Статья","Бап"],
+  "Journalism": ["Журналистика","Журналистика"],
+  "Journalism uses creative exams.": ["Журналистика: творческие экзамены.","Журналистика: шығармашылық емтихандар."],
+  "Journalism uses two creative exams (an essay and a written interview) held online, plus your UNT History of Kazakhstan and Reading Literacy scores. KIMEP announces the exam date separately; check the applicant portal.": ["Journalism: два творческих экзамена онлайн (эссе и письменное интервью) плюс баллы ЕНТ по истории Казахстана и грамотности чтения. Дату экзамена KIMEP объявляет отдельно; смотрите портал абитуриента.","Journalism: онлайн екі шығармашылық емтихан (эссе және жазбаша сұхбат) және ҰБТ-дан Қазақстан тарихы мен оқу сауаттылығы баллдары. Емтихан күнін KIMEP бөлек жариялайды; Талапкер порталын қараңыз."],
+  "Journalism uses two online creative exams; there is no total UNT threshold.": ["Журналистика: два творческих экзамена онлайн, общего порога ЕНТ нет.","Журналистика: екі онлайн шығармашылық емтихан, жалпы ҰБТ шегі жоқ."],
+  "JPEG, 300 ppi, at least 8 MP, high quality with low compression.": ["JPEG, 300 ppi, не менее 8 МП, высокое качество с низким сжатием.","JPEG, 300 ppi, кемінде 8 МП, аз сығылған жоғары сапа."],
+  "Kazakhstan high-school graduate": ["Выпускник школы Казахстана","Қазақстан мектебінің түлегі"],
+  "Key numbers": ["Ключевые цифры","Негізгі көрсеткіштер"],
+  "KIMEP Pathway assistant": ["Ассистент KIMEP Pathway","KIMEP Pathway көмекшісі"],
+  "KIMEP Pathway, home": ["KIMEP Pathway, главная","KIMEP Pathway, басты бет"],
+  "KIMEP sends official decisions and messages there.": ["KIMEP отправляет туда официальные решения и сообщения.","KIMEP ресми шешімдер мен хабарламаларды сол жерге жібереді."],
+  "KIMEP tests, interviews and exams": ["Тесты, собеседования и экзамены KIMEP","KIMEP тесттері, сұхбаттары және емтихандары"],
+  "KIMEP's own sources differ on three document details.": ["Источники KIMEP расходятся по трём деталям документов.","KIMEP дереккөздері құжаттардың үш бөлшегі бойынша сәйкес келмейді."],
+  "Language": ["Язык","Тіл"],
+  "Law applicants (LL.B. and B.I.L.)": ["Право (LL.B. и B.I.L.)","Құқық (LL.B. және B.I.L.)"],
+  "Laws (Jurisprudence)": ["Юриспруденция (Laws)","Құқықтану (Laws)"],
+  "Length of study": ["Срок обучения","Оқу мерзімі"],
+  "Level": ["Уровень","Деңгей"],
+  "Listed in the admission guide but not on the website requirements page. Confirm with Admissions.": ["Есть в гиде поступления, но нет на странице требований сайта. Уточните в приёмной комиссии.","Қабылдау нұсқаулығында бар, бірақ сайттың талаптар бетінде жоқ. Қабылдау комиссиясынан нақтылаңыз."],
+  "Live contact page": ["Актуальная страница контактов","Өзекті байланыс беті"],
+  "Live schedule": ["Актуальное расписание","Өзекті кесте"],
+  "Live service": ["Работающий сервис","Жұмыс істеп тұрған сервис"],
+  "Main navigation": ["Основная навигация","Негізгі навигация"],
+  "Management": ["Менеджмент","Менеджмент"],
+  "Mandatory fees": ["Обязательные сборы","Міндетті төлемдер"],
+  "Marketing": ["Маркетинг","Маркетинг"],
+  "Mathematical Literacy": ["Математическая грамотность","Математикалық сауаттылық"],
+  "Mathematical Literacy needs at least 5, not 3.": ["По математической грамотности нужно минимум 5, а не 3.","Математикалық сауаттылықтан кемінде 5 керек, 3 емес."],
+  "Mathematics": ["Математика","Математика"],
+  "Mathematics and Informatics for the standard Information Systems high-school route. Vocational and transfer routes need separate assessment.": ["Для стандартного поступления после школы — математика и информатика. Выпускникам колледжей и переводящимся нужна отдельная оценка.","Мектептен кейінгі стандартты жол үшін — математика және информатика. Колледж түлектері мен ауысушылар бөлек бағаланады."],
+  "Medical Center": ["Медицинский центр","Медицина орталығы"],
+  "Medical documents": ["Медицинские документы","Медициналық құжаттар"],
+  "Medical examination fee": ["Сбор за медосмотр","Медициналық тексеру ақысы"],
+  "Medical forms, checks and foreign medical records": ["Медицинские формы, обследования и иностранные меддокументы","Медициналық нысандар, тексерулер және шетелдік медициналық құжаттар"],
+  "minimum": ["минимум","минимум"],
+  "Minimum": ["Минимум","Минимум"],
+  "Minimum overall": ["Минимум в сумме","Жалпы минимум"],
+  "Months per academic year": ["Месяцев в учебном году","Оқу жылындағы айлар"],
+  "New Kazakhstan school graduates apply for the Fall 2027 intake. The other rows are for international, transfer and reinstated applicants.": ["Выпускники школ Казахстана подают заявки на осенний набор 2027. Остальные строки — для иностранных, переводящихся и восстанавливающихся абитуриентов.","Қазақстан мектептерінің түлектері 2027 жылғы күзгі қабылдауға өтініш береді. Қалған жолдар — шетелдік, ауысып келетін және қайта қабылданатын талапкерлерге."],
+  "No answer found. Try other words or ask the assistant.": ["Ответ не найден. Попробуйте другие слова или спросите ассистента.","Жауап табылмады. Басқа сөздерді қолданыңыз немесе көмекшіден сұраңыз."],
+  "No program matches.": ["Программы не найдены.","Бағдарлама табылмады."],
+  "No update date shown": ["Дата обновления не указана","Жаңарту күні көрсетілмеген"],
+  "No update date shown; contains legacy program counts": ["Дата обновления не указана; содержит устаревшее число программ","Жаңарту күні көрсетілмеген; бағдарлама санының ескі мәліметі бар"],
+  "No, different subjects": ["Нет, другие предметы","Жоқ, басқа пәндер"],
+  "Number of semesters": ["Число семестров","Семестр саны"],
+  "Official applicant portal": ["Официальный портал абитуриента","Ресми талапкер порталы"],
+  "Official KIMEP Applicant Portal": ["Официальный портал абитуриента KIMEP","KIMEP-тің ресми Талапкер порталы"],
+  "Official scholarships page": ["Официальная страница о грантах","Грант туралы ресми бет"],
+  "Online application": ["Онлайн-заявка","Онлайн өтініш"],
+  "open": ["открыто","ашық"],
+  "Open documents and dates": ["Открыть «Документы и сроки»","«Құжаттар мен мерзімдер» ашу"],
+  "Open Home": ["Открыть «Главная»","«Басты бет» ашу"],
+  "Open questions and contacts": ["Открыть «Вопросы и контакты»","«Сұрақтар мен байланыс» ашу"],
+  "Open the tuition calculator": ["Открыть калькулятор стоимости","Құн калькуляторын ашу"],
+  "Open UNT scores": ["Открыть «Баллы ЕНТ»","«ҰБТ балдары» ашу"],
+  "Optional certificate upload. Without one, arrange KIMEP English placement. Tick this after choosing your route.": ["Сертификат загружается при наличии. Если его нет, согласуйте определение уровня KIMEP. Отметьте после выбора варианта.","Сертификат бар болса жүктеледі. Жоқ болса, KIMEP деңгей анықтауын келісіңіз. Нұсқаны таңдаған соң белгілеңіз."],
+  "paid separately, not tuition": ["вносятся отдельно, это не обучение","бөлек төленеді, оқу ақысы емес"],
+  "Pedagogical track.": ["Педагогическое направление.","Педагогикалық бағыт."],
+  "Percentages in the calculator are only scenarios.": ["Проценты в калькуляторе — только сценарии.","Калькулятордағы пайыздар — тек сценарийлер."],
+  "Please ask Admissions": ["Пожалуйста, уточните в приёмной комиссии","Қабылдау комиссиясынан сұраңыз"],
+  "Political Science": ["Политология","Саясаттану"],
+  "Political Science is in the admission guide but not on the website list.": ["Political Science есть в гиде поступления, но нет в списке на сайте.","Political Science қабылдау нұсқаулығында бар, бірақ сайттағы тізімде жоқ."],
+  "Prepare Form 075/u": ["Подготовьте форму 075/у","075/у нысанын дайындаңыз"],
+  "Prepare the chest X-ray and conclusion": ["Подготовьте флюорографию с заключением","Флюорографияны қорытындысымен дайындаңыз"],
+  "Prepare to register for courses": ["Подготовьтесь к регистрации на курсы","Пәндерге тіркелуге дайындалыңыз"],
+  "profile": ["профильный","бейіндік"],
+  "Profile subjects": ["Профильные предметы","Бейіндік пәндер"],
+  "Program": ["Программа","Бағдарлама"],
+  "Psychology": ["Психология","Психология"],
+  "Public and Municipal Administration": ["Государственное и местное управление","Мемлекеттік және жергілікті басқару"],
+  "Questions": ["Вопросы","Сұрақтар"],
+  "Questions about the Foundation English program": ["Вопросы о программе Foundation English","Foundation English бағдарламасы бойынша сұрақтар"],
+  "Read your decision and sign the agreement": ["Получите решение и подпишите договор","Шешімді оқып, шартқа қол қойыңыз"],
+  "Reading Literacy": ["Грамотность чтения","Оқу сауаттылығы"],
+  "Recommended 15–18 per semester (30–36 per year).": ["Рекомендуется 15–18 в семестр (30–36 в год).","Семестріне 15–18 ұсынылады (жылына 30–36)."],
+  "Requirements for every program": ["Требования по всем программам","Барлық бағдарламаға қойылатын талаптар"],
+  "Reset checklist": ["Сбросить список","Тізімді тазалау"],
+  "Residence hall": ["Общежитие","Жатақхана"],
+  "Residence Hall": ["Общежитие","Жатақхана"],
+  "Residence hall bed": ["Место в общежитии","Жатақханадағы орын"],
+  "Residence hall security deposit": ["Депозит за общежитие","Жатақхана кепілдік жарнасы"],
+  "Review, sign and upload your agreement": ["Прочитайте, подпишите и загрузите договор","Шартты оқып, қол қойып, жүктеңіз"],
+  "Saved only in this browser.": ["Сохраняется только в этом браузере.","Тек осы браузерде сақталады."],
+  "Scholarship eligibility, deadlines and funding": ["Условия грантов, сроки и финансирование","Грант талаптары, мерзімдер және қаржыландыру"],
+  "Scholarships": ["Стипендии и гранты","Стипендиялар мен гранттар"],
+  "Scholarships for newly admitted students": ["Гранты для новых студентов","Жаңа қабылданған студенттерге гранттар"],
+  "Scores, costs, documents and dates for bachelor applicants, in one place.": ["Баллы, стоимость, документы и сроки для абитуриентов бакалавриата — в одном месте.","Бакалавриат талапкерлеріне арналған балл, құн, құжат және мерзімдер — бір жерде."],
+  "Search a program or subject": ["Найти программу или предмет","Бағдарлама немесе пән іздеу"],
+  "Search common questions": ["Поиск по частым вопросам","Жиі қойылатын сұрақтарды іздеу"],
+  "Search programs": ["Поиск программ","Бағдарламаларды іздеу"],
+  "Section minimums": ["Минимумы по разделам","Бөлімдер бойынша минимум"],
+  "Section minimums are in this order": ["Порядок минимумов по разделам","Бөлім минимумдарының реті"],
+  "Semesters": ["Семестров","Семестр саны"],
+  "Send": ["Отправить","Жіберу"],
+  "Short answers from KIMEP's official sources.": ["Короткие ответы по официальным источникам KIMEP.","KIMEP-тің ресми дереккөздері бойынша қысқа жауаптар."],
+  "Show total for": ["Показать итог за","Қорытындыны көрсету"],
+  "Skip to content": ["Перейти к содержанию","Мазмұнға өту"],
+  "Source": ["Источник","Дереккөз"],
+  "Sources": ["Источники","Дереккөздер"],
+  "Spring 2027": ["Весна 2027","Көктем 2027"],
+  "Standard high-school route. Other education routes need individual review.": ["Стандартный маршрут для школьников. Для других форм образования нужна индивидуальная проверка.","Мектеп түлектеріне арналған стандартты жол. Басқа білім беру жолдары жеке қаралады."],
+  "Start in the official Applicant Portal. Upload ID, photo and any valid English certificate.": ["Начните на официальном портале. Загрузите удостоверение, фото и действующий сертификат по английскому при наличии.","Ресми порталдан бастаңыз. Жеке куәлік, фото және бар болса жарамды ағылшын сертификатын жүктеңіз."],
+  "Start over": ["Начать заново","Қайта бастау"],
+  "Stop": ["Стоп","Тоқтату"],
+  "Stricter English rules apply to law applicants.": ["Для права действуют более строгие требования к английскому.","Құқық бағдарламаларына ағылшын тіліне қойылатын талаптар қатаңырақ."],
+  "Student Academic Support": ["Академическая поддержка студентов","Студенттерді академиялық қолдау"],
+  "Student activity fee": ["Студенческий сбор","Студенттік жарна"],
+  "Students who skip the English level procedure start from the lowest level, UF C.": ["Студенты, не прошедшие определение уровня английского, начинают с самого низкого уровня — UF C.","Ағылшын деңгейін анықтаудан өтпеген студенттер ең төменгі деңгейден — UF C-ден бастайды."],
+  "Submit medical originals to the Medical Center": ["Сдайте оригиналы медицинских документов в Медцентр","Медициналық түпнұсқаларды Медицина орталығына тапсырыңыз"],
+  "Submit the original certificate and transcript": ["Сдайте оригинал аттестата с приложением","Аттестат пен қосымшаның түпнұсқасын тапсырыңыз"],
+  "Summer I 2027": ["Лето I 2027","Жаз I 2027"],
+  "Summer II 2027": ["Лето II 2027","Жаз II 2027"],
+  "Textbook security deposit": ["Залог за учебники","Оқулықтар үшін кепілдік жарна"],
+  "The 2026–2027 guide gives 15 June as the start for originals. Submit the certificate and transcript to Admissions and confirm the date for your own intake.": ["В руководстве 2026–2027 приём оригиналов начинается 15 июня. Сдайте аттестат с приложением в приёмную комиссию и уточните дату вашего набора.","2026–2027 нұсқаулығында түпнұсқа қабылдау 15 маусымнан басталады. Аттестат пен қосымшаны комиссияға тапсырып, өз қабылдау кезеңіңіздің күнін нақтылаңыз."],
+  "The 2026–2027 guide says originals can be submitted from 15 June. Confirm the date for your intake.": ["В руководстве 2026–2027 оригиналы принимаются с 15 июня. Уточните дату для вашего набора.","2026–2027 нұсқаулығында түпнұсқалар 15 маусымнан қабылданады. Өз қабылдау кезеңіңіздің күнін нақтылаңыз."],
+  "The 2026–2027 price list lists a late payment fee of KZT 29,950 and a late registration fee of KZT 15,380 per course. Bank transfers can take 3 or more business days, so pay in advance.": ["В прайсе 2026–2027 указаны штраф за просрочку оплаты 29 950 KZT и за позднюю регистрацию 15 380 KZT за курс. Банковские переводы идут от 3 рабочих дней, поэтому платите заранее.","2026–2027 прайсында төлемді кешіктіргені үшін 29 950 KZT және кеш тіркелгені үшін бір курсқа 15 380 KZT көрсетілген. Банк аударымдары 3 және одан көп жұмыс күніне созылуы мүмкін, сондықтан алдын ала төлеңіз."],
+  "The 2026–2027 rate is KZT 163,230 per KIMEP credit. Multiply it by your credit load, then account for fees and any assigned Foundation English. Future-year rates may change.": ["В 2026–2027 году ставка — 163 230 тенге за кредит KIMEP. Умножьте на число кредитов и отдельно учтите сборы и назначенный Foundation English. В следующие годы ставка может меняться.","2026–2027 мөлшерлемесі — бір KIMEP кредитіне 163 230 теңге. Кредит санына көбейтіп, алымдар мен тағайындалған Foundation English ақысын бөлек ескеріңіз. Келесі жылдары мөлшерлеме өзгеруі мүмкін."],
+  "The AI service is not available right now. Showing the handbook answer instead.": ["ИИ-сервис сейчас недоступен. Показываю ответ из справочника.","ЖИ сервисі қазір қолжетімсіз. Анықтамалықтағы жауапты көрсетемін."],
+  "The center may require translation of foreign records. An X-ray taken outside Kazakhstan needs verification by an Almaty radiologist.": ["Для иностранных документов может потребоваться перевод. Флюорографию из другой страны должен подтвердить рентгенолог в Алматы.","Шетелдік құжаттарға аударма қажет болуы мүмкін. Қазақстаннан тыс түсірілген флюорографияны Алматы рентгенологы растауы керек."],
+  "The Duolingo and TOEFL rows are unclear in KIMEP's table.": ["Строки Duolingo и TOEFL в таблице KIMEP неоднозначны.","KIMEP кестесіндегі Duolingo және TOEFL жолдары анық емес."],
+  "The published 2026 offer was the Intellectual Olympiad: 15 grants of 100% and 15 of 50% of tuition, for 2026 graduates. Grants cover tuition only. Nothing for 2027 is published yet.": ["Опубликованное предложение 2026 года — Интеллектуальная олимпиада: 15 грантов на 100% и 15 на 50% обучения для выпускников 2026 года. Гранты покрывают только обучение. Предложений на 2027 год пока не опубликовано.","2026 жылы жарияланған ұсыныс — Зияткерлік олимпиада: 2026 жылғы түлектерге оқу ақысының 100%-ын жабатын 15 және 50%-ын жабатын 15 грант. Гранттар тек оқу ақысын жабады. 2027 жылға ұсыныстар әлі жарияланбаған."],
+  "The published 2026 offer was the Intellectual Olympiad: 15 grants of 100% and 15 of 50% of tuition, held on 29 March 2026 for 2026 graduates. Grants cover tuition only. Opportunities for 2027 are not published in the sources we checked, so ask Financial Aid: finaid@kimep.kz, +7 727 270 43 16.": ["Опубликованное предложение 2026 года — Интеллектуальная олимпиада: 15 грантов на 100% и 15 на 50% обучения, проведена 29 марта 2026 для выпускников 2026 года. Гранты покрывают только обучение. Возможности на 2027 в проверенных источниках не опубликованы, уточняйте в Financial Aid: finaid@kimep.kz, +7 727 270 43 16.","2026 жылы жарияланған ұсыныс — Зияткерлік олимпиада: оқу ақысының 100%-ын жабатын 15 және 50%-ын жабатын 15 грант, 2026 жылғы түлектер үшін 2026 жылғы 29 наурызда өтті. Гранттар тек оқу ақысын жабады. 2027 жылға мүмкіндіктер біз тексерген дереккөздерде жарияланбаған, Financial Aid-тен сұраңыз: finaid@kimep.kz, +7 727 270 43 16."],
+  "The steps, what to prepare and when.": ["Шаги, что подготовить и когда.","Қадамдар, не дайындау керек және қашан."],
+  "There is no total UNT threshold to check; ask Admissions for the exam date.": ["Общего порога ЕНТ здесь нет; дату экзамена уточните в приёмной комиссии.","Жалпы ҰБТ шегі жоқ; емтихан күнін қабылдау комиссиясынан нақтылаңыз."],
+  "This checklist covers Kazakhstan high-school applicants. International and transfer routes need separate review.": ["Список предназначен для выпускников школ Казахстана. Иностранные абитуриенты и переводы рассматриваются отдельно.","Тізім Қазақстан мектептерінің түлектеріне арналған. Шетелдік талапкерлер мен ауысушылар бөлек қаралады."],
+  "Too many questions in a short time. Showing the handbook answer instead.": ["Слишком много вопросов за короткое время. Показываю ответ из справочника.","Қысқа уақытта тым көп сұрақ. Анықтамалықтағы жауапты көрсетемін."],
+  "Total": ["Итого","Барлығы"],
+  "Total: {n}/140, the published minimum is {min}.": ["Общий балл: {n}/140, опубликованный минимум — {min}.","Жалпы балл: {n}/140, жарияланған минимум — {min}."],
+  "Transfer & reinstatement": ["Перевод и восстановление","Ауысу және қайта қабылдану"],
+  "Transfer and reinstatement": ["Перевод и восстановление","Ауысу және қайта қабылдану"],
+  "Translation Studies": ["Переводческое дело","Аударма ісі"],
+  "Tuition": ["Обучение","Оқу ақысы"],
+  "Tuition and fees for all programs, 2026–2027": ["Стоимость и сборы по всем программам, 2026–2027","Барлық бағдарлама бойынша оқу ақысы мен төлемдер, 2026–2027"],
+  "Tuition per credit": ["Стоимость кредита","Бір кредиттің құны"],
+  "Tuition, fees, housing": ["Обучение, сборы, общежитие","Оқу ақысы, төлемдер, жатақхана"],
+  "Two online creative exams (an essay and a written interview). UNT History of Kazakhstan and Reading Literacy scores are also taken into account.": ["Два творческих экзамена онлайн (эссе и письменное интервью). Учитываются также баллы ЕНТ по истории Казахстана и грамотности чтения.","Онлайн форматтағы екі шығармашылық емтихан (эссе және жазбаша сұхбат). ҰБТ-дан Қазақстан тарихы және оқу сауаттылығы баллдары да ескеріледі."],
+  "Type your question": ["Введите вопрос","Сұрағыңызды жазыңыз"],
+  "Typing": ["Печатает","Жазып жатыр"],
+  "Undergraduate · Kazakhstan & international": ["Бакалавриат · местные и иностранные абитуриенты","Бакалавриат · жергілікті және шетелдік талапкерлер"],
+  "Undergraduate admission guide for Kazakhstan citizens (Kazakh edition, April 2026)": ["Гид поступления на бакалавриат для граждан Казахстана (казахская версия, апрель 2026)","Қазақстан азаматтарына арналған бакалавриатқа түсу нұсқаулығы (қазақша, 2026 жылғы сәуір)"],
+  "Undergraduate admission guide, 2026–2027": ["Руководство по поступлению в бакалавриат, 2026–2027","Бакалавриатқа түсу нұсқаулығы, 2026–2027"],
+  "Undergraduate fees, Kazakh edition, 2026–2027": ["Стоимость бакалавриата, казахская версия, 2026–2027","Бакалавриат оқу ақысы, қазақша нұсқа, 2026–2027"],
+  "Undergraduate tuition and fees, 2026–2027": ["Стоимость и сборы бакалавриата, 2026–2027","Бакалавриат оқу ақысы мен алымдары, 2026–2027"],
+  "UNT": ["ЕНТ","ҰБТ"],
+  "UNT History and Reading are considered": ["Учитываются история и грамотность чтения ЕНТ","ҰБТ тарихы мен оқу сауаттылығы ескеріледі"],
+  "UNT minimum": ["Минимум ЕНТ","ҰБТ минимумы"],
+  "UNT scores": ["Баллы ЕНТ","ҰБТ балдары"],
+  "Upload a valid English certificate, if you have one": ["Загрузите действующий сертификат по английскому, если есть","Бар болса, жарамды ағылшын сертификатын жүктеңіз"],
+  "Upload both sides of your ID": ["Загрузите обе стороны удостоверения","Жеке куәліктің екі жағын жүктеңіз"],
+  "Upload your certificate and transcript": ["Загрузите аттестат и приложение","Аттестат пен қосымшаны жүктеңіз"],
+  "Upload your certificate and transcript when ready. Enter your UNT scores and ICT number.": ["Загрузите аттестат с приложением, когда получите. Укажите баллы ЕНТ и номер ИКТ.","Аттестат пен қосымшаны алған соң жүктеңіз. ҰБТ балдары мен ТЖК нөмірін енгізіңіз."],
+  "Upload your photo in the Photo field": ["Загрузите фото в поле Photo","Фотосуретті Photo өрісіне жүктеңіз"],
+  "Use a valid accepted certificate or the KIMEP placement procedure. Your level determines your English study route.": ["Предоставьте принимаемый действующий сертификат или пройдите определение уровня KIMEP. Уровень определит программу английского.","Қабылданатын жарамды сертификатты беріңіз немесе KIMEP деңгей анықтауынан өтіңіз. Деңгей ағылшын оқу жолын анықтайды."],
+  "Use Acceptance Package, sign every page and upload under SIGNED CONTRACT. If under 18, a parent or guardian also signs. Ask whether paper copies are required.": ["Откройте Acceptance Package, подпишите каждую страницу и загрузите в SIGNED CONTRACT. До 18 лет также подписывает родитель или опекун. Уточните необходимость бумажных копий.","Acceptance Package бөлімін ашып, әр бетке қол қойып, SIGNED CONTRACT өрісіне жүктеңіз. 18 жасқа дейін ата-ана не қамқоршы да қол қояды. Қағаз даналар қажет пе екенін сұраңыз."],
+  "Use KIMEP’s official Applicant Portal. This student project does not receive your documents or submit an application for you.": ["Используйте официальный портал абитуриента KIMEP. Этот студенческий проект не принимает документы и не подаёт заявку за вас.","KIMEP ресми талапкер порталын пайдаланыңыз. Бұл студенттік жоба құжат қабылдамайды және сіздің атыңыздан өтініш бермейді."],
+  "verified": ["проверено","тексерілген"],
+  "We do not know your chance of a grant, grant passing scores or the number of places. Financial Aid has its own deadlines, separate from admission.": ["Мы не знаем ваших шансов на грант, проходные баллы на грант и число мест. У Financial Aid свои сроки, отдельные от поступления.","Грант алу мүмкіндігіңізді, грантқа өту балдарын және орындар санын білмейміз. Financial Aid-тің өз мерзімдері бар, ол қабылдаудан бөлек."],
+  "What do you want to know?": ["Что вы хотите узнать?","Нені білгіңіз келеді?"],
+  "What happens if I pay or register late?": ["Что будет при просрочке оплаты или поздней регистрации?","Төлемді не тіркелуді кешіктірсем не болады?"],
+  "What is BELA early registration?": ["Что такое ранняя регистрация BELA?","BELA ерте тіркелуі дегеніміз не?"],
+  "What is Foundation English?": ["Что такое Foundation English?","Foundation English дегеніміз не?"],
+  "What UNT score do I need for {p}?": ["Какой балл ЕНТ нужен для программы {p}?","{p} бағдарламасына ҰБТ-дан неше балл керек?"],
+  "What UNT score do I need for Information Systems?": ["Какой балл ЕНТ нужен для информационных систем?","Ақпараттық жүйелерге қандай ҰБТ балы қажет?"],
+  "What UNT score do I need for my program?": ["Какой балл ЕНТ нужен на мою программу?","Менің бағдарламама ҰБТ-дан неше балл керек?"],
+  "When do I submit the original certificate?": ["Когда сдавать оригинал аттестата?","Аттестат түпнұсқасын қашан тапсыру керек?"],
+  "Where do I apply?": ["Куда подавать?","Қайда өтініш беремін?"],
+  "Where do I submit my application?": ["Где подать заявку?","Өтінішті қайда беру керек?"],
+  "Which documents do I need and by when?": ["Какие документы нужны и до какого числа?","Қандай құжаттар керек және қашанға дейін?"],
+  "Which documents, and by when?": ["Какие документы и до какого числа?","Қандай құжаттар және қашанға дейін?"],
+  "Which medical documents do I need?": ["Какие медицинские документы нужны?","Қандай медициналық құжаттар қажет?"],
+  "Which profile subjects should I take?": ["Какие профильные предметы нужно сдавать?","Қандай бейіндік пәндерді тапсыру керек?"],
+  "Who are you?": ["Кто вы?","Сіз кімсіз?"],
+  "Who can help with scholarships?": ["Кто поможет с грантами?","Гранттар бойынша кім көмектеседі?"],
+  "Whole program": ["Вся программа","Бүкіл бағдарлама"],
+  "World History": ["Всемирная история","Дүниежүзі тарихы"],
+  "Yes": ["Да","Иә"],
+  "Yes for bachelor programs. In the 2026–2027 price list every undergraduate program, including Economics, Finance, Management, Information Systems, Computer Science, Law and Psychology, costs KZT 163,230 per credit. Rates for later years may change.": ["Да, для бакалавриата. В прайсе 2026–2027 все программы бакалавриата, включая Economics, Finance, Management, Information Systems, Computer Science, право и психологию, стоят 163 230 KZT за кредит. Ставки следующих лет могут измениться.","Иә, бакалавриат үшін. 2026–2027 прайсында барлық бакалавриат бағдарламасы, соның ішінде Economics, Finance, Management, Information Systems, Computer Science, құқық және психология, бір кредит үшін 163 230 KZT тұрады. Келесі жылдардағы бағалар өзгеруі мүмкін."],
+  "Yes, clear": ["Да, снять","Иә, алу"],
+  "Yes. Computer Science (BSCS) students take a math placement test: 20 multiple-choice questions in 50 minutes, maximum 20 points. 12 or more places you in Calculus I; below 12 places you in College Algebra.": ["Да. Студенты Computer Science (BSCS) сдают тест на определение уровня математики: 20 вопросов с выбором ответа за 50 минут, максимум 20 баллов. 12 и более — Calculus I, меньше 12 — College Algebra.","Иә. Computer Science (BSCS) студенттері математикадан деңгей анықтау тестін тапсырады: 50 минутта таңдау бойынша 20 сұрақ, ең жоғары балл — 20. 12 және одан жоғары — Calculus I, 12-ден төмен — College Algebra."],
+  "Yes. Contact Admissions about the international route, education recognition, interview and immigration requirements. The local UNT checker does not assess international eligibility.": ["Да. Уточните в приёмной комиссии порядок для иностранных граждан, признание образования, собеседование и миграционные требования. Проверка местного ЕНТ не определяет право иностранного абитуриента на поступление.","Иә. Шетелдік азаматтарға арналған тәртіп, білімді тану, сұхбат және көші-қон талаптарын комиссиядан сұраңыз. Жергілікті ҰБТ тексеруі шетелдік талапкердің түсу құқығын анықтамайды."],
+  "Yes. For LL.B. and B.I.L., IELTS 6.5+ (or an equivalent approved certificate) means direct placement in academic courses. IELTS 5.5 or 6.0 (or equivalent) requires an interview; you may be admitted with parallel English study or advised to choose another track.": ["Да. Для LL.B. и B.I.L. IELTS 6.5+ (или эквивалентный сертификат) — сразу на академические курсы. IELTS 5.5 или 6.0 (или эквивалент) — собеседование; возможно зачисление с параллельным изучением английского или рекомендация выбрать другую траекторию.","Иә. LL.B. және B.I.L. үшін IELTS 6.5+ (немесе баламалы сертификат) — академиялық пәндерге тікелей. IELTS 5.5 немесе 6.0 (немесе баламасы) — сұхбат; ағылшын тілін қатар оқыту шартымен қабылдау немесе басқа траекторияны таңдау ұсынылуы мүмкін."],
+  "Yes. Start your online application with available documents, then add your education records as soon as you receive them.": ["Да. Начните онлайн-заявку с имеющимися документами и добавьте документы об образовании после получения.","Иә. Қолда бар құжаттармен онлайн өтінішті бастап, білім құжаттарын алған соң қосыңыз."],
+  "You appear to meet the basic UNT requirement.": ["Похоже, вы проходите по базовому требованию ЕНТ.","Сіз ҰБТ бойынша негізгі талапқа сай көрінесіз."],
+  "You are {n} points short.": ["Не хватает {n} баллов.","{n} балл жетіспейді."],
+  "Your program": ["Ваша программа","Сіздің бағдарламаңыз"],
+  "Your question": ["Ваш вопрос","Сіздің сұрағыңыз"],
+  "Your total is {n}/140 and all five section minimums are met. Next: prepare your documents and confirm your English level. This is not an admission decision.": ["Ваш общий балл — {n}/140, минимумы всех пяти разделов выполнены. Дальше: подготовьте документы и подтвердите уровень английского. Это не решение о зачислении.","Жалпы балыңыз — {n}/140, бес бөлімнің де минимумы орындалған. Әрі қарай: құжаттарыңызды дайындап, ағылшын тілі деңгейін растаңыз. Бұл қабылдау туралы шешім емес."],
+  "Your way into KIMEP": ["Ваш путь в KIMEP","KIMEP-ке жолыңыз"],
 };
-
-Object.assign(translations, {
-  "Programs": [
-    "Программы",
-    "Бағдарламалар"
-  ],
-  "Explore programs": [
-    "Изучить программы",
-    "Бағдарламаларды қарау"
-  ],
-  "Your program": [
-    "Ваша программа",
-    "Сіздің бағдарламаңыз"
-  ],
-  "Compare majors →": [
-    "Сравнить специальности →",
-    "Мамандықтарды салыстыру →"
-  ],
-  "Your choice updates the overview, requirements, checker and assistant.": [
-    "Выбранная программа применяется к обзору, требованиям, проверке баллов и помощнику.",
-    "Таңдалған бағдарлама шолу, талаптар, балдарды тексеру және көмекші бөлімдеріне қолданылады."
-  ],
-  "Bachelor of Finance": [
-    "Бакалавриат по финансам",
-    "Қаржы бакалавриаты"
-  ],
-  "Bachelor of Management": [
-    "Бакалавриат по менеджменту",
-    "Менеджмент бакалавриаты"
-  ],
-  "Bachelor of International Law": [
-    "Бакалавриат по международному праву",
-    "Халықаралық құқық бакалавриаты"
-  ],
-  "Bang College of Business": [
-    "Бизнес-школа имени Бэнга",
-    "Бэнг атындағы бизнес мектебі"
-  ],
-  "School of Law": [
-    "Школа права",
-    "Құқық мектебі"
-  ],
-  "Geography": [
-    "География",
-    "География"
-  ],
-  "World History": [
-    "Всемирная история",
-    "Дүниежүзі тарихы"
-  ],
-  "Foundations of Law": [
-    "Основы права",
-    "Құқық негіздері"
-  ],
-  "Build software, organize data and connect technology with business needs.": [
-    "Создавайте программное обеспечение, работайте с данными и применяйте технологии для задач бизнеса.",
-    "Бағдарламалық жасақтама құрып, деректермен жұмыс істеп, технологияларды бизнес міндеттеріне қолданыңыз."
-  ],
-  "Study how businesses raise capital, evaluate investments and manage financial risk.": [
-    "Изучайте привлечение капитала, оценку инвестиций и управление финансовыми рисками.",
-    "Капитал тартуды, инвестицияларды бағалауды және қаржылық тәуекелдерді басқаруды үйреніңіз."
-  ],
-  "Learn to lead people, improve business operations and develop responsible organizations.": [
-    "Учитесь руководить людьми, улучшать бизнес-процессы и развивать ответственные организации.",
-    "Адамдарды басқаруды, бизнес үдерістерін жетілдіруді және жауапты ұйымдарды дамытуды үйреніңіз."
-  ],
-  "Explore legal systems, international agreements and cross-border legal issues.": [
-    "Изучайте правовые системы, международные соглашения и трансграничные правовые вопросы.",
-    "Құқықтық жүйелерді, халықаралық келісімдерді және трансшекаралық құқықтық мәселелерді зерттеңіз."
-  ],
-  "Software and databases": [
-    "Программное обеспечение и базы данных",
-    "Бағдарламалық жасақтама және дерекқорлар"
-  ],
-  "Data analysis": [
-    "Анализ данных",
-    "Деректерді талдау"
-  ],
-  "IT project management": [
-    "Управление IT-проектами",
-    "IT жобаларын басқару"
-  ],
-  "Corporate finance": [
-    "Корпоративные финансы",
-    "Корпоративтік қаржы"
-  ],
-  "Investments": [
-    "Инвестиции",
-    "Инвестициялар"
-  ],
-  "Financial markets and risk": [
-    "Финансовые рынки и риски",
-    "Қаржы нарықтары және тәуекелдер"
-  ],
-  "Leadership and people": [
-    "Лидерство и управление персоналом",
-    "Көшбасшылық және персоналды басқару"
-  ],
-  "Operations and strategy": [
-    "Операционная деятельность и стратегия",
-    "Операциялық қызмет және стратегия"
-  ],
-  "Entrepreneurship": [
-    "Предпринимательство",
-    "Кәсіпкерлік"
-  ],
-  "Public international law": [
-    "Международное публичное право",
-    "Халықаралық жария құқық"
-  ],
-  "Private international law": [
-    "Международное частное право",
-    "Халықаралық жеке құқық"
-  ],
-  "Legal research and international trade": [
-    "Правовые исследования и международная торговля",
-    "Құқықтық зерттеулер және халықаралық сауда"
-  ],
-  "Financial analyst": [
-    "Финансовый аналитик",
-    "Қаржы талдаушысы"
-  ],
-  "Investment analyst": [
-    "Инвестиционный аналитик",
-    "Инвестициялық талдаушы"
-  ],
-  "Risk analyst": [
-    "Аналитик рисков",
-    "Тәуекелдер талдаушысы"
-  ],
-  "Operations coordinator": [
-    "Координатор операционной деятельности",
-    "Операциялық қызмет үйлестірушісі"
-  ],
-  "HR specialist": [
-    "Специалист по персоналу",
-    "Персонал жөніндегі маман"
-  ],
-  "Business development specialist": [
-    "Специалист по развитию бизнеса",
-    "Бизнесті дамыту жөніндегі маман"
-  ],
-  "Legal researcher": [
-    "Специалист по правовым исследованиям",
-    "Құқықтық зерттеулер маманы"
-  ],
-  "Corporate legal support": [
-    "Юридическое сопровождение компаний",
-    "Компанияларды құқықтық сүйемелдеу"
-  ],
-  "International organization support": [
-    "Работа в международных организациях",
-    "Халықаралық ұйымдардағы жұмыс"
-  ],
-  "Find your direction.": [
-    "Выберите своё направление.",
-    "Өз бағытыңызды таңдаңыз."
-  ],
-  "Compare four majors, then follow one clear application path.": [
-    "Сравните четыре специальности и составьте понятный план поступления.",
-    "Төрт мамандықты салыстырып, оқуға түсудің нақты жоспарын құрыңыз."
-  ],
-  "What you will study": [
-    "Что вы будете изучать",
-    "Сіз не оқисыз"
-  ],
-  "Career examples depend on experience and employer requirements. A degree does not guarantee a job or professional licence.": [
-    "Карьерные возможности зависят от опыта и требований работодателя. Диплом не гарантирует трудоустройство или профессиональную лицензию.",
-    "Мансап мүмкіндіктері тәжірибеге және жұмыс берушінің талаптарына байланысты. Диплом жұмысқа орналасуға немесе кәсіби лицензияға кепілдік бермейді."
-  ],
-  "Curriculum details use the 2025–2026 official catalog. Confirm the curriculum for your intake with the school. Admission thresholds use the 2026–2027 admissions guide.": [
-    "Сведения об учебном плане взяты из официального каталога 2025–2026. Уточните план для своего года поступления в школе. Пороговые баллы взяты из руководства по приёму 2026–2027.",
-    "Оқу жоспары туралы мәліметтер 2025–2026 ресми каталогынан алынған. Өз қабылдау жылыңыздың оқу жоспарын мектептен нақтылаңыз. Шекті балдар 2026–2027 қабылдау нұсқаулығынан алынған."
-  ],
-  "Minimum overall": [
-    "Минимальный общий балл",
-    "Ең төменгі жалпы балл"
-  ],
-  "Basic eligibility is not an admission or scholarship guarantee.": [
-    "Соответствие минимальным требованиям не гарантирует зачисление или стипендию.",
-    "Ең төменгі талаптарға сәйкестік оқуға қабылдануға немесе шәкіртақыға кепілдік бермейді."
-  ],
-  "Standard high-school route. Other education routes need individual review.": [
-    "Стандартный путь для выпускников школ. Для других категорий требуется индивидуальная оценка.",
-    "Мектеп түлектеріне арналған стандартты жол. Басқа санаттар жеке қаралады."
-  ],
-  "Choose your subject combination": [
-    "Выберите комбинацию предметов",
-    "Пәндер комбинациясын таңдаңыз"
-  ],
-  "Uses the selected program’s published thresholds": [
-    "Учитывает опубликованные пороговые баллы выбранной программы",
-    "Таңдалған бағдарламаның жарияланған шекті балдарын ескереді"
-  ],
-  "The standard route below is for Kazakhstan high-school graduates applying to your selected program.": [
-    "Ниже приведены стандартные требования для выпускников школ Казахстана по выбранной программе.",
-    "Төменде таңдалған бағдарламаға түсетін Қазақстан мектептерінің түлектеріне арналған стандартты талаптар берілген."
-  ],
-  "A student university project covering four majors with a shared admissions guide. It is not an official KIMEP service.": [
-    "Студенческий проект с общим руководством по поступлению на четыре специальности. Это не официальный сервис КИМЭП.",
-    "Төрт мамандыққа түсу жөніндегі ортақ нұсқаулығы бар студенттік жоба. Бұл КИМЭП-тің ресми қызметі емес."
-  ],
-  "Choose one of the supported programs or ask Admissions about another major.": [
-    "Выберите одну из представленных программ или уточните другую специальность в приёмной комиссии.",
-    "Ұсынылған бағдарламалардың бірін таңдаңыз немесе басқа мамандық туралы қабылдау комиссиясынан сұраңыз."
-  ],
-  "Select the published subject combination shown for your chosen program, or ask Admissions about your options.": [
-    "Выберите указанную комбинацию предметов для вашей программы или уточните варианты в приёмной комиссии.",
-    "Бағдарламаңыз үшін көрсетілген пәндер комбинациясын таңдаңыз немесе мүмкіндіктерді қабылдау комиссиясынан нақтылаңыз."
-  ]
-});

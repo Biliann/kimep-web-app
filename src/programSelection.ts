@@ -7,8 +7,9 @@ export function setSelectedProgram(id: string) {
   if (!isProgramId(id) || id === selected) return;
   selected = id;
   try { localStorage.setItem("kimep-program-v1", id); } catch {}
-  listeners.forEach(fn => fn());
+  listeners.forEach((fn) => fn());
 }
+export const getSelectedProgram = () => selected;
 export function useSelectedProgram() {
-  return useSyncExternalStore(fn => { listeners.add(fn); return () => { listeners.delete(fn); }; }, () => selected, () => "bis" as ProgramId);
+  return useSyncExternalStore((fn) => { listeners.add(fn); return () => { listeners.delete(fn); }; }, () => selected, () => "bis" as ProgramId);
 }

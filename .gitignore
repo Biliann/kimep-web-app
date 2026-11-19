@@ -2,3 +2,9 @@ node_modules/
 dist/
 *.tar.gz
 .DS_Store
+
+# Secrets (never commit)
+.env
+.env.*
+!.env.example
+tests/assistant-eval/last-run.json

@@ -1,4 +1,5 @@
-export const verified = "26 October 2026";
+export const verified = "18 November 2026";
+export const verifiedEarlier = "26 October 2026";
 const base = "https://www.kimep.kz/prospective-students/";
 export const sources = {
   admission: {
@@ -16,13 +17,25 @@ export const sources = {
   program: {
     title: "BIS · School of Computer Science and Artificial Intelligence",
     url: "https://www.kimep.kz/school-of-computer-science-and-artificial-intelligence/bachelor-of-information-system/",
-    lastVerified: verified,
+    lastVerified: verifiedEarlier,
     published: "No update date shown",
+  },
+  guideKz: {
+    title: "Undergraduate admission guide for Kazakhstan citizens (Kazakh edition, April 2026)",
+    url: base + "files/2026/04/HowToApplyKAZugrad.pdf",
+    lastVerified: verified,
+    published: "April 2026 file path",
+  },
+  priceList: {
+    title: "Tuition and fees for all programs, 2026–2027",
+    url: base + "files/2026/05/Tuition-and-fees-eng-2026-27.pdf",
+    lastVerified: verified,
+    published: "2026–2027 edition",
   },
   legacy: {
     title: "BIS · older Bang College page (Kazakh)",
     url: "https://www.kimep.kz/bang-college-of-business/kz/bachelor-of-information-systems/",
-    lastVerified: verified,
+    lastVerified: verifiedEarlier,
     published: "No update date shown",
   },
   fees: {
@@ -34,7 +47,7 @@ export const sources = {
   feesKz: {
     title: "Undergraduate fees, Kazakh edition, 2026–2027",
     url: base + "files/2026/05/tuition_fees_ugrad_kaz.pdf",
-    lastVerified: verified,
+    lastVerified: verifiedEarlier,
     published: "2026–2027 edition",
   },
   deadlines: {
@@ -64,19 +77,19 @@ export const sources = {
   transfer: {
     title: "Transfer and reinstatement",
     url: base + "kz/admission/admission-for-transfer-and-reinstated-students/",
-    lastVerified: verified,
+    lastVerified: verifiedEarlier,
     published: "No update date shown",
   },
   international: {
     title: "International students at KIMEP",
     url: "https://www.kimep.kz/diam/kz/international-students-coming-to-kimep/",
-    lastVerified: verified,
+    lastVerified: verifiedEarlier,
     published: "No update date shown; contains legacy program counts",
   },
   portal: {
     title: "Official applicant portal",
     url: "https://www.kimep.kz/ext/application/online/en-US/",
-    lastVerified: verified,
+    lastVerified: verifiedEarlier,
     published: "Live service",
   },
   contacts: {
@@ -156,6 +169,125 @@ export const fees = [
   lastVerified: verified,
   academicYear: "2026–2027",
 }));
+export const otherFees = [
+  { name: "Late payment fee", amount: 29950, unit: "as listed in the price list" },
+  { name: "Late registration fee", amount: 15380, unit: "per course" },
+  { name: "Official transcript / diploma supplement", amount: 2960, unit: "per unit" },
+  { name: "Duplicate or replacement of diploma / certificate", amount: 8500, unit: "per issue" },
+  { name: "Withdrawal administrative fee", amount: 22400, unit: "per withdrawal" },
+  { name: "Textbook rental fee", amount: 0, unit: "25% of textbook replacement cost, collected from the textbook security deposit" },
+].map((x) => ({ ...x, source: "priceList" as SourceKey, lastVerified: verified, academicYear: "2026–2027" }));
+export const tuitionRules = {
+  perCredit: 163230,
+  recommendedCreditsPerYear: [30, 36] as [number, number],
+  recommendedCreditsPerSemester: [15, 18] as [number, number],
+  exampleProgramCredits: 146,
+  exampleProgramYears: 4,
+  sameForAllUndergraduate: true,
+  paymentOptions: [
+    "A single payment for the whole period of study, made when you sign the Contract for Educational Services; the tuition then stays unchanged (retakes and extra courses are exceptions)",
+    "A single payment for the whole semester at the start of the semester",
+    "Three installments during the semester",
+    "An individual payment schedule arranged with the Financial Aid Office",
+  ],
+  source: "fees" as SourceKey,
+  lastVerified: verified,
+};
+export const englishRules = [
+  "English is not an admission requirement for bachelor programs, but teaching at KIMEP is in English, so every student's English level must be determined.",
+  "Students who skip the English level procedure start from the lowest level, UF C.",
+  "A valid accepted certificate exempts you from the KIMEP English test. KIMEP's TOEFL institution code is 2104.",
+  "Foundation English has three levels, UF A, UF B and UF C. Each level is 225 contact hours (3 hours a day, 5 days a week) and costs KZT 682 320. It is a mandatory part of the program and cannot be waived; a poor grade means retaking it.",
+  "Bachelor of Laws (LL.B.) and Bachelor of International Law (B.I.L.) applicants: IELTS 6.5+ (or an equivalent approved certificate) means direct placement in academic courses. IELTS 5.5 or 6.0 (or an equivalent) requires an interview; the result may be admission with parallel English study, or a recommendation to choose an alternative academic track.",
+].map((text) => ({ text, source: "school" as SourceKey, lastVerified: verified }));
+export const placementTests = [
+  {
+    name: "Math placement test · Computer Science (BSCS)",
+    detail:
+      "For students of the School of Computer Science and Mathematics bachelor of Computer Science program. 20 multiple-choice questions, 50 minutes, maximum 20 points (arithmetic, algebra, geometry). A score of 12 or more places you in Calculus I; below 12 places you in College Algebra.",
+    source: "tests" as SourceKey,
+    lastVerified: verified,
+  },
+  {
+    name: "Creative exam · Journalism",
+    detail:
+      "Journalism applicants take two creative exams (an essay and a written interview), held online. UNT History of Kazakhstan and Reading Literacy scores are also taken into account. The exam date is announced separately by KIMEP.",
+    source: "tests" as SourceKey,
+    lastVerified: verified,
+  },
+];
+export const bela = {
+  detail:
+    "BELA (early registration) status lets new students register for fall courses early, before the official enrollment order. Requirements: enter your UNT scores and ICT number in the applicant portal with the required subject combination; register an English test result (TOEFL, IELTS or Duolingo) in the International Certificates section; hand in the original school certificate in person or by courier; sign the BELA agreement. Students with BELA status switch to normal status after the enrollment order in August.",
+  source: "school" as SourceKey,
+  lastVerified: verified,
+};
+export const scholarships2026 = {
+  note: "These are the offers published for applicants entering in 2026. They are not open offers for 2027; ask Financial Aid for the current opportunities and deadlines.",
+  olympiad: {
+    name: "Intellectual Olympiad grants for 2026 school and college graduates",
+    covers: "100% or 50% of tuition only. Grants do not cover accommodation, student and medical fees, fines, library payments or any deposits.",
+    count: "15 grants of 100% and 15 grants of 50%",
+    duration: "4 academic years, not extended",
+    heldOn: "29 March 2026, KIMEP campus (stage 1 English certificate, stage 2 subject exam)",
+    keep:
+      "Keep full academic load (at least 4 courses or 12 credits per semester) and a semester GPA of at least 3.50; retaken and withdrawn courses are excluded. Grants are subject to a 38-credit limit.",
+  },
+  contact: "Financial Aid: finaid@kimep.kz, +7 727 270 43 16. The Admissions Office does not advise on scholarships.",
+  source: "aid" as SourceKey,
+  lastVerified: verified,
+};
+export const discrepancies = [
+  {
+    id: "ects",
+    topic: "BIS ECTS credits",
+    values: ["241 ECTS (current School of Computer Science and AI page)", "240 ECTS (older Bang College page)"],
+    advice: "Both pages list 146 KIMEP credits. Confirm ECTS with the school.",
+    sources: ["program", "legacy"],
+  },
+  {
+    id: "agreement",
+    topic: "Educational Services Agreement format",
+    values: ["Sign each page, scan and upload under SIGNED CONTRACT (2026–2027 English guide and the April 2026 Kazakh guide)", "Print, sign and hand in two copies to Admissions before course registration ends (website page)"],
+    advice: "Confirm with Admissions whether paper copies are still required.",
+    sources: ["admission", "guideKz", "school"],
+  },
+  {
+    id: "xray",
+    topic: "Chest X-ray conclusion",
+    values: ["Two radiologist stamps (medical page and admission guide)", "Two doctors' signatures and two stamps, valid for 6 months (high-school page)"],
+    advice: "Confirm exact requirements with the Medical Center.",
+    sources: ["medical", "admission", "school"],
+  },
+  {
+    id: "opening",
+    topic: "Application opening date",
+    values: ["15 October (guide: every year)", "16 October 2026 (live 2027 intake schedule)"],
+    advice: "Use the intake schedule; the portal is available all year.",
+    sources: ["admission", "deadlines"],
+  },
+  {
+    id: "duolingo",
+    topic: "Duolingo ranges for UF A and UF B",
+    values: ["UF A: 94 (≥80 in each section)", "UF B: 60–94 (≥75 in each section)"],
+    advice: "The ranges overlap; KIMEP assigns the level, ask Admissions.",
+    sources: ["school", "admission"],
+  },
+  {
+    id: "toefl",
+    topic: "TOEFL iBT scale",
+    values: ["Legacy 0–120 ranges (51–66 for Academic English)", "New 1–6 scale from 21 January 2026; KIMEP says values will be updated"],
+    advice: "If your TOEFL report uses the new scale, ask Admissions how it is converted.",
+    sources: ["school", "admission"],
+  },
+  {
+    id: "polsci",
+    topic: "Political Science (6B03103) UNT row",
+    values: ["Listed in the 2026–2027 admission guide together with International Relations and Translation Studies", "Not listed on the website high-school requirements page"],
+    advice: "Confirm the program's UNT subjects with Admissions.",
+    sources: ["admission", "school"],
+  },
+];
 export const englishLevels = [
   {
     name: "Academic English",
@@ -415,6 +547,22 @@ export const contacts = [
     mobile: "+7 701 309 16 24",
     source: "admission",
   },
+  {
+    name: "Foundation English",
+    for: "Questions about the Foundation English program",
+    email: "",
+    phone: "+7 701 717 38 06",
+    mobile: "",
+    source: "fees",
+  },
+  {
+    name: "Residence Hall",
+    for: "Accommodation for students from outside Almaty and international students",
+    email: "",
+    phone: "+7 727 237 47 73",
+    mobile: "+7 701 679 47 09",
+    source: "fees",
+  },
 ].map((x) => ({ ...x, source: x.source as SourceKey, lastVerified: verified }));
 export const faq = [
   [
@@ -476,6 +624,51 @@ export const faq = [
     "Can I register for courses immediately?",
     "Follow your enrollment instructions first. An unsigned agreement or incomplete medical documents can block registration. Ask Student Academic Support for your next step.",
     "admission",
+  ],
+  [
+    "Is tuition the same for every program?",
+    "Yes for bachelor programs. In the 2026–2027 price list every undergraduate program, including Economics, Finance, Management, Information Systems, Computer Science, Law and Psychology, costs KZT 163,230 per credit. Rates for later years may change.",
+    "priceList",
+  ],
+  [
+    "How can I pay tuition?",
+    "Four options: one payment for the whole period of study when you sign the contract (the tuition then stays unchanged); one payment for each semester at its start; three installments within the semester; or an individual schedule arranged with the Financial Aid Office (+7 727 270 43 16).",
+    "fees",
+  ],
+  [
+    "What happens if I pay or register late?",
+    "The 2026–2027 price list lists a late payment fee of KZT 29,950 and a late registration fee of KZT 15,380 per course. Bank transfers can take 3 or more business days, so pay in advance.",
+    "priceList",
+  ],
+  [
+    "Are there scholarships for 2027 applicants?",
+    "The published 2026 offer was the Intellectual Olympiad: 15 grants of 100% and 15 of 50% of tuition, held on 29 March 2026 for 2026 graduates. Grants cover tuition only. Opportunities for 2027 are not published in the sources we checked, so ask Financial Aid: finaid@kimep.kz, +7 727 270 43 16.",
+    "aid",
+  ],
+  [
+    "Do Law applicants need a higher English level?",
+    "Yes. For LL.B. and B.I.L., IELTS 6.5+ (or an equivalent approved certificate) means direct placement in academic courses. IELTS 5.5 or 6.0 (or equivalent) requires an interview; you may be admitted with parallel English study or advised to choose another track.",
+    "guideKz",
+  ],
+  [
+    "Is there a math test for Computer Science?",
+    "Yes. Computer Science (BSCS) students take a math placement test: 20 multiple-choice questions in 50 minutes, maximum 20 points. 12 or more places you in Calculus I; below 12 places you in College Algebra.",
+    "tests",
+  ],
+  [
+    "What is Foundation English?",
+    "A mandatory English program for students whose English level is below Academic English. It has three levels (UF A, UF B, UF C); each is 225 contact hours and costs KZT 682,320. It cannot be waived and a poor grade means retaking the level.",
+    "school",
+  ],
+  [
+    "What is BELA early registration?",
+    "BELA status lets new students register for fall courses early. You need valid UNT scores in the applicant portal, a registered English test result, the original school certificate handed in, and a signed BELA agreement. It changes to normal status after the August enrollment order.",
+    "school",
+  ],
+  [
+    "How do Journalism applicants apply?",
+    "Journalism uses two creative exams (an essay and a written interview) held online, plus your UNT History of Kazakhstan and Reading Literacy scores. KIMEP announces the exam date separately; check the applicant portal.",
+    "tests",
   ],
 ].map(([q, a, source]) => ({
   q,

@@ -1,88 +1,85 @@
-# KIMEP Pathway — Phase 1
+# KIMEP Pathway
 
-An independent admissions information website for prospective undergraduate students. The program catalog covers Information Systems, Finance, Management and International Law. This is a student project, not an official KIMEP University service.
+An independent student guide for bachelor applicants to KIMEP University: do my UNT scores qualify, what will it cost, which documents and by when, where to apply. It also has a live AI assistant that answers only from the official facts stored in this repository. This is a student project, not an official KIMEP service.
+
+- Stack: Vite 6 + React 19 + TypeScript. Static site plus one serverless function (`/api/chat`).
+- Languages: Russian, Kazakh, English.
+- Sections: Home · UNT scores · Cost · Documents and dates · Questions. Old links (`#checker`, `#documents`, `#tuition`, `#english`, `#deadlines`, `#faq`, `#contacts`, `#apply`, `#requirements`, `#program`) redirect into these.
 
 ## Run locally
 
-Install Node.js 22.13+ (Node 24 recommended). Extract the project and open a terminal in its folder.
+Node.js 22.13+ is required.
 
 ```bash
+git clone https://github.com/Biliann/kimep-web-app.git && cd kimep-web-app
+git checkout claude/nice-newton-n8j8tk     # until the pull request is merged
 npm ci
-npm run dev
+npm run setup      # asks for your NVIDIA key, checks it, writes .env.local
+npm run dev        # open http://localhost:5173
 ```
 
-Open the local URL Vite prints. No Java, Docker, database, login, API key or AI service is needed.
+`npm run setup` does the `.env.local` step below for you. To do it by hand: `cp .env.example .env.local` and fill it in.
+
+`.env.local` (git-ignored; only `.env.example` is committed):
+
+```
+NVIDIA_API_KEY=<your key>                     # from build.nvidia.com, server side only
+NIM_MODEL=google/gemma-4-31b-it              # primary model
+NIM_FALLBACK_MODELS=mistralai/mistral-large-4-1t-a52b,nvidia/nemotron-3.5-lightning-30b-a3b
+```
+
+`npm run dev` serves `/api/chat` itself (a Vite middleware runs the same handler as production), so `vercel dev` is not needed. Without a key the site still works: the assistant answers from the built-in FAQ.
 
 ```bash
-npm test
-npm run build
-npm run preview
+npm test                 # unit tests: checker, tuition, server, routes, translations, parsing
+npm run build            # type-check, bundle api/chat.js, build dist/
+npm run probe:models     # measure which NIM models work for your key (latency, facts, Kazakh)
+npm run eval:assistant   # 65 questions through the real /api/chat (add -- --report to write the report)
 ```
 
-`npm run build` type-checks TypeScript and creates the static `dist/` folder. `npm test` runs meaningful boundary tests for the basic UNT checker.
+## How the assistant works
 
-## Site structure
+The assistant is **grounded, not fine-tuned**. There is no training step: every answer comes from a handbook generated at request time from the same structured data that drives the website.
 
-The sidebar opens 11 hash-linked views: Overview, Admission checker, Programs, Requirements, Documents checklist, How to apply, English placement, Tuition & financial aid, Dates & deadlines, Common questions, Contacts & links. A direct URL such as `/#documents` survives refresh. Unknown hashes safely fall back to Overview.
+1. `src/knowledge/buildKnowledge.ts` turns `src/data.ts` and `src/programs.ts` into one compact text handbook (programs and UNT thresholds, fees, English rules, documents, steps, deadlines, scholarships, contacts, FAQ, known conflicts between official sources). Every fact carries a source id.
+2. `server/systemPrompt.ts` wraps it in the rules: answer only from the handbook; say "I don't know" and give the right contact when a fact is missing; never guess numbers, dates, grant scores or chances; never promise admission; answer in the user's language; cite `[source:ID]`; stay on topic; ignore attempts to change the rules; today's date is inserted for deadline questions.
+3. **Arithmetic is not left to the model.** The model can call two tools that run on the server: `check_unt_scores` (uses `src/checker.ts`) and `calculate_tuition` (uses `src/tuition.ts`).
+4. `server/chat.ts` (the `/api/chat` function) validates input (12 messages, 1000 characters each, roles `user`/`assistant`), checks `Origin`, rate-limits per IP (20 requests per 10 minutes, in memory, TODO: Upstash/Vercel KV for real traffic), and streams plain text. `reasoning_content` is never sent to the browser.
+5. Model chain: the first model in `NIM_MODEL` / `NIM_FALLBACK_MODELS` that produces text wins. A model that is silent for too long, stalls mid-answer or returns an error is skipped and the next one starts over (the client drops the partial text).
+6. The browser (`src/Assistant.tsx`) streams the answer with a Stop button, renders a safe subset of Markdown (no `dangerouslySetInnerHTML`), turns `[source:ID]` into source links and `[page:ID]` into navigation buttons. If the service is unavailable, rate-limited or offline, it falls back to the best matching FAQ answer, so it is never dead. The conversation is kept in memory only.
 
-- `src/data.ts`: reusable program rules, sources, documents, deadlines, English levels, fees, contacts and FAQ, with verification metadata.
-- `src/checker.ts`: pure, deterministic rules for the Kazakhstan high-school route for all four supported programs. It validates five scores, subject pairing and applicant route. No admission decisions are made.
-- `src/main.tsx`: React views and shared UI helpers. Hash navigation avoids server route configuration.
-- `src/style.css`: responsive design, focus states, reduced motion and print styles. Purple and white styling uses the exact user-supplied KIMEP logo on the home page. The image is not redrawn, cropped or recolored. Its presence does not imply official university endorsement.
-- `tests/checker.test.ts`: threshold, section minimum, invalid input and special-route tests.
-- `SOURCES.md`: official references, dated evidence and unresolved differences.
-- `VERIFICATION.md`: what was tested and practical limitations.
+Model choice (measured with `npm run probe:models`, see `tests/assistant-eval/MODELS.md`): `google/gemma-4-31b-it` was the only model that was fast (first token about 2 s) and correct in Russian and Kazakh. Kimi K3.1 Pro, GLM and MiniMax did not answer within 60 s on the available key. Switching the model is a change to `NIM_MODEL`, no code.
 
-The checklist uses versioned localStorage and stores only item IDs, not personal records. Other form answers live in memory and are cleared when the view is unmounted. No analytics, uploads, authentication or backend is included. Google Fonts is optional with local font fallbacks.
+## Deploy on Vercel
 
-## Deployment
+1. Import the repository (framework: Vite). Build command `npm run build`, output `dist`.
+2. In Project Settings, Environment Variables, add `NVIDIA_API_KEY` and `NIM_MODEL` (and optionally `NIM_FALLBACK_MODELS`, `ALLOWED_ORIGINS`). Never use a `VITE_` prefix: that would ship the key to the browser.
+3. `vercel.json` sets the function's `maxDuration` to 60 s. `api/chat.js` is generated from `server/` and `src/` by `scripts/build-api.mjs` (run by `npm run build`) and committed, so Vercel can pick it up as a function. Do not edit it by hand.
+4. After deploying, open the site, ask the assistant a question and check `/#checker`, `/#cost`, `/#docs`.
 
-The website is a static Vite build. On Vercel or another static host:
+Tuning variables (milliseconds): `NIM_FIRST_BYTE_MS`, `NIM_FIRST_TOKEN_MS`, `NIM_IDLE_MS`, `NIM_TOTAL_MS`, `NIM_CHAIN_MS`; `CHAT_RATE_LIMIT` per IP per 10 minutes.
 
-1. Import this source repository, or upload the extracted source through the host's normal workflow.
-2. Set framework to Vite; build command `npm run build`; output directory `dist`.
-3. Deploy. There are no environment variables.
-4. Check the home page, `/#checker`, and `/#documents` after refresh.
+## Update the facts every year
 
-For manual static hosting, upload the **contents** of `dist/`. Do not open `dist/index.html` using a `file://` URL: module assets need an HTTP server. The `.openai/hosting.json` file connects the hosted Sites version to its project and should be preserved for updates to that Site. Use your own Site identity when making an independent copy.
+Everything shown on the site, used by the calculators and told by the assistant lives in two files:
 
-## Later Spring Boot integration
+- `src/data.ts`: sources (with `lastVerified`), fees, tuition rules, English rules and levels, documents, steps, deadlines, scholarships, contacts, FAQ, known conflicts between official sources.
+- `src/programs.ts`: every bachelor program with code, UNT minimum, section minimums, profile subjects.
 
-Keep the present display data shapes and replace `src/data.ts` reads with a small API client once an approved backend exists. Checker rules should also be enforced by the backend if they ever become part of an actual submission workflow. This phase does not include student data or course planning.
+Steps: re-read the official pages listed in `SOURCES.md`, change the structured entries, move `lastVerified` only for sources you actually re-opened, add new text to `src/translations.ts` (check with `node --experimental-strip-types scripts/missing-translations.ts`), run `npm test`, `npm run build` and `npm run eval:assistant`. **The assistant updates itself** because its handbook is rebuilt from these files. 2026–2027 rates are not promised for later years.
 
-## Facts to update each year (and before each intake)
+## Layout
 
-- UNT overall and section thresholds, accepted subject pairs and special routes.
-- Program school, name, curriculum version, total credits / ECTS and expected duration.
-- Accepted English certificates, validity, every placement threshold, TOEFL scale and Foundation fees.
-- Tuition per credit, student and medical fees, deposits, housing and payment conditions.
-- Intake dates, originals submission windows, course registration and enrollment periods.
-- Scholarship eligibility, coverage, application links, deadlines and continuation conditions.
-- Medical forms, tests, validity, translation and signature/stamp requirements.
-- Office contacts, application portal fields, agreement signing and paper-original requirements.
+```
+src/pages/*.tsx          Home, Scores, Cost, Docs, Faq
+src/components/*.tsx     Shell (header, tab bar), ui (accordion, notes, sources)
+src/Assistant.tsx        chat panel;  src/assistant/  markdown, parsing, offline fallback
+src/knowledge/           handbook builder for the assistant
+src/checker.ts           UNT rules;  src/tuition.ts  tuition model (pure, tested)
+server/                  /api/chat handler, system prompt, tools, NIM client
+api/chat.js              generated bundle for Vercel
+scripts/                 probe-models, eval-assistant, build-api, missing-translations
+tests/                   unit tests;  tests/assistant-eval/  cases, report
+```
 
-When updating a fact, change its structured entry and verification metadata, recheck related FAQ/overview explanations, run tests/build, then publish. Do not advance the verified date unless the source was checked again. 2026–2027 fee rates are not promised for Fall 2027.
-
-## Admissions assistant demo
-
-The bottom-right AI assistant button opens a clearly labeled MVP concept. Six sample questions reuse answers and official sources from `src/data.ts`. No free-text messages, model, API, backend or external requests are used. The short sample conversation stays in memory and persists across handbook views until reload; Start again clears it. Escape and the close control dismiss the panel. UI and responsive styling live in `src/AssistantDemo.tsx` and `src/assistant.css`.
-
-## Languages
-
-English, Russian and Kazakh are available in the header. The language preference uses `kimep-language-v1` in localStorage and survives refresh. `src/translations.ts` holds the translation catalogue; `src/i18n.ts` provides the shared React subscription, translation lookup, localized data and checker-result formatting. The original admission rules and numeric values remain in `src/data.ts` and `src/checker.ts`. Checklist state uses language-independent IDs. Official certificate names and Applicant Portal field names are retained to match the external university system. Dates use explicit translated month names for consistent Kazakh rendering across browser runtimes. External source documents remain in the language published by KIMEP.
-
-
-## Program selection and verified requirements
-
-`src/programs.ts` is the shared program catalog used by the overview, comparison cards, requirements, checker, FAQ and predefined assistant. The selected stable program ID is stored locally; changing the program clears checker scores and assistant turns. General documents, English placement, deadlines and fee rules remain shared because they are university-wide, rather than being duplicated as separate program rules. An applicant must explicitly choose their actual UNT subject combination before checking.
-
-| Program | Code | Minimum UNT | Profile subjects |
-| --- | --- | --- | --- |
-| Information Systems | 6B06101 | 50 | Mathematics + Informatics |
-| Finance | 6B04105 | 50 | Geography + Mathematics |
-| Management | 6B04103 | 50 | Geography + Mathematics |
-| International Law | 6B04201 | 75 | World History + Foundations of Law |
-
-All four require at least 3 in Reading Literacy, 3 in Mathematical Literacy, and 5 in History of Kazakhstan and each profile subject. These thresholds cover the standard Kazakhstan high-school route, not admission decisions or scholarship eligibility. Other applicant routes are referred to Admissions.
-
-Requirements checked on 29 October 2026 against KIMEP's [2026–2027 admissions guide](https://www.kimep.kz/prospective-students/files/2026/02/HowToApplyENGUgrad_2026-27.pdf) and [high-school requirements](https://www.kimep.kz/prospective-students/kz/admission/high-school-graduates/). Program descriptions link to the relevant official school pages. Management curriculum uses the 2025–2026 catalog and is visibly labelled as such; confirm the curriculum for your intake. New content is available in English, Russian and Kazakh.
+Design: white background, KIMEP purple `#473984` (the exact logo colour, scale 50 to 900, all text pairs pass WCAG AA), Inter (self-hosted via `@fontsource-variable/inter`, includes Kazakh letters), 44 px touch targets, visible focus, `prefers-reduced-motion` respected. The logo in `public/kimep-logo.png` is used unchanged; the favicon is the same file scaled down with white padding.

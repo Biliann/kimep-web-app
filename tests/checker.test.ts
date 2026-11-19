@@ -92,3 +92,65 @@ test("law does not inherit the 50-point business threshold", () => {
   assert.equal(result.status, "warning");
   assert.match(result.detail, /minimum 75/);
 });
+
+// ---- Phase 1: all programs, section minimums from data, special routes ----
+import { programs, programIds } from "../src/programs.ts";
+
+const forProgram = (id: string, scores: string[]) =>
+  checkAdmission({ ...base, program: id, subjects: programs[id].subjectKey, scores });
+
+test("Cognitive Sciences: Mathematical Literacy 4 fails, 5 passes", () => {
+  assert.equal(forProgram("cognitive", ["3", "4", "20", "35", "35"]).status, "warning");
+  assert.deepEqual(forProgram("cognitive", ["3", "4", "20", "35", "35"]).belowMinimum, ["Mathematical Literacy"]);
+  assert.equal(forProgram("cognitive", ["3", "5", "20", "35", "35"]).status, "success");
+  // every other program accepts Mathematical Literacy 3
+  assert.equal(forProgram("ir", ["3", "3", "20", "35", "35"]).status, "success");
+});
+test("Law total is exactly 75 minimum", () => {
+  for (const id of ["law", "jurisprudence"]) {
+    const ok = forProgram(id, ["5", "5", "20", "25", "20"]); // 75
+    const bad = forProgram(id, ["5", "5", "20", "25", "19"]); // 74
+    assert.equal(ok.status, "success");
+    assert.equal(ok.total, 75);
+    assert.equal(bad.status, "warning");
+    assert.equal(bad.total, 74);
+    assert.equal(bad.shortBy, 1);
+  }
+});
+test("Foreign Languages needs 75; Economics needs 50", () => {
+  assert.equal(forProgram("languages", ["5", "5", "20", "25", "19"]).status, "warning");
+  assert.equal(forProgram("languages", ["5", "5", "20", "25", "20"]).status, "success");
+  assert.equal(forProgram("economics", ["3", "3", "14", "15", "15"]).status, "success"); // 50
+  assert.equal(forProgram("economics", ["3", "3", "14", "15", "14"]).status, "warning"); // 49
+});
+test("Journalism is a special route, never a UNT pass or fail", () => {
+  const r = checkAdmission({ ...base, program: "journalism", subjects: "creative", scores: ["", "", "", "", ""] });
+  assert.equal(r.status, "review");
+  assert.match(r.detail, /creative/i);
+  assert.equal(programs.journalism.creative, true);
+});
+test("every program has consistent section data", () => {
+  assert.ok(programIds.length >= 17);
+  for (const id of programIds) {
+    const p = programs[id];
+    assert.equal(p.sectionMinimums.length, 5, id);
+    assert.equal(p.sectionMaximums.length, 5, id);
+    if (!p.creative) {
+      assert.equal(p.sectionNames.length, 5, id);
+      assert.ok(p.unt === 50 || p.unt === 75, id);
+      assert.equal(p.subjects.length, 2, id);
+      // the minimum total must be reachable and every section minimum within its maximum
+      p.sectionMinimums.forEach((m, i) => assert.ok(m <= p.sectionMaximums[i], id));
+    }
+  }
+});
+test("credits and ECTS are only claimed for programs with an official page value", () => {
+  for (const id of programIds) {
+    if (id === "bis") continue;
+    assert.equal(programs[id].credits, undefined, id);
+    assert.equal(programs[id].ects, undefined, id);
+  }
+});
+test("maximum scores pass for every non-creative program", () => {
+  for (const id of programIds) if (!programs[id].creative) assert.equal(forProgram(id, ["10", "10", "20", "50", "50"]).status, "success", id);
+});

@@ -5,18 +5,27 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
-    "build": "tsc --noEmit && vite build",
-    "test": "node --experimental-strip-types --test tests/checker.test.ts",
-    "preview": "vite preview --host 0.0.0.0"
+    "build": "tsc --noEmit && node scripts/build-api.mjs && vite build",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "preview": "vite preview --host 0.0.0.0",
+    "build:api": "node scripts/build-api.mjs",
+    "probe:models": "node --experimental-strip-types --no-warnings scripts/probe-models.ts",
+    "eval:assistant": "node --experimental-strip-types --no-warnings scripts/eval-assistant.ts",
+    "setup": "node scripts/setup.mjs",
+    "start": "npm run dev"
   },
   "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "lucide-react": "^0.468.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "lucide-react": "^0.468.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@types/node": "^26.6.6",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "axe-core": "^4.14.1",
+    "esbuild": "^0.28.2",
     "typescript": "^5.7.0",
     "vite": "^6.0.0"
   }
