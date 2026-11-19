@@ -4,7 +4,7 @@ import { tf, useContent, useT } from "../i18n";
 import { checkAdmission, type CheckerResult } from "../checker";
 import { programs, programIds, sectionMaximums } from "../programs";
 import { setSelectedProgram, useSelectedProgram } from "../programSelection";
-import { Accordion, Head, Note, ProgramPicker, Sources } from "../components/ui";
+import { Accordion, Head, Note, ProgramPicker, SourceShot, Sources } from "../components/ui";
 
 function Checker() {
   const t = useT();
@@ -82,7 +82,7 @@ function Checker() {
 
 function Requirements() {
   const t = useT();
-  const { program } = useContent();
+  const { program, sources } = useContent();
   const selected = useSelectedProgram();
   const [q, setQ] = useState("");
   const [min, setMin] = useState<"all" | "50" | "75" | "creative">("all");
@@ -126,6 +126,8 @@ function Requirements() {
         {rows.length === 0 && <div className="row">{t("No program matches.")}</div>}
       </div>
       <p className="hint">{t("Section minimums are in this order")}: {t("Reading Literacy")} · {t("Mathematical Literacy")} · {t("History of Kazakhstan")} · {t("elective")} · {t("profile")}. {t("Defaults: 3, 3, 5, 5, 5. Cognitive Sciences needs 5 in Mathematical Literacy.")}</p>
+      <SourceShot src="/kimep-unt-table.png" w={1225} h={678} url={sources.school.url} title={sources.school.title}
+        alt={t("Table of UNT requirements for programs on the KIMEP website")} />
       <Note summary={t("Political Science is in the admission guide but not on the website list.")}>{t("Confirm its UNT subjects with Admissions before relying on this row.")}</Note>
     </section>
   );

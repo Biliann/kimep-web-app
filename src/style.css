@@ -131,6 +131,11 @@ select { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns
 .action > svg { width: 20px; height: 20px; color: var(--p-700); }
 @media (min-width: 720px) { .facts { grid-template-columns: repeat(4, 1fr); } .fact { padding-right: 24px; } .actions { grid-template-columns: repeat(2, 1fr); column-gap: 32px; } }
 
+/* official-page screenshots */
+.shot { margin: 0; display: grid; gap: 8px; }
+.shot img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: var(--r); display: block; }
+.shot figcaption { font-size: .8125rem; color: var(--muted); }
+
 /* ---------- scores ---------- */
 .checker { display: grid; gap: 16px; }
 .grid5 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }

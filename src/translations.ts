@@ -1,6 +1,10 @@
 // Russian and Kazakh strings. Key = the English text shown on the site. Generated list: only strings the UI uses.
 // Check coverage with: node --experimental-strip-types scripts/missing-translations.ts
 export const translations: Record<string, [string, string]> = {
+  "Screenshot of 19 November 2026; the page is in Kazakh.": ["Снимок от 19 ноября 2026; страница на казахском языке.","2026 жылғы 19 қарашадағы скриншот; бет қазақ тілінде."],
+  "Open the original": ["Открыть оригинал","Түпнұсқаны ашу"],
+  "Table of Fall 2027 application dates on the KIMEP website": ["Таблица сроков подачи документов на осень 2027 на сайте KIMEP","KIMEP сайтындағы 2027 жылғы күзгі құжат тапсыру мерзімдерінің кестесі"],
+  "Table of UNT requirements for programs on the KIMEP website": ["Таблица требований по ЕНТ для программ на сайте KIMEP","KIMEP сайтындағы бағдарламаларға қойылатын ҰБТ талаптарының кестесі"],
   "0 to": ["от 0 до","0-ден"],
   "2026–2027 edition": ["Редакция 2026–2027","2026–2027 басылымы"],
   "2026–2027 edition, May 2026 path": ["Редакция 2026–2027 (файл за май 2026)","2026–2027 басылымы (2026 жылғы мамыр файлы)"],

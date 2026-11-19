@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useContent, useT } from "../i18n";
 import { fmtDate } from "../format";
-import { Head, Note, Sources } from "../components/ui";
+import { Head, Note, Sources, SourceShot } from "../components/ui";
 
 const KEY = "kimep-pathway-checklist-v1"; // same key as before, saved ticks survive the redesign
 
@@ -62,7 +62,7 @@ function Checklist() {
 
 function Deadlines() {
   const t = useT();
-  const { deadlines } = useContent();
+  const { deadlines, sources } = useContent();
   const intakes = [...new Set(deadlines.map((d) => d.intake))];
   const [filter, setFilter] = useState("all");
   const today = new Date().toISOString().slice(0, 10);
@@ -89,6 +89,8 @@ function Deadlines() {
         })}
       </div>
       <p className="hint">{t("Applications open on 16 October 2026 according to the live schedule; the guide says 15 October. Applying early is recommended.")}</p>
+      <SourceShot src="/kimep-deadlines.png" w={1250} h={291} url={sources.deadlines.url} title={sources.deadlines.title}
+        alt={t("Table of Fall 2027 application dates on the KIMEP website")} />
     </section>
   );
 }

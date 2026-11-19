@@ -150,3 +150,12 @@ KIMEP University advising plan.pdf was read as project context. Its wider advisi
 ## Visual asset
 
 Home-page KIMEP logo: user-provided image, added unchanged on 26 October 2026. Its link goes to the official university website. The guide retains its independent student-project notice.
+
+## Screenshots of official pages
+
+Two content-only crops (tables and headings, no photographs of people) taken with Playwright on 19 November 2026 and stored in `public/`:
+
+- `kimep-deadlines.png`: the Fall 2027 bachelor block of https://www.kimep.kz/prospective-students/kz/admission/application-deadlines/ (shown on Documents and dates).
+- `kimep-unt-table.png`: heading and first two rows of the program table on https://www.kimep.kz/prospective-students/kz/admission/high-school-graduates/ (shown on UNT scores).
+
+Each is shown with a source caption and a link to the original. The pages are in Kazakh. They are quoted as evidence of what KIMEP publishes; the site's own numbers still come from `src/data.ts`. If KIMEP changes these pages, retake the crops.

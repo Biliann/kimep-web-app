@@ -66,6 +66,19 @@ export function ProgramPicker({ label }: { label?: string }) {
   );
 }
 
+/** A cropped screenshot of an official KIMEP page (tables only, no photos), with its source and a link to the original. */
+export function SourceShot({ src, alt, url, title, w, h }: { src: string; alt: string; url: string; title: string; w: number; h: number }) {
+  const t = useT();
+  return (
+    <figure className="shot">
+      <img src={src} alt={alt} width={w} height={h} loading="lazy" />
+      <figcaption>
+        {t("Source")}: KIMEP, {title}. {t("Screenshot of 19 November 2026; the page is in Kazakh.")} <a href={url} target="_blank" rel="noreferrer">{t("Open the original")}</a>
+      </figcaption>
+    </figure>
+  );
+}
+
 export function Head({ title, lead }: { title: string; lead?: string }) {
   return (
     <header className="band"><div className="wrap">
